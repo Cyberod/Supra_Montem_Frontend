@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+
+
+@theme {
+  --font-inter: "Inter";
+
+
+  --breakpoint-3xl: 120rem;
+  --color-primary: #4D6379;
+  --color-secondary: #E19132;
+  --color-midnight: #01203F;
+  --color-barley-white: #FFF1CE;
+  --color-aqua-haze: #EDF0F5;
+  --color-blue-bayoux: #4D6379;
+
+
+
+  --color-background-primary: #FFF4CE;
+  /* ... */
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 3s linear infinite;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] px-[120px];
+  }
+
+}
+
+@layer components{
+  .practice-cta {
+    @apply relative flex items-center 
+    justify-between w-[300px] text-[18px] hover:text-secondary
+    transition cursor-pointer after:content-[''] after:absolute after:left-0 
+    after:top-[calc(100%+24px)] after:w-0.5 after:h-0.5 
+    after:bg-current after:rounded-full 
+    hover:after:w-full hover:after:h-[0.5px] 
+    hover:after:rounded-none hover:after:text-barley-white after:transition-all 
+    after:duration-900 ;
+  }
+  .practice-cta img {
+    @apply transition-all duration-900;
+    filter: brightness(0) saturate(100%) invert(89%) sepia(11%) saturate(267%) hue-rotate(168deg) brightness(96%) contrast(91%);
+  }
+  .practice-cta:hover img {
+    filter: brightness(0) saturate(500%) invert(40%) sepia(83%) saturate(800%) hue-rotate(1deg) brightness(130%) contrast(60%);
+  }
+}
+
+
+
+
