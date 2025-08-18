@@ -199,30 +199,37 @@ export default function Home() {
 
         </div>
       </div>
-
-      <div className="max-w-[1440px] mx-auto px-[120px]">
-        <div className="pt-[120px] max-w-[1200px]">
-          <h5 className="text-secondary font-[14px] font-inter">• Our Process •</h5>
-          <div className="flex justify-between gap-20">
-            <h1 className="font-inter text-[48px] text-midnight ">Explore Our Process</h1>
-            <a
-              href="#consultation"
-              className="inline-flex mt-2 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
-            >
-              Book a free consultation
-              <img src="src/assets/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[32px] h-[32px] text-[18px]"/>
-            </a>
+      <div className="max-w-[1440px] mx-auto  max-h-[656.97px]">
+        <div className="pt-[120px] px-[120px]">
+          <div className="max-w-[1200px] mx-auto">
+            <h5 className="text-secondary font-[14px] font-inter">• Our Process •</h5>
+            <div className="flex justify-between items-center" id='Explore-Process'>
+              <h1 className="font-inter text-[48px] text-midnight ">Explore Our Process</h1>
+              <a
+                href="#consultation"
+                className="inline-flex px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+              >
+                Book a free consultation
+                <img src="src/assets/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[32px] h-[32px]"/>
+              </a>
+            </div>
           </div>
-          <div className="mt-[40px] flex justify-between gap-12 max-w-[1200px] max-h-[399.97px] " id="process-image">
-            <img src="src/assets/consultation.png" alt="process image" className="w-[360px] h-[399.7px] " />
-            <img src="src/assets/consultation.png" alt="process image" className="w-[360px] h-[399.7px] " />
-            <img src="src/assets/consultation.png" alt="process image" className="w-[360px] h-[399.7px] " />
+          <div className='max-w-[1200px] mt-[50px]  flex items-center justify-between mx-auto gap-[40px] '>
+            <div className=" w-[360px]  " id="process-image">
+            <img src="src/assets/consultation.png" alt="process image" className="" />
+            </div>
+            <div className=" w-[360px]" id="process-image ">
+            <img src="src/assets/consultation.png" alt="process image" className=" " />
+            </div>
+            <div className=" w-[360px]" id="process-image ">
+            <img src="src/assets/consultation.png" alt="process image" className=" " />
+            </div>
           </div>
 
         </div>
-
-        
       </div>
+
+
     </section>
     
     
