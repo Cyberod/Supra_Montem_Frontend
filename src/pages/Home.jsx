@@ -1,5 +1,4 @@
 import CountUp from '../components/CountUp';
-import Scroller from '../components/Scroller';
 
 export default function Home() {
   return (
@@ -265,9 +264,9 @@ export default function Home() {
 
       
       {/* Legal Automation Section */}
-      <div className="max-w-[1440px] mx-auto max-h-[1539px] px-[120px]">
-        <div className=" max-w-[1200px] flex gap-8">
-          <div className="pt-[120px] flex-1 h-[3666px]">
+      <div className="max-w-[1440px] mx-auto px-[120px]">
+        <div className="max-w-[1200px] flex gap-8 relative">
+          <div className="flex-1 pt-[120px] sticky top-[0px] self-start">
             <h5 className="font-inter text-secondary text-[14px] text-left">
               • LEGAL AUTOMATION • 
             </h5>
@@ -279,27 +278,24 @@ export default function Home() {
               Generate legally valid documents in minutes. Just fill in your details, make payment, 
               and receive your document signed, stamped, and delivered to your email.
             </h5>
-          <a
-            href="#consultation"
-            className="inline-flex mt-5 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
-          >
-            Get started now
-            <img src="src/assets/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
-          </a>
-
+            <a
+              href="#consultation"
+              className="inline-flex mt-5 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+            >
+              Get started now
+              <img src="src/assets/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+            </a>
           </div>
 
-          <div className="flex-1 justify-end pt-[120px] ">
+          <div className="flex-1 flex flex-col gap-[68.5px] pt-[120px] pb-[120px]">
             <div>
-            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+              <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px]" />
             </div>
-
             <div>
-            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+              <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px]" />
             </div>
-
             <div>
-            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+              <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px]" />
             </div>
           </div>
         </div>
