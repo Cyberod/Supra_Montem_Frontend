@@ -1,4 +1,5 @@
 import CountUp from '../components/CountUp';
+import Scroller from '../components/Scroller';
 
 export default function Home() {
   return (
@@ -175,6 +176,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Statistics Section */}
       <div className="container bg-aqua-haze">
         <div className="pt-[136px] pb-[136px] pl-[104px] pr-[104px] flex justify-between gap-8">
           <div className="flex-1">
@@ -199,7 +201,8 @@ export default function Home() {
 
         </div>
       </div>
-      <div className="max-w-[1440px] mx-auto  max-h-[656.97px]">
+      {/* Process Image */}
+      <div className="max-w-[1440px] mx-auto  max-h-[656.97px] ">
         <div className="pt-[120px] px-[120px]">
           <div className="max-w-[1200px] mx-auto">
             <h5 className="text-secondary font-[14px] font-inter">• Our Process •</h5>
@@ -215,17 +218,90 @@ export default function Home() {
             </div>
           </div>
           <div className='max-w-[1200px] mt-[50px]  flex items-center justify-between mx-auto gap-[40px] '>
-            <div className=" w-[360px]  " id="process-image">
-            <img src="src/assets/consultation.png" alt="process image" className="" />
+            <div className="w-[360px] relative" id="process-image">
+              <img src="src/assets/consultation.png" alt="process image" className="w-full h-full object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="flex flex-col items-start text-left">
+                  <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    01
+                  </div>
+                  <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Consultation</h3>
+                  <p className="text-barley-white font-inter text-sm">Providing legal advice tailored to your specific needs</p>
+                </div>
+              </div>
             </div>
-            <div className=" w-[360px]" id="process-image ">
-            <img src="src/assets/consultation.png" alt="process image" className=" " />
+
+            <div className="w-[360px] relative" id="process-image">
+              <img src="src/assets/Strategy.png" alt="process image" className="w-full h-full object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="flex flex-col items-start text-left">
+                  <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    02
+                  </div>
+                  <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Strategy & Planning</h3>
+                  <p className="text-barley-white font-inter text-sm">Creating a tailored legal strategy to meet your goals</p>
+                </div>
+              </div>
             </div>
-            <div className=" w-[360px]" id="process-image ">
-            <img src="src/assets/consultation.png" alt="process image" className=" " />
+
+            <div className="w-[360px] relative" id="process-image">
+              <img src="src/assets/Execution.png" alt="process image" className="w-full h-full object-cover" />
+              <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="flex flex-col items-start text-left">
+                  <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    01
+                  </div>
+                  <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Execution</h3>
+                  <p className="text-barley-white font-inter text-sm">Executing the legal strategy for resolution of your legal matters</p>
+                </div>
+              </div>
             </div>
+
+
           </div>
 
+        </div>
+      </div>
+
+      
+      {/* Legal Automation Section */}
+      <div className="max-w-[1440px] mx-auto max-h-[1539px] px-[120px]">
+        <div className=" max-w-[1200px] flex gap-8">
+          <div className="pt-[120px] flex-1 h-[3666px]">
+            <h5 className="font-inter text-secondary text-[14px] text-left">
+              • LEGAL AUTOMATION • 
+            </h5>
+            <h2 className="text-midnight font-inter leading-tight text-5xl">
+              Fast. Reliable. Lawyer-Crafted Documents at Your Finger Tips
+            </h2>
+            <h5 className="font-inter text-midnight text-[16px] mt-5">
+              From Quit Notices to Tenancy Agreements, NDAs, and more. 
+              Generate legally valid documents in minutes. Just fill in your details, make payment, 
+              and receive your document signed, stamped, and delivered to your email.
+            </h5>
+          <a
+            href="#consultation"
+            className="inline-flex mt-5 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+          >
+            Get started now
+            <img src="src/assets/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+          </a>
+
+          </div>
+
+          <div className="flex-1 justify-end pt-[120px] ">
+            <div>
+            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+            </div>
+
+            <div>
+            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+            </div>
+
+            <div>
+            <img src="src/assets/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px] pb-[68.5px]" />
+            </div>
+          </div>
         </div>
       </div>
 
