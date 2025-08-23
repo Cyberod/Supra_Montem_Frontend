@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import { Disclosure } from "@headlessui/react";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -8,45 +9,41 @@ export default function Navbar() {
         <div className="max-w-[1440px] mx-auto px-[120px] py-[24px] h-[80px] flex items-center justify-between">
           {/* Left: Logo & Company Name */}
           <div className="flex items-center space-x-3">
-            <img src="src/assets/Logo+Menu.png" alt="Company Logo"/>
+            <img src="/Logo+Menu.png" alt="Company Logo"/>
           </div>
 
           {/* Center: Navbar Links */}
           <div className="flex space-x-8">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="font-inter text-secondary hover:text-secondary transition-colors font-medium"
             >
               Home
-            </a>
-                        <a
-              href="#home"
+            </Link>
+            <Link
+              to="/practice-areas"
               className="font-inter text-primary hover:text-secondary transition-colors"
             >
               Practice Areas
-            </a>
-
-                        <a
-              href="#home"
+            </Link>
+            <a
+              href="#legal-automation"
               className="font-inter text-primary hover:text-secondary transition-colors"
             >
               Legal Automation
             </a>
-
-                        <a
-              href="#home"
+            <Link
+              to="/Blog"
               className="font-inter text-primary hover:text-secondary transition-colors"
             >
               Blog
-            </a>
-
-                        <a
-              href="#home"
+            </Link>
+            <Link
+              to="/Contact"
               className="font-inter text-primary hover:text-secondary transition-colors"
             >
               Contact
-            </a>
-
+            </Link>
           </div>
 
           {/* Right: WhatsApp Contact */}
@@ -57,7 +54,7 @@ export default function Navbar() {
               rel="noopener noreferrer"
               className="text-primary hover:text-[#E19132] flex items-center space-x-2"
             >
-              <img src="/src/assets/whatsapp-icon.png" alt="WhatsApp"/>
+              <img src="/whatsapp-Icon.png" alt="WhatsApp"/>
               <span>+234-7035786703</span>
             </a>
           </div>

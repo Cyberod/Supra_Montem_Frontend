@@ -8,17 +8,27 @@
 
 
   --breakpoint-3xl: 120rem;
-  --color-primary: #4D6379;
+ 
   --color-secondary: #E19132;
   --color-midnight: #01203F;
   --color-barley-white: #FFF1CE;
   --color-aqua-haze: #EDF0F5;
   --color-blue-bayoux: #4D6379;
+  --color-matisse: #1F4993;
+  --color-grey: #D5D6D8; 
+  --color-grey-2: #667185;
+  --color-grey-3: #98A2B3;
 
 
 
   --color-background-primary: #FFF4CE;
   /* ... */
+}
+
+hr {
+  border: none;
+  height: 0.2px;
+  background: #D5D6D8;
 }
 
 
