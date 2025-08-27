@@ -1,6 +1,7 @@
 import Navbar from '../components/Navbar';
 import ReachOut from '../components/ReachOut';
 import Footer from '../components/Footer';
+import {Link} from "react-router-dom";
 
 
 export default function Blog() {
@@ -28,13 +29,13 @@ export default function Blog() {
                     <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
                         this piece unpacks key legal highlights from the UBS event ...
                     </h4>
-                    <a
-                    href="#"
+                    <Link
+                    to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
                     className="inline-flex text-matisse font-inter items-center gap-3"
                     >
                     Read More
                     <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
-                    </a>
+                    </Link>
                     </div>
                 </div>
                 </div>
@@ -79,65 +80,6 @@ export default function Blog() {
                 </div>
                 </div>
 
-                <div className="relative pb-[200px]" id="process-image">
-                <img src="/blog3.png" alt="process image" className=" object-cover" />
-                <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                    <div className="flex flex-col items-start text-left">
-                    <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                    <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                    <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
-                        this piece unpacks key legal highlights from the UBS event ...
-                    </h4>
-                    <a
-                    href="#"
-                    className="inline-flex text-matisse font-inter items-center gap-3"
-                    >
-                    Read More
-                    <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
-                    </a>
-                    </div>
-                </div>
-                </div>
-
-                <div className="relative pb-[200px]" id="process-image">
-                <img src="/blog2.png" alt="process image" className=" object-cover" />
-                <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                    <div className="flex flex-col items-start text-left">
-                    <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                    <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                    <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
-                        this piece unpacks key legal highlights from the UBS event ...
-                    </h4>
-                    <a
-                    href="#"
-                    className="inline-flex text-matisse font-inter items-center gap-3"
-                    >
-                    Read More
-                    <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
-                    </a>
-                    </div>
-                </div>
-                </div>
-
-                <div className="relative pb-[200px]" id="process-image">
-                <img src="/blog1.png" alt="process image" className=" object-cover" />
-                <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                    <div className="flex flex-col items-start text-left">
-                    <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                    <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                    <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
-                        this piece unpacks key legal highlights from the UBS event ...
-                    </h4>
-                    <a
-                    href="#"
-                    className="inline-flex text-matisse font-inter items-center gap-3"
-                    >
-                    Read More
-                    <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
-                    </a>
-                    </div>
-                </div>
-                </div>
             </div>
 
             <div className="text-center mt-[80px] ">

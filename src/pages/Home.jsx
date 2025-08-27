@@ -9,7 +9,7 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <section id="Home" className=" w-full py-12">
-        <div className="max-w-[1440px] mx-auto px-[120px] flex gap-10 bg-background-blue-bayoux">
+        <div className="max-w-[1440px] mx-auto px-[120px] flex gap-10 bg-barley-white">
           {/* Left Text Column */}
           <div className="pt-30 flex-1 space-y-6 ">
             <h1 className="font-inter text-6xl text-midnight leading-tight">
@@ -28,14 +28,14 @@ export default function Home() {
             </a>
 
             {/* Scrolling SUPRA MONTEM */}
-            <div className="overflow-hidden mt-20 mb-0 p-0 inline-flex items-center  ">
-              <img src="/SUPRAMONTEM_HERO.svg" className="animate-marquee"/>
+            <div className="overflow-hidden mt-20 mb-0 p-0 inline-flex items-center   ">
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee   "/>
             </div>
 
           </div>
 
           {/* Right CEO Image */}
-          <div className="w-[500px] flex justify-end">
+          <div className="w-[500px] flex justify-end"> 
             <img
               src="/ceo.png"
               alt="CEO"
