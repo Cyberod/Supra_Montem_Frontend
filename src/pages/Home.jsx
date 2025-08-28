@@ -9,9 +9,9 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <section id="Home" className=" w-full py-12">
-        <div className="max-w-[1440px] mx-auto px-[120px] flex gap-10 bg-barley-white">
+        <div className="max-w-[1440px] h-[675px] mx-auto px-[120px] flex gap-[80px] bg-barley-white">
           {/* Left Text Column */}
-          <div className="pt-30 flex-1 space-y-6 ">
+          <div className="pt-30 flex-1 space-y-6 max-w-[520px]">
             <h1 className="font-inter text-6xl text-midnight leading-tight">
               Guiding You from a higher Ground
             </h1>
@@ -27,10 +27,12 @@ export default function Home() {
               <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
             </a>
 
-            {/* Scrolling SUPRA MONTEM */}
-            <div className="overflow-hidden mt-20 mb-0 p-0 inline-flex items-center   ">
-              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee   "/>
-            </div>
+
+          </div>
+          {/* Scrolling SUPRA MONTEM */}
+          <div className="flex overflow-hidden mt-145  max-w-[520px] absolute inline-flex gap-10   ">
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee max-w-[1833px] h-[94px]   "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee max-w-[1833px] h-[94px] [animation-delay:3s]   "/>
 
           </div>
 
