@@ -8,41 +8,52 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <section id="Home" className=" w-full py-12">
-        <div className="max-w-[1440px] h-[675px] mx-auto px-[120px] flex gap-[80px] bg-barley-white">
-          {/* Left Text Column */}
-          <div className="pt-30 flex-1 space-y-6 max-w-[520px]">
-            <h1 className="font-inter text-6xl text-midnight leading-tight">
-              Guiding You from a higher Ground
-            </h1>
-            <p className="text-midnight text-sm  text-[18px] font-inter">
-              At SupraMontem Attorney, we deliver law with clarity, strategy and integrity,
-              elevating every client's position through modern, value-driven solutions.
-            </p>
-            <a
-              href="#consultation"
-              className="inline-flex mt-2 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
-            >
-              Book a free consultation
-              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
-            </a>
+      <section id="Home" className=" w-full py-12 ">
+        <div className="max-w-[375px] xl:max-w-[1440px] h-[824px] xl:h-[675px] mx-auto  xl:px-[120px] xl:flex xl:gap-[80px] bg-barley-white">
+          <div className='px-[20px]'>
+            {/* Left Text Column */}
+            <div className="pt-[48px] xl:pt-30 xl:flex-1 xl:space-y-6 max-w[335px] xl:max-w-[520px]">
+              <h1 className="font-inter text-[28px] text-md xl:text-6xl  text-midnight leading-tight">
+                Guiding You from a Higher Ground
+              </h1>
+              <p className="mt-[16px] text-midnight text-sm  xl:text-[18px] font-inter">
+                At SupraMontem Attorney, we deliver law with clarity, strategy and integrity,
+                elevating every client's position through modern, value-driven solutions.
+              </p>
+              <a
+                href="#consultation"
+                className=" w-[237px] h-[48px] inline-flex xl:mt-2 px-3 xl:px-4 text-sm py-2 xl:py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+              >
+                <p >Book a free consultation</p>
+                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+              </a>
 
 
+            </div>
           </div>
+
           {/* Scrolling SUPRA MONTEM */}
-          <div className="flex overflow-hidden mt-145  max-w-[520px] absolute inline-flex gap-10   ">
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee max-w-[1833px] h-[94px]   "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee max-w-[1833px] h-[94px] [animation-delay:3s]   "/>
+          <div className="overflow-hidden mt-145  max-w-[520px] absolute inline-flex gap-80 ">
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]   "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
 
           </div>
 
+          <div>
           {/* Right CEO Image */}
-          <div className="w-[500px] flex justify-end"> 
-            <img
-              src="/ceo.png"
-              alt="CEO"
-              className="w-full h-full object-cover"
-            />
+            <div className="w-full xl:w-[500px] xl:flex xl:justify-end"> 
+              <img
+                src="/ceo.png"
+                alt="CEO"
+                className="xl:w-full h-[441px] xl:h-full  xl:object-cover"
+              />
+            </div>
           </div>
         </div>
 
