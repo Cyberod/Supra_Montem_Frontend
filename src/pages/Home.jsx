@@ -9,42 +9,45 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <section id="Home" className=" w-full py-12 ">
-        <div className="max-w-[1440px] h-[675px] mx-auto px-[120px] flex gap-10 bg-barley-white">
-          {/* Left Text Column */}
-          <div className="pt-30 flex-1 space-y-6 ">
-            <h1 className="font-inter text-6xl text-midnight leading-tight">
+        {/* Hero Section */}
+        <div className="max-w-[375px] mx-auto bg-barley-white xl:max-w-[1440px] xl:h-[675px] xl:px-[120px] xl:flex xl:gap-10">
+          {/* Mission statement */}
+          <div className="pt-[110px] px-5  xl:pt-30 xl:flex-1 xl:space-y-6 xl:px-0">
+            <h1 className="font-inter text-[28px] text-midnight leading-tight xl:text-6xl">
               Guiding You from a higher Ground
             </h1>
-            <p className="text-midnight text-sm  text-[18px] font-inter">
-              At SupraMontem Attorney, we deliver law with clarity, strategy and integrity,
+            {/* Secondary statement */}
+            <p className="text-midnight text-sm text-[13px] font-inter mt-4 xl:text-[18px] xl:mt-6">
+              At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
             <a
               href="#consultation"
-              className="inline-flex mt-2 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+              className="inline-flex mt-6 px-3 py-2 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-base text-[14px]  xl:ml-0 xl:mt-2"
             >
               Book a free consultation
               <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
             </a>
-
-            {/* Scrolling SUPRA MONTEM */}
-
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
-          <div className="overflow-hidden mt-145  max-w-[520px] absolute inline-flex gap-80 ">
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]   "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-            <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
+          <div className="overflow-hidden mt-9 mx-5 max-w-[335px] h-16 xl:mt-145 xl:max-w-[460px] absolute xl:inline-flex xl:gap-80 xl:px-0 xl:mx-0 xl:h-[94px]">            
+            <div className="inline-flex gap-80 xl:contents">
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+              <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 xl:h-[94px]"/>
+            </div>
+            {/* Fade overlay for left side */}
+            <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-barley-white to-transparent pointer-events-none z-10"></div>
           </div>
 
-          {/* Right CEO Image */}
-          <div className="w-[500px] flex justify-end"> 
+          {/* CEO Image */}
+          <div className="w-full h-[441px] xl:h-[675px] mt-25 xl:w-[500px] xl:flex xl:justify-end xl:mt-0"> 
             <img
               src="/ceo.png"
               alt="CEO"
@@ -53,18 +56,18 @@ export default function Home() {
           </div>
         </div>
 
-        
-        <div className="max-w-[1440px] mx-auto px-[120px]">
-          <div className="pt-20 text-center pb-20">
-            <h2 className="font-inter text-[42px] text-midnight leading-tight">
-              At Supra Montem Attorney, we merge deep legal insight, strategic focus, and a 
+        {/* Pitch statement */}
+        <div className="max-w-[375px] mx-auto px-5 xl:max-w-[1440px] xl:px-[120px]">
+          <div className="pt-8 pb-8 xl:pt-20 text-center xl:pb-20">
+            <h2 className="font-inter text-[22px] font-normal text-midnight leading-tight xl:text-[42px]">
+              At Supra Montem Attorneys, we merge deep legal insight, strategic focus, and a 
               Client-first ethos to deliver truly distinguished legal solutions. Rooted 
               in integrity and driven by results, we stand with you-every step, every matter.
             </h2>
-            
           </div>
         </div>
 
+        {/* Practice Areas Section */}
         <div className="max-w-[1440px] px-[120px] bg-midnight  ">
           <div className=" pt-[104px]  max-w[1200px] px-[180px]">
             <h5 className="font-inter text-barley-white text-[14px] text-left">
