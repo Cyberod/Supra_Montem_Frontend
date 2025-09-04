@@ -83,7 +83,7 @@ export default function Footer() {
 
         </div>
 
-        <div className=" max-w-[1120px] overflow-hidden inline-flex gap-200  absolute pt-[87px] pb-[88.57] mb-[28px]">
+        <div className=" max-w-[1000px] overflow-hidden inline-flex gap-200  absolute pt-[87px] pb-[88.57]  mb-[28px]">
             <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee max-w-[1833px] h-[94px]"/>
             <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee max-w-[1833px] h-[94px]"/>
 

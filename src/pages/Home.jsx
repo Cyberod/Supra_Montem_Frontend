@@ -9,27 +9,26 @@ export default function Home() {
     <div className="min-h-screen">
       <Navbar />
       <section id="Home" className=" w-full py-12 ">
-        <div className="max-w-[375px] xl:max-w-[1440px] h-[824px] xl:h-[675px] mx-auto  xl:px-[120px] xl:flex xl:gap-[80px] bg-barley-white">
-          <div className='px-[20px]'>
-            {/* Left Text Column */}
-            <div className="pt-[48px] xl:pt-30 xl:flex-1 xl:space-y-6 max-w[335px] xl:max-w-[520px]">
-              <h1 className="font-inter text-[28px] text-md xl:text-6xl  text-midnight leading-tight">
-                Guiding You from a Higher Ground
-              </h1>
-              <p className="mt-[16px] text-midnight text-sm  xl:text-[18px] font-inter">
-                At SupraMontem Attorney, we deliver law with clarity, strategy and integrity,
-                elevating every client's position through modern, value-driven solutions.
-              </p>
-              <a
-                href="#consultation"
-                className=" w-[237px] h-[48px] inline-flex xl:mt-2 px-3 xl:px-4 text-sm py-2 xl:py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
-              >
-                <p >Book a free consultation</p>
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
-              </a>
+        <div className="max-w-[1440px] h-[675px] mx-auto px-[120px] flex gap-10 bg-barley-white">
+          {/* Left Text Column */}
+          <div className="pt-30 flex-1 space-y-6 ">
+            <h1 className="font-inter text-6xl text-midnight leading-tight">
+              Guiding You from a higher Ground
+            </h1>
+            <p className="text-midnight text-sm  text-[18px] font-inter">
+              At SupraMontem Attorney, we deliver law with clarity, strategy and integrity,
+              elevating every client's position through modern, value-driven solutions.
+            </p>
+            <a
+              href="#consultation"
+              className="inline-flex mt-2 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+            >
+              Book a free consultation
+              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+            </a>
 
+            {/* Scrolling SUPRA MONTEM */}
 
-            </div>
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
@@ -42,18 +41,15 @@ export default function Home() {
             <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
             <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
             <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-[94px]    "/>
-
           </div>
 
-          <div>
           {/* Right CEO Image */}
-            <div className="w-full xl:w-[500px] xl:flex xl:justify-end"> 
-              <img
-                src="/ceo.png"
-                alt="CEO"
-                className="w-full h-full  object-cover"
-              />
-            </div>
+          <div className="w-[500px] flex justify-end"> 
+            <img
+              src="/ceo.png"
+              alt="CEO"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
 
@@ -195,13 +191,42 @@ export default function Home() {
 
             <div className="flex-1 flex flex-col gap-[68.5px] pt-[120px] pb-[120px]">
               <div>
-                <img src="/Justice_Image1.png" alt="Justice Image" className="w-[563px] h-[473px]" />
+                <img src="/justice_image1.png" alt="Justice Image" className="w-[563px] h-[405px]" />
+                <div className="absolute bottom-300 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+                  <div className="flex flex-col items-start text-left p-[15px]">
+                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                      <img src="/justice_icon1.svg" alt="justice Icon" />
+                    </div>
+                    <h3 className="text-barley-white font-inter text-xl mb-3">Input your Details</h3>
+                    <p className="text-barley-white font-inter text-sm">Enter the information needed to personalize your legal document quickly and securely.</p>
+                  </div>
+                </div>
               </div>
+
               <div>
-                <img src="/Justice_Image2.png" alt="Justice Image" className="w-[563px] h-[473px]" />
+                <img src="/justice_image2.png" alt="Justice Image" className="w-[563px] h-[404px]" />
+                <div className="absolute bottom-178 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+                  <div className="flex flex-col items-start text-left p-[15px]">
+                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                      <img src="/justice_icon2.svg" alt="justice Icon" />
+                    </div>
+                    <h3 className="text-barley-white font-inter text-xl mb-3">Make Payment</h3>
+                    <p className="text-barley-white font-inter text-sm">Complete payment via our secure platform to initiate processing. Your data remains protected at all times</p>
+                  </div>
+                </div>
               </div>
+
               <div>
-                <img src="/Justice_Image3.png" alt="Justice Image" className="w-[563px] h-[473px]" />
+                <img src="/justice_image3.png" alt="Justice Image" className="w-[563px] h-[405x]" />
+                <div className="absolute bottom-63 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+                  <div className="flex flex-col items-start text-left p-[15px]">
+                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                      <img src="/justice_icon3.svg" alt="justice Icon" />
+                    </div>
+                    <h3 className="text-barley-white font-inter text-xl mb-3">Receive your Document</h3>
+                    <p className="text-barley-white font-inter text-[13px]">Your document will be generated, signed, sealed, and delivered straight to your email, ready to use.</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
