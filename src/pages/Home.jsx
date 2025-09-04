@@ -51,7 +51,7 @@ export default function Home() {
               <img
                 src="/ceo.png"
                 alt="CEO"
-                className="xl:w-full h-[441px] xl:h-full  xl:object-cover"
+                className="w-full h-full  object-cover"
               />
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function Home() {
             <div className="mt-[48px] flex left gap-[16px]">
                 <img src="/Client_image.png" alt="client Image" className=" rounded-full"/>
                 <div>
-                  <h5 className="text-midnight font-inter text-[24px] font-semibold">Sir O'Kelly</h5>
+                  <h5 className="text-midnight font-inter text-[20px] font-semibold">Sir O'Kelly</h5>
                   <p className="text-blue-bayoux font-inter text-[16px]">CEO, Venoxe Inc.</p>
                 </div>
             </div>
@@ -289,17 +289,17 @@ export default function Home() {
             <div className="w-[360px] relative pb-[200px]" id="process-image">
               <img src="/blog3.png" alt="process image" className=" object-cover" />
               <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                <div className="flex flex-col items-start text-left">
+                <div className="flex flex-col items-start ">
                   <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
+                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter  text-sm text-[13px] mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
                   className="inline-flex text-matisse font-inter items-center gap-3"
                 >
-                  Read More
+                  Read Full Story
                   <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
                 </a>
                 </div>
@@ -311,15 +311,15 @@ export default function Home() {
               <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
                 <div className="flex flex-col items-start text-left">
                   <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
+                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter  text-sm text-[13px]  mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
                   className="inline-flex text-matisse font-inter items-center gap-3"
                 >
-                  Read More
+                  Read Full Story
                   <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
                 </a>
                 </div>
@@ -331,34 +331,42 @@ export default function Home() {
               <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
                 <div className="flex flex-col items-start text-left">
                   <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[24px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm mb-[16.68px]">From regulatory compliance to business structuring, 
+                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter  text-sm text-[13px] mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
                   className="inline-flex text-matisse font-inter items-center gap-3"
                 >
-                  Read More
+                  Read Full Story
                   <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
                 </a>
                 </div>
               </div>
             </div>
 
-
           </div> 
+
+            <div className=" mt-[64px] mb-[104px] ">
+                <button
+                type="submit"
+                className="inline-flex px-[14px] py-[13.5px] bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-[18px]"
+                >
+                Load More Updates
+                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[32px] h-[32px]"/>
+                </button>
+            </div> 
   
         </div>
 
+
+      </section>
         {/* Reach out section */}
         <ReachOut />
 
         {/* Footer Section */}
         <Footer />
-
-
-      </section>
     </div>
     
   );
