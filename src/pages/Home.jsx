@@ -23,7 +23,7 @@ export default function Home() {
             </p>
             <a
               href="#consultation"
-              className="inline-flex mt-6 px-3 py-2 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-base text-[14px]  xl:ml-0 xl:mt-2"
+              className="inline-flex mt-6 px-3 py-2 xl:px-4 xl:py-3 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-base text-[14px] xl:text-[16px] xl:ml-0 xl:mt-2"
             >
               Book a free consultation
               <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
@@ -68,63 +68,62 @@ export default function Home() {
         </div>
 
         {/* Practice Areas Section */}
-        <div className="max-w-[1440px] px-[120px] bg-midnight  ">
-          <div className=" pt-[104px]  max-w[1200px] px-[180px]">
-            <h5 className="font-inter text-barley-white text-[14px] text-left">
+        <div className="max-w-[375px] mx-auto bg-midnight pt-8 px-5 xl:max-w-[1440px] xl:px-[120px] xl:py-0">
+          <div className="xl:pt-[104px] xl:max-w[1200px] xl:px-[180px]">
+            <h5 className="font-inter text-secondary text-sm text-[12px] text-left xl:text-[14px]">
               • PRACTICE AREAS • 
             </h5>
-            <h2 className="font-inter text-barley-white text-[48px] text-left">Expert Legal Services Tailored to Your Needs</h2>
-            
-            
+            <h2 className="font-inter text-barley-white text-2xl text-left mt-4 xl:text-[48px] xl:mt-0">Expert Legal Services Tailored to Your Needs</h2>
           </div>
-          <div className="pt-[80px] pb-[104px]" > <PracticeCta/></div>
+          <div className="mt-8 xl:pt-[80px] xl:pb-[104px]" > <PracticeCta/></div>
         </div>
 
         {/* Statistics Section */}
-        <div className="max-w-[1440px] px-[120px] bg-aqua-haze">
-          <div className="pt-[136px] pb-[136px] pl-[104px] pr-[104px] flex justify-between gap-8">
-            <div className="flex-1">
+        <div className="max-w-[375px] mx-auto bg-aqua-haze px-[50px] xl:max-w-[1440px] xl:px-[120px]">
+          <div className="py-[50px] flex flex-col gap-17 text-center xl:pt-[136px] xl:pb-[136px] xl:pl-[104px] xl:pr-[104px] xl:flex-row xl:justify-between xl:gap-8">
+            <div className="xl:flex-1">
               <CountUp target={20} suffix="+" duration={2500} />
-              <h6 className="text-[20px] text-midnight font-inter font-semibold">Years of Experience</h6>
-              <p className="text-[16px] text-blue-bayoux font-inter mt-4">We've handled cases across 
+              <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Years of Experience</h6>
+              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">We've handled cases across 
                 diverse areas, securing justice for our clients</p>
             </div>
 
-            <div className="flex-1">
+            <div className="xl:flex-1">
               <CountUp target={99.7} suffix="%" decimals={1} duration={2500} />
-              <h6 className="text-[20px] text-midnight font-inter font-semibold">Success Rate</h6>
-              <p className="text-[16px] text-blue-bayoux font-inter mt-4">Our cases result to favourable 
+              <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Success Rate</h6>
+              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">Our cases result to favourable 
                 outcomes for 99% of our clients.</p>
             </div>
 
-            <div className="flex-1">
+            <div className="xl:flex-1">
               <CountUp target={1.5} suffix="K" decimals={1} duration={2500} />
-              <h6 className="text-[20px] text-midnight font-inter font-semibold">clients Served</h6>
-              <p className="text-[16px] text-blue-bayoux font-inter mt-4">We've served over 100 clients, from individuals to Businesses.</p>
+              <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">clients Served</h6>
+              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">We've served over 100 clients, from individuals to Businesses.</p>
             </div>
 
           </div>
         </div>
-        {/* Process Image */}
-        <div className="max-w-[1440px] mx-auto  max-h-[656.97px] ">
-          <div className="pt-[120px] px-[120px]">
-            <div className="max-w-[1200px] mx-auto">
-              <h5 className="text-secondary font-inter test-sm">• Our Process •</h5>
-              <div className="flex justify-between items-center" id='Explore-Process'>
-                <h1 className="font-inter text-[48px] text-midnight ">Explore Our Process</h1>
+
+        {/* Process Section*/}
+        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:mx-auto xl:max-h-[656.97px] xl:px-0 xl:py-0">
+          <div className="xl:pt-[120px] xl:px-[120px]">
+            <div className="xl:max-w-[1200px] xl:mx-auto">
+              <h5 className="text-secondary font-inter text-xs xl:text-sm">• Our Process •</h5>
+              <div className="flex flex-col gap-6 mt-4 xl:flex-row xl:justify-between xl:items-center xl:mt-0" id='Explore-Process'>
+                <h1 className="font-inter text-2xl text-midnight xl:text-[48px]">Explore Our Process</h1>
                 <a
                   href="#consultation"
-                  className="inline-flex px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+                  className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:px-4 xl:py-3 xl:text-base"
                 >
                   Book a free consultation
-                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[32px] h-[32px]"/>
+                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
                 </a>
               </div>
             </div>
-            <div className='max-w-[1200px] mt-[50px]  flex items-center justify-between mx-auto gap-[40px] '>
-              <div className="w-[360px] relative" id="process-image">
+            <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px] xl:flex-row'>
+              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
                 <img src="/Consultation.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
                   <div className="flex flex-col items-start text-left">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
                       01
@@ -135,9 +134,9 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-[360px] relative" id="process-image">
+              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
                 <img src="/Strategy.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
                   <div className="flex flex-col items-start text-left">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
                       02
@@ -148,19 +147,18 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="w-[360px] relative" id="process-image">
+              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
                 <img src="/Execution.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-5 right-5 bg-midnight p-2 h-38">
+                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
                   <div className="flex flex-col items-start text-left">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
-                      01
+                      03
                     </div>
                     <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Execution</h3>
                     <p className="text-barley-white font-inter text-sm">Executing the legal strategy for resolution of your legal matters</p>
                   </div>
                 </div>
               </div>
-
 
             </div>
 
@@ -169,33 +167,34 @@ export default function Home() {
 
         
         {/* Legal Automation Section */}
-        <div className="max-w-[1440px] mx-auto px-[120px]">
-          <div className="max-w-[1200px] flex gap-8 relative">
-            <div className="flex-1 pt-[120px] sticky top-[0px] self-start pb-[120px]">
-              <h5 className="font-inter text-secondary text-sm text-left">
+        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:mx-auto xl:px-[120px] xl:py-0">
+          <div className="flex flex-col gap-8 xl:max-w-[1200px] xl:flex-row xl:gap-8 xl:relative">
+            <div className="xl:flex-1 xl:pt-[120px] xl:sticky xl:top-[0px] xl:self-start xl:pb-[120px]">
+              <h5 className="font-inter text-secondary text-xs text-left xl:text-sm">
                 • LEGAL AUTOMATION • 
               </h5>
-              <h2 className="text-midnight font-inter leading-tight text-5xl">
+              <h2 className="text-midnight font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-0">
                 Fast. Reliable. Lawyer-Crafted Documents at Your Finger Tips
               </h2>
-              <h5 className="font-inter text-midnight text-[16px] mt-5">
+              <h5 className="font-inter text-midnight text-sm mt-4 xl:text-[16px] xl:mt-5">
                 From Quit Notices to Tenancy Agreements, NDAs, and more. 
                 Generate legally valid documents in minutes. Just fill in your details, make payment, 
                 and receive your document signed, stamped, and delivered to your email.
               </h5>
               <a
                 href="#consultation"
-                className="inline-flex mt-5 px-4 py-3 bg-midnight text-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3"
+                className="inline-flex mt-6 px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:mt-5 xl:px-4 xl:py-3 xl:text-base"
               >
                 Get started now
                 <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
               </a>
             </div>
 
-            <div className="flex-1 flex flex-col gap-[68.5px] pt-[120px] pb-[120px]">
-              <div>
-                <img src="/justice_image1.png" alt="Justice Image" className="w-[563px] h-[405px]" />
-                <div className="absolute bottom-300 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+            <div className="flex flex-col gap-8 xl:flex-1 xl:flex xl:flex-col xl:gap-[68.5px] xl:pt-[120px] xl:pb-[120px]">
+              <div className="relative">
+                <img src="/details.png" alt="Details Image" className="w-full h-[405px] object-cover xl:hidden" />
+                <img src="/justice_image1.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[405px]" />
+                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-500  xl:transform-none xl:translate-x-0">
                   <div className="flex flex-col items-start text-left p-[15px]">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
                       <img src="/justice_icon1.svg" alt="justice Icon" />
@@ -206,9 +205,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div>
-                <img src="/justice_image2.png" alt="Justice Image" className="w-[563px] h-[404px]" />
-                <div className="absolute bottom-178 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+              <div className="relative">
+                <img src="/payment.png" alt="Payment Image" className="w-full h-[405px] object-cover xl:hidden" />
+                <img src="/justice_image2.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[404px]" />
+                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-300  xl:transform-none xl:translate-x-0">
                   <div className="flex flex-col items-start text-left p-[15px]">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
                       <img src="/justice_icon2.svg" alt="justice Icon" />
@@ -219,9 +219,10 @@ export default function Home() {
                 </div>
               </div>
 
-              <div>
-                <img src="/justice_image3.png" alt="Justice Image" className="w-[563px] h-[405x]" />
-                <div className="absolute bottom-63 left-140 right-5 bg-midnight  w-[250px] h-[200px]">
+              <div className="relative">
+                <img src="/document.png" alt="Document Image" className="w-full h-[405px] object-cover xl:hidden" />
+                <img src="/justice_image3.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[405px]" />
+                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-100  xl:transform-none xl:translate-x-0">
                   <div className="flex flex-col items-start text-left p-[15px]">
                     <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
                       <img src="/justice_icon3.svg" alt="justice Icon" />
