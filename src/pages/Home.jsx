@@ -237,139 +237,136 @@ export default function Home() {
         </div>
 
         {/* Success Stories section */}
-        <div className="max-w-[1440px] max-h-[739px] mx-auto px-[120px] py-[104px]">
-          <div classNamee="max-w-[1200px] ">
-            <h5 className="font-inter text-secondary text-sm">SUCCESS STORIES</h5>
-              <h2 className="text-midnight font-inter leading-tight text-5xl">
+        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:max-h-[739px] xl:mx-auto xl:px-[120px] xl:py-[104px]">
+          <div className="xl:max-w-[1200px]">
+            <h5 className="font-inter text-secondary text-xs xl:text-sm">SUCCESS STORIES</h5>
+              <h2 className="text-midnight font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-0">
                 Legal Journeys, Real Results
               </h2>
           </div>
-          <div classNamee="max-w-[1200px] mt-[64px]">
-            <img src="/Quote.png" alt="Quote image" className="w-[64.5px] h-[52.5px] mt-[64px]" />
-            <h3 className="font-inter font-[28px] text-midnight pt-[16px] pr-[30px]">
+          <div className="mt-8 xl:max-w-[1200px] items-center xl:mt-[64px] ">
+            <img src="/Quote.png" alt="Quote image" className="w-[50px] h-[40px] mx-auto xl:w-[64.5px] xl:h-[52.5px] xl:mt-[64px]" />
+            <h3 className="font-inter text-sm text-center text-midnight mt-4 xl:text-[28px] xl:pt-[16px] xl:pr-[30px]">
               Supra Montem guided me through a complex property transaction with remarkable clarity and professionalism. 
               Their attention to detail and prompt communication made the entire process seamless. 
               I felt fully supported every step of the way.
             </h3>
-            <div className="mt-[48px] flex left gap-[16px]">
-                <img src="/Client_image.png" alt="client Image" className=" rounded-full"/>
+            <div className="mt-6 flex gap-3 px-[72px] xl:mt-[48px] xl:gap-[16px]">
+                <img src="/Client_image.png" alt="client Image" className="w-16 h-16 rounded-full xl:w-auto xl:h-auto"/>
                 <div>
-                  <h5 className="text-midnight font-inter text-[20px] font-semibold">Sir O'Kelly</h5>
-                  <p className="text-blue-bayoux font-inter text-[16px]">CEO, Venoxe Inc.</p>
+                  <h5 className="text-midnight font-inter text-base font-semibold xl:text-[20px]">Sir O'Kelly</h5>
+                  <p className="text-blue-bayoux font-inter text-sm xl:text-[16px]">CEO, Venoxe Inc.</p>
                 </div>
             </div>
-
-
           </div>
         </div>
 
         {/* Team Section */}
-        <div className="max-w-[1440px] max-h-[857.23px] px-[120px] py-[104px] mx-auto bg-midnight">
-          <div classNamee="max-w-[1200px]  ">
-            <h5 className="font-inter text-barley-white text-sm">•  MEET OUR TEAM • </h5>
-              <h2 className="text-barley-white font-inter leading-tight text-5xl mt-[15px]">
+        <div className="max-w-[375px] h-[1600px] mx-auto bg-midnight px-5 py-10 xl:max-w-[1440px] xl:max-h-[857.23px] xl:px-[120px] xl:py-[104px] xl:mx-auto">
+          <div className="xl:max-w-[1200px]">
+            <h5 className="font-inter text-barley-white text-xs xl:text-sm">•  MEET OUR TEAM • </h5>
+              <h2 className="text-barley-white font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-[15px]">
                 Meet the Experts Behind Your Legal Success
               </h2>
           </div>
-          <div className='max-w-[1200px] mt-[50px]  flex items-center justify-between mx-auto gap-[50px] '>
-            <div className="w-[360px] relative pb-[50px]" id="process-image">
-              <img src="/team1.png" alt="process image" className=" object-cover" />
+          <div className='flex flex-col gap-18 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex-row xl:items-center xl:justify-between xl:mx-auto xl:gap-[50px]'>
+            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
+              <img src="/team1.png" alt="process image" className="w-full object-cover xl:w-auto" />
               <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
                 <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-2xl font-inter mb-[9px]">Izundu Ukanwa</h3>
-                  <h4 className="text-midnight font-inter font-[16px] text-sm">CEO, Senior Attorney</h4>
+                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">Izundu Ukanwa</h3>
+                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">CEO, Senior Attorney</h4>
                 </div>
               </div>
             </div>
 
-            <div className="w-[360px] relative pb-[50px]" id="process-image">
-              <img src="/advisor.png" alt="process image" className=" object-cover" />
+            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
+              <img src="/advisor.png" alt="process image" className="w-full object-cover xl:w-auto" />
               <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
                 <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-2xl font-inter mb-[9px]">Seun Ukanwa</h3>
-                  <h4 className="text-midnight font-inter font-[16px] text-sm">Senior Legal Advisor</h4>
+                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">Seun Ukanwa</h3>
+                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">Senior Legal Advisor</h4>
                 </div>
               </div>
             </div>
 
-            <div className="w-[360px] relative pb-[50px]" id="process-image">
-              <img src="/expert.png" alt="process image" className=" object-cover" />
+            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
+              <img src="/expert.png" alt="process image" className="w-full object-cover xl:w-auto" />
               <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
                 <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-2xl font-inter mb-[9px]">James Roberts</h3>
-                  <h4 className="text-midnight font-inter font-[16px] text-sm">Litigation Expert</h4>
+                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">James Roberts</h3>
+                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">Litigation Expert</h4>
                 </div>
               </div>
             </div>
-
 
           </div>
         </div>
 
         {/* Blog Section */}
-        <div className="max-w-[1440px] px-[120px] max-h-[915.97px] py-[104px] mx-auto">
-          <div classNamee="max-w-[1200px]  ">
-            <h5 className="font-inter text-secondary text-sm mb-[11px]">•  BLOG • </h5>
-              <h2 className="text-midnight font-inter leading-tight text-5xl mt-[15px]">
+        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:px-[120px] xl:max-h-[915.97px] xl:py-[104px] xl:mx-auto">
+          <div className="xl:max-w-[1200px]">
+            <h5 className="font-inter text-secondary text-xs mb-4 xl:text-sm xl:mb-[11px]">•  BLOG • </h5>
+              <h2 className="text-midnight font-inter leading-tight text-2xl xl:text-5xl xl:mt-[15px]">
                 Insights and Updates from the Legal World
               </h2>
           </div>
-          <div className='max-w-[1200px] mt-[50px]  flex items-center justify-between mx-auto gap-[40px] '>
-            <div className="w-[360px] relative pb-[200px]" id="process-image">
-              <img src="/blog3.png" alt="process image" className=" object-cover" />
-              <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                <div className="flex flex-col items-start ">
-                  <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm text-[13px] mb-[16.68px]">From regulatory compliance to business structuring, 
+          <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex-row xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px]'>
+            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
+              <img src="/blog3.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
-                  className="inline-flex text-matisse font-inter items-center gap-3"
+                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
                 >
                   Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
+                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                 </a>
                 </div>
               </div>
             </div>
 
-            <div className="w-[360px] relative pb-[200px]" id="process-image">
-              <img src="/blog2.png" alt="process image" className=" object-cover" />
-              <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                <div className="flex flex-col items-start text-left">
-                  <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm text-[13px]  mb-[16.68px]">From regulatory compliance to business structuring, 
+            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
+              <img src="/blog2.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
-                  className="inline-flex text-matisse font-inter items-center gap-3"
+                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
                 >
                   Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
+                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                 </a>
                 </div>
               </div>
             </div>
 
-            <div className="w-[360px] relative pb-[200px]" id="process-image">
-              <img src="/blog1.png" alt="process image" className=" object-cover" />
-              <div className="absolute bottom--30 left-0 right-0  pb-[24px] pt-[16px] h-[230px]">
-                <div className="flex flex-col items-start text-left">
-                  <h3 className="text-secondary font-[14px] font-inter mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-[20px] mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter  text-sm text-[13px] mb-[16.68px]">From regulatory compliance to business structuring, 
+            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
+              <img src="/blog1.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
                 <a
                   href="#"
-                  className="inline-flex text-matisse font-inter items-center gap-3"
+                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
                 >
                   Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className=" w-[10px] h-[10px]"/>
+                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                 </a>
                 </div>
               </div>
@@ -377,13 +374,13 @@ export default function Home() {
 
           </div> 
 
-            <div className=" mt-[64px] mb-[104px] ">
+            <div className="mt-8 text-center xl:mt-[64px] xl:mb-[104px]">
                 <button
                 type="submit"
-                className="inline-flex px-[14px] py-[13.5px] bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-[18px]"
+                className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm xl:px-[14px] xl:py-[13.5px] xl:text-[18px]"
                 >
                 Load More Updates
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[32px] h-[32px]"/>
+                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
                 </button>
             </div> 
   
