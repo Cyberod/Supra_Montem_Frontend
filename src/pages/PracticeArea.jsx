@@ -14,31 +14,30 @@ export default function PracticeArea() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Breadcrumbs items={breadcrumbItems} />
-      
 
-      <section id="practice-area" className="w-full py-12 bg-aqua-haze ">
+      <div className="hidden xl:block">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
 
-        <div className="max-w-[1440px] mx-auto px-[120px] py-[104px] h-[347.58px] ">
-          <div className="text-center mb-16 px-[180px]">
-            <h5 className="font-inter text-secondary text-sm mb-3">• PRACTICE AREAS •</h5>
-            <h1 className="font-inter text-[48px] text-midnight leading-tight">
+      <section id="practice-area" className="w-full bg-aqua-haze">
+      {/* Topic Section */}
+        <div className="max-w-[375px] mx-auto px-5 mt-20 py-10 xl:mt-0 xl:max-w-[1440px] xl:mx-auto xl:px-[120px] xl:py-[104px] xl:h-[347.58px]">
+          <div className="text-center px-10 xl:mb-16 xl:px-[180px]">
+            <h5 className="font-inter text-secondary text-xs mb-4 xl:text-sm xl:mb-3">• PRACTICE AREAS •</h5>
+            <h1 className="font-inter text-2xl text-midnight leading-tight xl:text-[48px]">
               Expert Legal Services Tailored to Your Needs
             </h1>
           </div>
+        </div>
+        <div className="max-w-[375px] px-5 xl:max-w-[1440px] xl:px-[120px] bg-midnight  ">
+
+            <div className="py-10 xl:pt-[80px] xl:pb-[104px]" > <PracticeCta/></div>
 
         </div>
-        <div className="max-w-[1440px] px-[120px] bg-midnight  ">
-
-            <div className="pt-[80px] pb-[104px]" > <PracticeCta/></div>
-
-        </div>
-
+        <ReachOut />
+        <Footer />
       </section>
 
-
-        <ReachOut />
-      <Footer />
     </div>
   );
 }

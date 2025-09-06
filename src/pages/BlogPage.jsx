@@ -58,42 +58,44 @@ export default function BlogPage() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <Breadcrumbs items={breadcrumbItems} />
+      <div className="hidden xl:block">
+        <Breadcrumbs items={breadcrumbItems} />
+      </div>
       
       {/* Hero Section */}
-      <div className="max-w-[1440px] h-[341px] bg-midnight flex items-center justify-center px-[150px]">
-        <h1 className="font-inter text-[64px] text-barley-white text-center">
+      <div className="max-w-[375px] mt-20 mx-auto h-40 bg-midnight flex items-center justify-center px-5 xl:max-w-[1440px] xl:mt-0 xl:h-[341px] xl:px-[150px]">
+        <h1 className="font-inter text-lg text-barley-white text-center xl:text-[64px]">
           10 Key Questions to Ask Before Hiring a Law Firm
         </h1>
       </div>
-      <div>
-        <img src="/BlogPage1.png" alt=""  className="max-w-[1440px] h-[638px]"/>
+      <div className="max-w-[375px] mx-auto xl:max-w-full">
+        <img src="/BlogPage1.png" alt="" className="w-full h-48 object-cover xl:max-w-[1440px] xl:h-[638px] xl:object-fill"/>
       </div>
 
       {/* Content Section */}
-      <div className="mx-auto px-[120px] py-[48px]">
+      <div className="max-w-[375px] mx-auto px-5 py-8 xl:max-w-full xl:mx-auto xl:px-[120px] xl:py-[48px]">
 
         <div className="space-y-6">
-          <p className="font-inter text-[18px] text-midnight leading-relaxed">
+          <p className="font-inter text-sm text-midnight leading-relaxed xl:text-[18px]">
             Choosing the right law firm is crucial for ensuring legal success, whether for personal matters or business needs. A competent law firm can help you navigate legal complexities, protect your rights, and achieve favorable outcomes. Before hiring, asking the right questions can help you determine if the firm is the right fit for you.
           </p>
 
           {Array.from({ length: 10 }).map((_, index) => (
-            <div key={index} className="mt-8">
-              <h3 className="font-inter text-[24px] text-midnight font-semibold mb-4">
+            <div key={index} className="mt-6 xl:mt-8">
+              <h3 className="font-inter text-lg text-midnight font-semibold mb-3 xl:text-[24px] xl:mb-4">
                 {index + 1}. {questions[index].title}
               </h3>
-              <p className="font-inter text-[18px] text-midnight leading-relaxed">
+              <p className="font-inter text-sm text-midnight leading-relaxed xl:text-[18px]">
                 {questions[index].content}
               </p>
             </div>
           ))}
 
-          <div className="mt-8">
-            <h3 className="font-inter text-[24px] text-midnight font-semibold mb-4">
+          <div className="mt-6 xl:mt-8">
+            <h3 className="font-inter text-lg text-midnight font-semibold mb-3 xl:text-[24px] xl:mb-4">
               Final Thoughts
             </h3>
-            <p className="font-inter text-[18px] text-midnight leading-relaxed">
+            <p className="font-inter text-sm text-midnight leading-relaxed xl:text-[18px]">
               Hiring the right law firm requires careful consideration. By asking these key questions, you can make an informed decision and choose a firm that aligns with your legal needs, budget, and expectations. Take your time, compare options, and ensure you feel confident in your choice before moving forward.
             </p>
           </div>
@@ -102,7 +104,6 @@ export default function BlogPage() {
       </div>
     {/* Reach Out Section */}
     <ReachOut />
-
 
       {/* Footer */}
       <Footer />

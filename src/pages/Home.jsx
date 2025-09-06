@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      <section id="Home" className=" w-full py-12 ">
+      <section id="Home" className=" w-full ">
         {/* Hero Section */}
         <div className="max-w-[375px] mx-auto bg-barley-white xl:max-w-[1440px] xl:h-[675px] xl:px-[120px] xl:flex xl:gap-10">
           {/* Mission statement */}
@@ -73,9 +73,9 @@ export default function Home() {
             <h5 className="font-inter text-secondary text-sm text-[12px] text-left xl:text-[14px]">
               • PRACTICE AREAS • 
             </h5>
-            <h2 className="font-inter text-barley-white text-2xl text-left mt-4 xl:text-[48px] xl:mt-0">Expert Legal Services Tailored to Your Needs</h2>
+            <h2 className="font-inter text-barley-white text-2xl text-left mt-4 xl:text-[40px] xl:mt-0">Expert Legal Services Tailored to Your Needs</h2>
           </div>
-          <div className="mt-8 xl:pt-[80px] xl:pb-[104px]" > <PracticeCta/></div>
+          <div className="mt-4 xl:pt-[60px] xl:pb-[104px]" > <PracticeCta/></div>
         </div>
 
         {/* Statistics Section */}
@@ -245,13 +245,13 @@ export default function Home() {
               </h2>
           </div>
           <div className="mt-8 xl:max-w-[1200px] items-center xl:mt-[64px] ">
-            <img src="/Quote.png" alt="Quote image" className="w-[50px] h-[40px] mx-auto xl:w-[64.5px] xl:h-[52.5px] xl:mt-[64px]" />
-            <h3 className="font-inter text-sm text-center text-midnight mt-4 xl:text-[28px] xl:pt-[16px] xl:pr-[30px]">
+            <img src="/Quote.png" alt="Quote image" className="w-[50px] h-[40px] mx-auto xl:mx-0  xl:w-[64.5px] xl:h-[52.5px] xl:mt-[64px]" />
+            <h3 className="font-inter text-sm text-center xl:text-left text-midnight mt-4 xl:text-[28px] xl:pt-[16px] xl:pr-[30px]">
               Supra Montem guided me through a complex property transaction with remarkable clarity and professionalism. 
               Their attention to detail and prompt communication made the entire process seamless. 
               I felt fully supported every step of the way.
             </h3>
-            <div className="mt-6 flex gap-3 px-[72px] xl:mt-[48px] xl:gap-[16px]">
+            <div className="mt-6 flex gap-3 px-[72px] xl:px-0 xl:mt-[48px] xl:gap-[16px]">
                 <img src="/Client_image.png" alt="client Image" className="w-16 h-16 rounded-full xl:w-auto xl:h-auto"/>
                 <div>
                   <h5 className="text-midnight font-inter text-base font-semibold xl:text-[20px]">Sir O'Kelly</h5>
@@ -262,7 +262,7 @@ export default function Home() {
         </div>
 
         {/* Team Section */}
-        <div className="max-w-[375px] h-[1600px] mx-auto bg-midnight px-5 py-10 xl:max-w-[1440px] xl:max-h-[857.23px] xl:px-[120px] xl:py-[104px] xl:mx-auto">
+        <div className="max-w-[375px] h-[1600px] mx-auto bg-midnight px-5 py-10 xl:max-w-[1440px] xl:max-h-[780.23px] xl:px-[120px] xl:py-[104px] xl:mx-auto">
           <div className="xl:max-w-[1200px]">
             <h5 className="font-inter text-barley-white text-xs xl:text-sm">•  MEET OUR TEAM • </h5>
               <h2 className="text-barley-white font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-[15px]">
@@ -314,10 +314,10 @@ export default function Home() {
           <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex-row xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px]'>
             <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
               <img src="/blog3.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
                   <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
@@ -334,10 +334,10 @@ export default function Home() {
 
             <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
               <img src="/blog2.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5  xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h3 className="text-secondary text-base font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
                   <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
@@ -354,10 +354,10 @@ export default function Home() {
 
             <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
               <img src="/blog1.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-4 xl:bottom--30 xl:pb-[24px] xl:pt-[16px] xl:h-[230px] xl:bg-transparent">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
                 <div className="flex flex-col items-start">
-                  <h3 className="text-secondary text-xs font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
+                  <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
                   <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
                     this piece unpacks key legal highlights from the UBS event ...
                   </h4>
@@ -387,12 +387,14 @@ export default function Home() {
         </div>
 
 
-      </section>
         {/* Reach out section */}
         <ReachOut />
 
         {/* Footer Section */}
         <Footer />
+
+      </section>
+
     </div>
     
   );
