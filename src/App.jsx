@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import WhatsappFloat from './components/WhatsappFloat';
 import Home from './pages/Home'
 import PracticeArea from './pages/PracticeArea'
 import ArbitrationADR from './pages/ArbitrationADR'
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
           {/* Add more routes as needed */}
         </Routes>
+        <WhatsappFloat />
       </div>
     </Router>
   );
