@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-      <div className="max-w-[375px] mx-auto px-5 py-10 bg-midnight relative xl:max-w-[1440px] xl:h-[685.14px] xl:px-[120px] xl:pb-[28px] xl:pt-[64px]">
+      <div className="max-w-[375px] h-[780px] mx-auto px-5 py-10 bg-midnight relative xl:max-w-[1440px] xl:h-[685.14px] xl:px-[120px] xl:pb-[28px] xl:pt-[64px]">
         <div className="flex flex-col gap-8 text-white xl:max-w-[1200px] xl:px-[40px] xl:flex xl:flex-row xl:space-x-0">
             {/* Logo */}
             <div className="flex flex-col">
@@ -84,15 +84,21 @@ export default function Footer() {
         </div>
 
         {/* Footer Montem Scroller */}
-{/*         <div className="w-[335px] h-16 overflow-hidden absolute bottom-0 left-1/2 transform -translate-x-1/2 xl:max-w-[1000px] xl:h-[94px] xl:inline-flex xl:gap-200 xl:pt-[87px] xl:pb-[88.57] xl:mb-[28px] xl:static xl:left-auto xl:transform-none xl:translate-x-0">
-            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
-            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
-        </div> */}
-{/*         <div className=" max-w-[1000px] overflow-hidden inline-flex gap-200  absolute pt-[87px] pb-[88.57]  mb-[28px]">
-            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee max-w-[1833px] h-[94px]"/>
-            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee max-w-[1833px] h-[94px]"/>
 
-        </div> */}
+        <div className=" max-w-[335px]  px-5 mt-10 gap-20 xl:max-w-[1000px] overflow-hidden inline-flex xl:gap-200 xl:mt-0  xl:px-0 absolute xl:pt-[87px] xl:pb-[88.57]  xl:mb-[28px]">
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 max-w-[1248px] h-16 xl:max-w-[1833px] xl:h-[94px]"/>
+            {/* Fade overlay for left side */}
+            <div className="absolute left-0 top-0 h-full w-8 bg-gradient-to-r from-midnight to-transparent pointer-events-none z-10"></div>
+
+        </div>
+
 
       </div>
 );}
