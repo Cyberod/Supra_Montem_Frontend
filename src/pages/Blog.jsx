@@ -32,7 +32,7 @@ export default function Blog() {
                         to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
                         className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
                         >
-                        Read More
+                        Read Full Story
                         <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                         </Link>
                     </div>
@@ -50,7 +50,7 @@ export default function Blog() {
                         href="#"
                         className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
                         >
-                        Read More
+                        Read Full Story
                         <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                         </a>
                     </div>
@@ -68,7 +68,7 @@ export default function Blog() {
                         href="#"
                         className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
                         >
-                        Read More
+                        Read Full Story
                         <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
                         </a>
                     </div>
@@ -81,7 +81,7 @@ export default function Blog() {
                 type="submit"
                 className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm xl:px-[14px] xl:py-[13.5px] xl:text-[18px]"
                 >
-                Load more
+                Load More Updates
                 <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
                 </button>
             </div> 
