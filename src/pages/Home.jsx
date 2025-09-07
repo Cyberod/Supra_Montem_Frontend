@@ -23,10 +23,10 @@ export default function Home() {
             </p>
             <a
               href="#consultation"
-              className="inline-flex mt-6 px-3 py-2 xl:px-4 xl:py-3 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-base text-[14px] xl:text-[16px] xl:ml-0 xl:mt-2"
+              className="inline-flex mt-6 px-3 py-2 xl:px-4 xl:py-3 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-2 text-base text-[14px] xl:gap-3 xl:text-[16px] xl:ml-0 xl:mt-2"
             >
               Book a free consultation
-              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]"/>
             </a>
           </div>
 
@@ -113,10 +113,10 @@ export default function Home() {
                 <h1 className="font-inter text-2xl text-midnight xl:text-[48px]">Explore Our Process</h1>
                 <a
                   href="#consultation"
-                  className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:px-4 xl:py-3 xl:text-base"
+                  className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-2 text-sm w-fit xl:gap-3 xl:px-4 xl:py-3 xl:text-base"
                 >
                   Book a free consultation
-                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
+                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]"/>
                 </a>
               </div>
             </div>
