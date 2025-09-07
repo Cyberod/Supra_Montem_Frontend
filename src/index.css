@@ -84,9 +84,18 @@ hr {
     @apply transition-all duration-900;
     filter: brightness(0) saturate(100%) invert(89%) sepia(11%) saturate(267%) hue-rotate(168deg) brightness(96%) contrast(91%);
   }
+
+/*   .practice-cta img {
+    @apply transition-all duration-900;
+    filter: brightness(0) saturate(200%) invert(200%) sepia(11%) saturate(267%) hue-rotate(168deg) brightness(96%) contrast(20%);
+  } */
   .practice-cta:hover img {
     filter: brightness(0) saturate(500%) invert(40%) sepia(83%) saturate(800%) hue-rotate(1deg) brightness(130%) contrast(60%);
   }
+
+/*   .practice-cta:hover img {
+    filter: brightness(0) saturate(0%) invert(40%) sepia(83%) saturate(800%) hue-rotate(1deg) brightness(130%) contrast(80%);
+  } */
 }
 
 

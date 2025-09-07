@@ -154,7 +154,9 @@ export default function AppointmentForm() {
               className="inline-flex px-4 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:px-8 xl:py-3 xl:text-base"
             >
               Confirm Your Appointment
-              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
+            <div className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]">
+              <img src="/arrow.svg" alt="arrow icon" className="w-[10px] h-[10px] xl:w-[20px] xl:h-[20px] xl:mt-1 xl:ml-1"/>
+            </div>          
             </button>
           </div>
         </form>

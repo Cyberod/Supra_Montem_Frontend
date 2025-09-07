@@ -5,55 +5,55 @@ export default function PracticeCta() {
     <div className="  bg-midnight">
         <div className="flex flex-col gap-8 xl:flex-row xl:justify-between py-5 xl:gap-20 xl:px-[180px] xl:max-w-[1200px]" id="practice-cta">
             <ul className="text-barley-white text-left">
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <Link to="/practice-areas/arbitration-adr" className="practice-cta">
                 <span>Arbitration ADR</span>
-                <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
+                <img src="/arrow.svg" alt="cta arrow" className="w-[10px] h-[10px] " />
                 </Link>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/competition" className="practice-cta">
                 <span>Competition</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Corporate</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Derivatives</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Environmental</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Intellectual Property</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Investigations</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Litigations</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/corporate" className="practice-cta">
                 <span>Tax</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
@@ -61,43 +61,43 @@ export default function PracticeCta() {
             </li>
             </ul>
             <ul className="text-barley-white text-left">
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/employment" className="practice-cta">
                 <span>Capital Markets</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>Compliance ESG</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/real-estate" className="practice-cta">
                 <span>Data Protection</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>Employment</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>Foreign Investments</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>Insolvency</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>Lendings</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
@@ -109,7 +109,7 @@ export default function PracticeCta() {
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />
                 </a>
             </li>
-            <li className="pt-8 xl:pt-[48px]">
+            <li className="pt-8 xl:pt-[48px] font-inter">
                 <a href="/litigation" className="practice-cta">
                 <span>White Collar</span>
                 <img src="/arrow.png" alt="cta arrow" className="w-4 h-4" />

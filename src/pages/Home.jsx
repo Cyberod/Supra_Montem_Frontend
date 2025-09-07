@@ -3,6 +3,7 @@ import ReachOut from '../components/ReachOut';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PracticeCta from '../components/PracticeCta';
+import AppointmentButton from '../components/AppointmentButton';
 
 export default function Home() {
   return (
@@ -21,13 +22,7 @@ export default function Home() {
               At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
-            <a
-              href="#consultation"
-              className="inline-flex mt-6 px-3 py-2 xl:px-4 xl:py-3 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-2 text-base text-[14px] xl:gap-3 xl:text-[16px] xl:ml-0 xl:mt-2"
-            >
-              Book a free consultation
-              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]"/>
-            </a>
+            <AppointmentButton/>
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
@@ -111,13 +106,7 @@ export default function Home() {
               <h5 className="text-secondary font-inter text-xs xl:text-sm">• Our Process •</h5>
               <div className="flex flex-col gap-6 mt-4 xl:flex-row xl:justify-between xl:items-center xl:mt-0" id='Explore-Process'>
                 <h1 className="font-inter text-2xl text-midnight xl:text-[48px]">Explore Our Process</h1>
-                <a
-                  href="#consultation"
-                  className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-2 text-sm w-fit xl:gap-3 xl:px-4 xl:py-3 xl:text-base"
-                >
-                  Book a free consultation
-                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]"/>
-                </a>
+              <AppointmentButton/>
               </div>
             </div>
             <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px] xl:flex-row'>
@@ -186,7 +175,9 @@ export default function Home() {
                 className="inline-flex mt-6 px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:mt-5 xl:px-4 xl:py-3 xl:text-base"
               >
                 Get started now
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
+              <div className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]">
+                <img src="/arrow.svg" alt="arrow icon" className="w-[10px] h-[10px] ml-1 mt-1 xl:w-[20px] xl:h-[20px] xl:mt-1 xl:ml-1"/>
+              </div>            
               </a>
             </div>
 
@@ -314,47 +305,7 @@ export default function Home() {
           <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex-row xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px]'>
             <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
               <img src="/blog3.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
-                <div className="flex flex-col items-start">
-                  <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">Event</h3>
-                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
-                    this piece unpacks key legal highlights from the UBS event ...
-                  </h4>
-                <a
-                  href="#"
-                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
-                >
-                  Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
-                </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
-              <img src="/blog2.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-5  xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
-                <div className="flex flex-col items-start">
-                  <h3 className="text-secondary text-base font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
-                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
-                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
-                    this piece unpacks key legal highlights from the UBS event ...
-                  </h4>
-                <a
-                  href="#"
-                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
-                >
-                  Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
-                </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
-              <img src="/blog1.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
-              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:bottom--30 xl:p-0 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
                 <div className="flex flex-col items-start">
                   <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
                   <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
@@ -366,7 +317,47 @@ export default function Home() {
                   className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
                 >
                   Read Full Story
-                  <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
+                  <img src="/Vector.svg" alt="Vector icon" className="w-[10px] h-[10px]"/>
+                </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
+              <img src="/blog2.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:p-0 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-secondary text-base font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
+                    this piece unpacks key legal highlights from the UBS event ...
+                  </h4>
+                <a
+                  href="#"
+                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
+                >
+                  Read Full Story
+                  <img src="/Vector.svg" alt="Vector icon" className="w-[10px] h-[10px]"/>
+                </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="w-[335px] h-[494.95px] relative mx-auto xl:w-[360px] xl:mx-0 xl:pb-[200px]" id="process-image">
+              <img src="/blog1.png" alt="process image" className="w-[335px] h-[312px] object-cover xl:h-auto" />
+              <div className="absolute bottom-0 left-0 right-0 bg-white p-5 xl:p-0 xl:bottom--30 xl:pb-[24px] xl:pt-[28px] xl:h-[230px] xl:bg-transparent">
+                <div className="flex flex-col items-start">
+                  <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
+                  <h4 className="text-midnight font-inter font-medium text-base mb-2 xl:text-[20px] xl:mb-[11.09px]">Umuahia Business Summit: Legal Insights and Impact</h4>
+                  <h4 className="text-midnight font-inter text-sm mb-3 xl:text-[13px] xl:mb-[16.68px]">From regulatory compliance to business structuring, 
+                    this piece unpacks key legal highlights from the UBS event ...
+                  </h4>
+                <a
+                  href="#"
+                  className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3"
+                >
+                  Read Full Story
+                  <img src="/Vector.svg" alt="Vector icon" className="w-[10px] h-[10px]"/>
                 </a>
                 </div>
               </div>
@@ -380,8 +371,10 @@ export default function Home() {
                 className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm xl:px-[14px] xl:py-[13.5px] xl:text-[18px]"
                 >
                 Load More Updates
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
-                </button>
+            <div className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]">
+              <img src="/arrow.svg" alt="arrow icon" className="w-[10px] h-[10px] ml-1 mt-1 xl:w-[20px] xl:h-[20px] xl:mt-1 xl:ml-1"/>
+            </div>              
+            </button>
             </div> 
   
         </div>
