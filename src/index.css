@@ -19,6 +19,14 @@
   --color-grey-2: #667185;
   --color-grey-3: #98A2B3;
 
+  --breakpoint-xs: 375px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+
 
 
   --color-background-primary: #FFF4CE;
@@ -64,10 +72,16 @@ hr {
 
 @layer components {
   .container {
-    @apply max-w-[1440px] px-[120px];
+    @apply w-full xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30;
+  }
+
+  .text-h-1 {
+    @apply  font-inter font-normal leading-[22.4px] md:leading-[28.8px] 
   }
 
 }
+
+
 
 @layer components{
   .practice-cta {
