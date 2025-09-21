@@ -72,33 +72,46 @@ hr {
 
 @layer components {
   .container {
-    @apply w-full xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30;
+    @apply mx-auto xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30;
   }
 
   .text-h-1 {
-    @apply  font-inter font-normal leading-[22.4px] md:leading-[28.8px] 
+    @apply  font-inter font-normal leading-[22.4px] md:leading-[28.8px] ;
+  }
+
+  .text-48 {
+    @apply text-[24px] sm:text-[30px] md:text-[38px] lg:text-[42px] 2xl:text-[48px]
+    leading-[31.2px] sm:leading-[40px] md:leading-[50px] lg:leading-[60px] 2xl:leading-[62.4px] 2xl:tracking-[1.92px] tracking-[0.96px] ;
   }
 
 }
 
 
 
-@layer components{
+@layer components {
   .practice-cta {
-    @apply relative flex items-center 
-    justify-between w-[300px] text-[18px] hover:text-secondary
-    transition cursor-pointer after:content-[''] after:absolute after:left-0 
-    after:top-[calc(100%+24px)] after:w-0.5 after:h-0.5 
-    after:bg-current after:rounded-full 
-    hover:after:w-full hover:after:h-[0.5px] 
-    hover:after:rounded-none hover:after:text-barley-white after:transition-all 
-    after:duration-900 ;
+    @apply relative flex items-center justify-between w-full transition cursor-pointer;
   }
+
+  .practice-cta:hover {
+    @apply text-secondary ;
+  }
+
+  .practice-cta::after {
+    content: '';
+    @apply absolute left-0 top-full mt-2 w-0.5 h-0.5 bg-current rounded-none transition-all duration-900;
+  }
+
+  .practice-cta:hover::after {
+    @apply w-full h-[0.2px] rounded-none text-barley-white;
+  }
+
   .practice-cta img {
-    @apply transition-all duration-900;
-    filter: brightness(0) saturate(100%) invert(89%) sepia(11%) saturate(267%) hue-rotate(168deg) brightness(96%) contrast(91%);
+    @apply transition-all duration-300 ;
   }
+
   .practice-cta:hover img {
+    @apply  rotate-45;
     filter: brightness(0) saturate(500%) invert(40%) sepia(83%) saturate(800%) hue-rotate(1deg) brightness(130%) contrast(60%);
   }
 }

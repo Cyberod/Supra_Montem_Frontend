@@ -62,7 +62,7 @@ export default function Home() {
         {/* Pitch statement */}
         <div className="w-full mx-auto xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30">
           <div className="lg:mx-[30px] py-8 md:py-14 xl:py-20 2xl:py-[104px]  text-center ">
-            <h2 className="font-inter text-[24px] sm:text-[30px] md:text-[38px] lg:text-[42px] 2xl:text-[48px]  font-normal text-midnight leading-[31.2px] sm:leading-[40px] md:leading-[50px] lg:leading-[60px] 2xl:leading-[62.4px] 2xl:tracking-[1.92px] tracking-[0.96px]  ">
+            <h2 className="font-inter text-48  font-normal text-midnight ">
               At Supra Montem Attorneys, we merge deep legal insight, strategic focus, and a 
               Client-first ethos to deliver truly distinguished legal solutions. Rooted 
               in integrity and driven by results, we stand with you-every step, every matter.
@@ -71,14 +71,14 @@ export default function Home() {
         </div>
 
         {/* Practice Areas Section */}
-        <div className="max-w-[375px] mx-auto bg-midnight pt-8 px-5 xl:max-w-[1440px] xl:px-[120px] xl:py-0">
-          <div className="xl:pt-[104px] xl:max-w[1200px] xl:px-[180px]">
-            <h5 className="font-inter text-secondary text-sm text-[12px] text-left xl:text-[14px]">
+        <div className="max-w-full container bg-midnight py-8 md:py-14 xl:py-20 2xl:py-[104px] ">
+          <div className=" xs:mx-0 lg:mx-[180px]">
+            <h5 className="font-inter text-secondary text-sm text-left leading-[14px] tracking-[0.56px] mb-[15px] font-medium ">
               • PRACTICE AREAS • 
             </h5>
-            <h2 className="font-inter text-barley-white text-2xl text-left mt-4 xl:text-[40px] xl:mt-0">Expert Legal Services Tailored to Your Needs</h2>
+            <h2 className="font-inter text-barley-white lg:text-[35px] xl:text-[40px] 2xl:text-[48px] font-medium lg:font-normal  text-48 text-left tracking-[0.96px]">Expert Legal Services Tailored to Your Needs</h2>
           </div>
-          <div className="mt-4 xl:pt-[60px] xl:pb-[104px]" > <PracticeCta/></div>
+          <div className="" > <PracticeCta/></div>
         </div>
 
         {/* Statistics Section */}
