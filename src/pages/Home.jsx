@@ -34,7 +34,7 @@ export default function Home() {
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
-          <div className="max-w-full xs:right-2 sm:right-5 md:right-10 left-5 lg:right-155 lg:left-15 xl:right-170 2xl:right-200 xl:left-25 lg:h-[94px] h-16  mt-9 sm:mt-16 md:mt-18 lg:mt-145 xl:mt-145 mx-5 sm:mx-7 xl:inline-flex xl:gap-80  lg:px-0 xl:mx-0  overflow-hidden  absolute">            
+          <div className="max-w-full xs:right-2 sm:right-5 md:right-10 left-5 lg:right-155 lg:left-15 xl:right-170 2xl:right-200 xl:left-25 2xl:left-30 lg:h-[94px] h-16  mt-9 sm:mt-16 md:mt-18 lg:mt-145 xl:mt-145 mx-5 sm:mx-7 xl:inline-flex xl:gap-80  lg:px-0 xl:mx-0  overflow-hidden  absolute">            
             <div className="inline-flex gap-80 xl:contents">
               <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 lg:h-[94px]"/>
               <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 lg:h-[94px]"/>
@@ -61,8 +61,8 @@ export default function Home() {
 
         {/* Pitch statement */}
         <div className="w-full mx-auto xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30">
-          <div className="mx-20 pt-8 md:pt-14  pb-8 xl:pt-20 text-center xl:pb-20">
-            <h2 className="font-inter text-[22px] md:text-[30px] lg:text-[38px] xl:text-[42px] font-normal text-midnight leading-tight ">
+          <div className="lg:mx-[30px] py-8 md:py-14 xl:py-20 2xl:py-[104px]  text-center ">
+            <h2 className="font-inter text-[24px] sm:text-[30px] md:text-[38px] lg:text-[42px] 2xl:text-[48px]  font-normal text-midnight leading-[31.2px] sm:leading-[40px] md:leading-[50px] lg:leading-[60px] 2xl:leading-[62.4px] 2xl:tracking-[1.92px] tracking-[0.96px]  ">
               At Supra Montem Attorneys, we merge deep legal insight, strategic focus, and a 
               Client-first ethos to deliver truly distinguished legal solutions. Rooted 
               in integrity and driven by results, we stand with you-every step, every matter.
