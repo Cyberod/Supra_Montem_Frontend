@@ -88,6 +88,19 @@ hr {
     @apply font-inter text-secondary text-sm text-left leading-[14px] tracking-[0.56px] mb-[15px] font-medium 
   }
 
+  .action-tag {
+    @apply bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3
+  }
+
+.action-header {
+  @apply text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2
+
+}
+
+.action-text {
+  @apply text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]
+}
+
 }
 
 

@@ -117,11 +117,11 @@ export default function Home() {
                 <img src="/Consultation.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
+                    <div className="action-tag">
                       01
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Consultation</h3>
-                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Providing legal advice tailored to your specific needs</p>
+                    <h3 className="action-header">Consultation</h3>
+                    <p className="action-text">Providing legal advice tailored to your specific needs</p>
                   </div>
                 </div>
               </div>
@@ -130,11 +130,11 @@ export default function Home() {
                 <img src="/Strategy.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
+                    <div className="action-tag">
                       02
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Strategy & Planning</h3>
-                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Creating a tailored legal strategy to meet your goals</p>
+                    <h3 className="action-header">Strategy & Planning</h3>
+                    <p className="action-text">Creating a tailored legal strategy to meet your goals</p>
                   </div>
                 </div>
               </div>
@@ -143,11 +143,11 @@ export default function Home() {
                 <img src="/Execution.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
+                    <div className="action-tag">
                       03
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Execution</h3>
-                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Executing the legal strategy for resolution of your legal matters</p>
+                    <h3 className="action-header">Execution</h3>
+                    <p className="action-text">Executing the legal strategy for resolution of your legal matters</p>
                   </div>
                 </div>
               </div>
@@ -159,68 +159,63 @@ export default function Home() {
 
         
         {/* Legal Automation Section */}
-        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:mx-auto xl:px-[120px] xl:py-0">
-          <div className="flex flex-col gap-8 xl:max-w-[1200px] xl:flex-row xl:gap-8 xl:relative">
-            <div className="xl:flex-1 xl:pt-[120px] xl:sticky xl:top-[0px] xl:self-start xl:pb-[120px]">
-              <h5 className="font-inter text-secondary text-xs text-left xl:text-sm">
+        <div className="max-w-full container">
+          <div className="flex flex-col gap-8 lg:flex-row  lg:relative">
+            <div className="lg:flex-1 lg:sticky lg:top-[0px] lg:self-start pt-10 sm:pt-15 md:pt-20 lg:pt-25 xl:pt-30">
+              <h5 className="section-name">
                 • LEGAL AUTOMATION • 
               </h5>
-              <h2 className="text-midnight font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-0">
-                Fast. Reliable. Lawyer-Crafted Documents at Your Finger Tips
+              <h2 className="text-midnight font-inter font-medium lg:font-normal text-[24px] sm:text-[30px] md:text-[38px] lg:text-[42px] 2xl:text-[48px] mt-[10px]  ">
+                Fast. Reliable. Lawyer-Crafted Documents at Your Fingertips
               </h2>
-              <h5 className="font-inter text-midnight text-sm mt-4 xl:text-[16px] xl:mt-5">
+              <h5 className="font-inter text-midnight text-base mt-5 ">
                 From Quit Notices to Tenancy Agreements, NDAs, and more. 
                 Generate legally valid documents in minutes. Just fill in your details, make payment, 
                 and receive your document signed, stamped, and delivered to your email.
               </h5>
-              <a
-                href="#consultation"
-                className="inline-flex mt-6 px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:mt-5 xl:px-4 xl:py-3 xl:text-base"
-              >
-                Get started now
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px]"/>
-              </a>
+              <ActionButton label="Get started now" href='#' className='mt-5 mb-8' />
             </div>
 
-            <div className="flex flex-col gap-8 xl:flex-1 xl:flex xl:flex-col xl:gap-[68.5px] xl:pt-[120px] xl:pb-[120px]">
+            <div className="flex flex-col gap-8 lg:flex-1 lg:flex lg:flex-col lg:gap-[68.5px] lg:py-30">
+
               <div className="relative">
-                <img src="/details.png" alt="Details Image" className="w-full h-[405px] object-cover xl:hidden" />
-                <img src="/justice_image1.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[405px]" />
-                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-500  xl:transform-none xl:translate-x-0">
-                  <div className="flex flex-col items-start text-left p-[15px]">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                <img src="/details.png" alt="Details Image" className="w-full h-auto object-cover lg:hidden" />
+                <img src="/justice_image1.png" alt="Justice Image" className="hidden lg:block lg:w-full h-auto" />
+                <div className="absolute top-5 left-5 right-5 xl:top-8 lg:left-8 lg:right-40 xl:right-60 h-auto bg-midnight ">
+                  <div className="flex flex-col items-start text-left p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
+                    <div className="action-tag">
                       <img src="/justice_icon1.svg" alt="justice Icon" />
                     </div>
-                    <h3 className="text-barley-white font-inter text-xl mb-3">Input your Details</h3>
-                    <p className="text-barley-white font-inter text-sm">Enter the information needed to personalize your legal document quickly and securely.</p>
+                    <h3 className="action-header">Input your Details</h3>
+                    <p className="action-text">Enter the information needed to personalize your legal document quickly and securely.</p>
                   </div>
                 </div>
               </div>
 
               <div className="relative">
-                <img src="/payment.png" alt="Payment Image" className="w-full h-[405px] object-cover xl:hidden" />
-                <img src="/justice_image2.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[404px]" />
-                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-300  xl:transform-none xl:translate-x-0">
-                  <div className="flex flex-col items-start text-left p-[15px]">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                <img src="/payment.png" alt="Payment Image" className="w-full h-auto object-cover lg:hidden" />
+                <img src="/justice_image2.png" alt="Justice Image" className="hidden lg:block lg:w-full h-auto" />
+                <div className="absolute top-5 left-5 right-5 lg:top-8 lg:left-8 lg:right-40 xl:right-60 h-auto bg-midnight ">
+                  <div className="flex flex-col items-start text-left p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
+                    <div className="action-tag">
                       <img src="/justice_icon2.svg" alt="justice Icon" />
                     </div>
-                    <h3 className="text-barley-white font-inter text-xl mb-3">Make Payment</h3>
-                    <p className="text-barley-white font-inter text-sm">Complete payment via our secure platform to initiate processing. Your data remains protected at all times</p>
+                    <h3 className="action-header">Make Payment</h3>
+                    <p className="action-text">Complete payment via our secure platform to initiate processing. Your data remains protected at all times</p>
                   </div>
                 </div>
               </div>
 
               <div className="relative">
-                <img src="/document.png" alt="Document Image" className="w-full h-[405px] object-cover xl:hidden" />
-                <img src="/justice_image3.png" alt="Justice Image" className="hidden xl:block xl:w-[563px] xl:h-[405px]" />
-                <div className="absolute top-5 left-1/2 transform -translate-x-1/2 bg-midnight w-[303px] h-[217px] xl:absolute  xl:left-7 xl:right-5 xl:bg-midnight xl:w-[250px] xl:h-[200px] xl:bottom-100  xl:transform-none xl:translate-x-0">
-                  <div className="flex flex-col items-start text-left p-[15px]">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                <img src="/document.png" alt="Document Image" className="w-full h-auto object-cover lg:hidden" />
+                <img src="/justice_image3.png" alt="Justice Image" className="hidden lg:block lg:w-full h-auto" />
+                <div className="absolute top-5 left-5 right-5 lg:top-8 lg:left-8 lg:right-40 xl:right-60 h-auto bg-midnight">
+                  <div className="flex flex-col items-start text-left p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
+                    <div className="action-tag">
                       <img src="/justice_icon3.svg" alt="justice Icon" />
                     </div>
-                    <h3 className="text-barley-white font-inter text-xl mb-3">Receive your Document</h3>
-                    <p className="text-barley-white font-inter text-[13px]">Your document will be generated, signed, sealed, and delivered straight to your email, ready to use.</p>
+                    <h3 className="action-header">Receive your Document</h3>
+                    <p className="action-text">Your document will be generated, signed, sealed, and delivered straight to your email, ready to use.</p>
                   </div>
                 </div>
               </div>
