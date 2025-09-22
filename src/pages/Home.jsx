@@ -3,6 +3,7 @@ import ReachOut from '../components/ReachOut';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PracticeCta from '../components/PracticeCta';
+import ActionButton from '../components/ActionButton';
 
 export default function Home() {
   return (
@@ -21,16 +22,8 @@ export default function Home() {
               At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
-            <a
-              href="#consultation"
-              className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0"
-            >
-              Book a free consultation
-            <div  className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform ">
-              <img src="/arrow.svg" alt="arrow icon" className="bg-secondary  w-[10px] h-[10px] stroke-[1.5px]"/>
+            <ActionButton label="Book a free Consultation" href="" className='' />
 
-            </div>
-            </a>
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
@@ -73,7 +66,7 @@ export default function Home() {
         {/* Practice Areas Section */}
         <div className="max-w-full container bg-midnight py-8 md:py-14 xl:py-20 2xl:py-[104px] ">
           <div className=" xs:mx-0 lg:mx-[180px]">
-            <h5 className="font-inter text-secondary text-sm text-left leading-[14px] tracking-[0.56px] mb-[15px] font-medium ">
+            <h5 className="section-name">
               • PRACTICE AREAS • 
             </h5>
             <h2 className="font-inter text-barley-white lg:text-[35px] xl:text-[40px] 2xl:text-[48px] font-medium lg:font-normal  text-48 text-left tracking-[0.96px]">Expert Legal Services Tailored to Your Needs</h2>
@@ -82,83 +75,79 @@ export default function Home() {
         </div>
 
         {/* Statistics Section */}
-        <div className="max-w-[375px] mx-auto bg-aqua-haze px-[50px] xl:max-w-[1440px] xl:px-[120px]">
-          <div className="py-[50px] flex flex-col gap-17 text-center xl:pt-[136px] xl:pb-[136px] xl:pl-[104px] xl:pr-[104px] xl:flex-row xl:justify-between xl:gap-8">
-            <div className="xl:flex-1">
+        <div className="max-w-full container bg-aqua-haze">
+          <div className="py-[40px] flex flex-col gap-17 tems-center  lg:py-[104px] mx-[50px] lg:mx-[136px] lg:flex-row lg:justify-between lg:gap-12">
+
+            <div className="xl:flex-1 text-center lg:text-left">
               <CountUp target={20} suffix="+" duration={2500} />
-              <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Years of Experience</h6>
-              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">We've handled cases across 
+              <h6 className="text-lg text-midnight font-inter font-semibold mt-3 xl:text-[20px]">Years of Combined Experience</h6>
+              <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">We've handled cases across 
                 diverse areas, securing justice for our clients</p>
             </div>
 
-            <div className="xl:flex-1">
-              <CountUp target={99.7} suffix="%" decimals={1} duration={2500} />
+            <div className="xl:flex-1 text-center lg:text-left">
+              <CountUp target={99.9} suffix="%" decimals={1} duration={2500} />
               <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Success Rate</h6>
-              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">Our cases result to favourable 
+              <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">Our cases result to favourable 
                 outcomes for 99% of our clients.</p>
             </div>
 
-            <div className="xl:flex-1">
+            <div className="xl:flex-1 text-center lg:text-left">
               <CountUp target={1.5} suffix="K" decimals={1} duration={2500} />
               <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">clients Served</h6>
-              <p className="text-base text-blue-bayoux font-inter mt-4 xl:text-[16px]">We've served over 100 clients, from individuals to Businesses.</p>
+              <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">We've served over 1,000 clients, from individuals to Businesses.</p>
             </div>
 
           </div>
         </div>
 
         {/* Process Section*/}
-        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:mx-auto xl:max-h-[656.97px] xl:px-0 xl:py-0">
-          <div className="xl:pt-[120px] xl:px-[120px]">
-            <div className="xl:max-w-[1200px] xl:mx-auto">
-              <h5 className="text-secondary font-inter text-xs xl:text-sm">• Our Process •</h5>
-              <div className="flex flex-col gap-6 mt-4 xl:flex-row xl:justify-between xl:items-center xl:mt-0" id='Explore-Process'>
-                <h1 className="font-inter text-2xl text-midnight xl:text-[48px]">Explore Our Process</h1>
-                <a
-                  href="#consultation"
-                  className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-2 text-sm w-fit xl:gap-3 xl:px-4 xl:py-3 xl:text-base"
-                >
-                  Book a free consultation
-                  <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[20px] h-[20px] xl:w-[30px] xl:h-[30px]"/>
-                </a>
+        <div className="max-w-full container">
+          <div className="pt-10 md:pt-20 lg:pt-30 ">
+            <div className='mx-5 sm:mx-10 md:mx-15 lg:mx-0'>
+              <h5 className="section-name">• Our Process •</h5>
+              <div className="flex flex-col gap-6 mt-4 lg:flex-row lg:justify-between  lg:items-center lg:mt-0" id='Explore-Process'>
+                <h1 className="font-inter text-midnight  font-medium lg:font-normal  text-[24px] sm:text-[40px] md:text-[48px] lg:text-[42px] 2xl:text-[48px] text-left tracking-[0.96px]">Explore Our Process</h1>
+                <ActionButton label="Book a free consultation" href="" className='w-[255px] lg:w-auto' />
               </div>
             </div>
-            <div className='flex flex-col gap-8 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex xl:items-center xl:justify-between xl:mx-auto xl:gap-[40px] xl:flex-row'>
-              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
-                <img src="/Consultation.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
+            <div className='flex flex-col gap-8 mt-8 lg:mt-[50px] lg:flex lg:items-center lg:justify-between lg:mx-auto xl:gap-[40px] lg:flex-row'>
+              
+              <div className="w-full h-auto relative mx-auto lg:w-auto xl:mx-0 group transition-all duration-300 overflow-hidden" id="process-image">
+                <img src="/Consultation.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
                       01
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Consultation</h3>
-                    <p className="text-barley-white font-inter text-sm">Providing legal advice tailored to your specific needs</p>
+                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Consultation</h3>
+                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Providing legal advice tailored to your specific needs</p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
-                <img src="/Strategy.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
+              <div className="w-full h-auto relative mx-auto lg:w-auto xl:mx-0 group transition-all duration-300 overflow-hidden" id="process-image">
+                <img src="/Strategy.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
                       02
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Strategy & Planning</h3>
-                    <p className="text-barley-white font-inter text-sm">Creating a tailored legal strategy to meet your goals</p>
+                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Strategy & Planning</h3>
+                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Creating a tailored legal strategy to meet your goals</p>
                   </div>
                 </div>
               </div>
 
-              <div className="w-[335px] h-[399.97px] relative mx-auto xl:w-[360px] xl:mx-0" id="process-image">
-                <img src="/Execution.png" alt="process image" className="w-full h-full object-cover" />
-                <div className="absolute bottom-5 left-1/2 transform -translate-x-1/2 bg-midnight p-2 w-[295px] h-[169.97px] xl:left-5 xl:right-5 xl:transform-none xl:translate-x-0 xl:w-auto xl:h-38">
+              <div className="w-full h-auto relative mx-auto lg:w-auto xl:mx-0 group transition-all duration-300 overflow-hidden" id="process-image">
+                <img src="/Execution.png" alt="process image" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                <div className="absolute bottom-5 left-5 right-5 h-auto bg-midnight p-5 sm:p-8 md:p-10 lg:p-3 xl:p-5">
                   <div className="flex flex-col items-start text-left">
-                    <div className="bg-secondary text-white rounded-full w-10 h-10 flex items-center justify-center font-inter font-medium text-[16px] mb-3">
+                    <div className="bg-secondary text-white rounded-full w-[50px] h-[50px] sm:w-20 sm:h-20 md:w-25 md:h-25 lg:w-10 lg:h-10 xl:w-[50px] xl:h-[50px] flex items-center justify-center font-inter font-medium text-base sm:text-3xl md:text-[35px] lg:text-base mb-3">
                       03
                     </div>
-                    <h3 className="text-barley-white font-inter font-medium text-xl mb-2">Execution</h3>
-                    <p className="text-barley-white font-inter text-sm">Executing the legal strategy for resolution of your legal matters</p>
+                    <h3 className="text-barley-white font-inter font-medium text-xl sm:text-[40px] md:text-[50px] lg:text-xl mb-2">Execution</h3>
+                    <p className="text-barley-white font-inter text-sm sm:text-3xl lg:text-sm leading-[20px] sm:leading-[40px] lg:leading-[20px]">Executing the legal strategy for resolution of your legal matters</p>
                   </div>
                 </div>
               </div>

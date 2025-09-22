@@ -54,7 +54,7 @@ function CountUp({ target, suffix = '', decimals = 0, duration = 2000 }) {
   };
 
   return (
-    <span ref={elementRef} className="text-[64px] text-midnight font-inter">
+    <span ref={elementRef} className="text-[48px] sm:text-[52px] md:text-[60px] lg:text-[64px] xl:text-[64px] leading-[62.4px] lg:leading-[64px] tracking-[1.92px] lg:tracking-[2.56px] text-midnight font-inter">
       {formatNumber(count)}{suffix}
     </span>
   );

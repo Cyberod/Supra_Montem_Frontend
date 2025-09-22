@@ -84,6 +84,10 @@ hr {
     leading-[31.2px] sm:leading-[40px] md:leading-[50px] lg:leading-[60px] 2xl:leading-[62.4px] 2xl:tracking-[1.92px] tracking-[0.96px] ;
   }
 
+  .section-name {
+    @apply font-inter text-secondary text-sm text-left leading-[14px] tracking-[0.56px] mb-[15px] font-medium 
+  }
+
 }
 
 
