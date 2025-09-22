@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import PracticeCta from '../components/PracticeCta';
 import ActionButton from '../components/ActionButton';
+import SuccessStories from '../components/SuccessStories';
 
 export default function Home() {
   return (
@@ -224,29 +225,7 @@ export default function Home() {
         </div>
 
         {/* Success Stories section */}
-        <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:max-h-[739px] xl:mx-auto xl:px-[120px] xl:py-[104px]">
-          <div className="xl:max-w-[1200px]">
-            <h5 className="font-inter text-secondary text-xs xl:text-sm">SUCCESS STORIES</h5>
-              <h2 className="text-midnight font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-0">
-                Legal Journeys, Real Results
-              </h2>
-          </div>
-          <div className="mt-8 xl:max-w-[1200px] items-center xl:mt-[64px] ">
-            <img src="/Quote.png" alt="Quote image" className="w-[50px] h-[40px] mx-auto xl:mx-0  xl:w-[64.5px] xl:h-[52.5px] xl:mt-[64px]" />
-            <h3 className="font-inter text-sm text-center xl:text-left text-midnight mt-4 xl:text-[28px] xl:pt-[16px] xl:pr-[30px]">
-              Supra Montem guided me through a complex property transaction with remarkable clarity and professionalism. 
-              Their attention to detail and prompt communication made the entire process seamless. 
-              I felt fully supported every step of the way.
-            </h3>
-            <div className="mt-6 flex gap-3 px-[72px] xl:px-0 xl:mt-[48px] xl:gap-[16px]">
-                <img src="/Client_image.png" alt="client Image" className="w-16 h-16 rounded-full xl:w-auto xl:h-auto"/>
-                <div>
-                  <h5 className="text-midnight font-inter text-base font-semibold xl:text-[20px]">Sir O'Kelly</h5>
-                  <p className="text-blue-bayoux font-inter text-sm xl:text-[16px]">CEO, Venoxe Inc.</p>
-                </div>
-            </div>
-          </div>
-        </div>
+        < SuccessStories />
 
         {/* Team Section */}
         <div className="max-w-[375px] h-[1600px] mx-auto bg-midnight px-5 py-10 xl:max-w-[1440px] xl:max-h-[780.23px] xl:px-[120px] xl:py-[104px] xl:mx-auto">

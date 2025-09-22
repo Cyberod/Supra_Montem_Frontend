@@ -134,5 +134,48 @@ hr {
 }
 
 
+/* Pagination Dots */
+.swiper-pagination-bullet {
+  background-color: #ccc !important; /* inactive color */
+  opacity: 1; /* keep them fully visible */
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #E19132 !important; /* active dot color */
+}
+
+/* Navigation Arrows */
+
+/* ...existing code... */
+
+/* Navigation Arrows */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #E19132 !important;
+  width: 35px !important;  
+  height: 35px !important; 
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  padding: 5px;
+
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 14px !important;  
+  width: 14px !important;     
+  height: 14px !important;    
+}
+
+@media (max-width: 1023px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
+
+
 
 
