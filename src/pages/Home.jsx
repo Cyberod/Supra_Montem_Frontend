@@ -228,46 +228,74 @@ export default function Home() {
         < SuccessStories />
 
         {/* Team Section */}
-        <div className="max-w-[375px] h-[1600px] mx-auto bg-midnight px-5 py-10 xl:max-w-[1440px] xl:max-h-[780.23px] xl:px-[120px] xl:py-[104px] xl:mx-auto">
-          <div className="xl:max-w-[1200px]">
-            <h5 className="font-inter text-barley-white text-xs xl:text-sm">•  MEET OUR TEAM • </h5>
-              <h2 className="text-barley-white font-inter leading-tight text-2xl mt-4 xl:text-5xl xl:mt-[15px]">
+        <div className="max-w-full bg-midnight container relative">
+          <div className=" py-8 md:py-14 xl:py-20 2xl:py-[104px]">
+            {/* Section Header */}
+            <div className="mb-6 sm:mb-8 md:mb-12 xl:mb-16">
+              <h5 className="section-name text-barley-white mb-[10px]">
+                • MEET OUR TEAM •
+              </h5>
+              <h2 className="text-barley-white font-inter font-medium lg:font-normal  text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
                 Meet the Experts Behind Your Legal Success
               </h2>
-          </div>
-          <div className='flex flex-col gap-18 mt-8 xl:max-w-[1200px] xl:mt-[50px] xl:flex-row xl:items-center xl:justify-between xl:mx-auto xl:gap-[50px]'>
-            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
-              <img src="/team1.png" alt="process image" className="w-full object-cover xl:w-auto" />
-              <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
-                <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">Izundu Ukanwa</h3>
-                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">CEO, Senior Attorney</h4>
+            </div>
+
+            {/* Team Members Grid */}
+            <div className="grid grid-cols-1  lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
+              {/* Team Member 1 */}
+              <div className="bg-barley-white ">
+                <img
+                  src="/team1.png"
+                  alt="Izundu Ukanwa, CEO, Senior Attorney"
+                  className="w-full h-auto "
+                />
+                <div className="p-6 md:p-7 lg:p-4 bg-barley-white">
+                  <h3 className="text-midnight font-inter font-semibold text-base sm:text-xl md:text-3xl lg:text-2xl mb-3 mt-2 lg:mb-2 lg:mt-0">
+                    Izundu Ukanwa
+                  </h3>
+                  <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
+                    Founder, Senior Attorney
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 2 */}
+              <div className=" ">
+                <img
+                  src="/advisor.png"
+                  alt="Seun Ukanwa, Senior Legal Advisor"
+                  className="w-full h-auto "
+                />
+                <div className="p-6 md:p-7 lg:p- bg-barley-white">
+                  <h3 className="text-midnight font-inter font-semibold text-base sm:text-xl md:text-3xl lg:text-2xl mb-3 mt-2 lg:mb-2 lg:mt-0">
+                    Seun Ukanwa
+                  </h3>
+                  <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
+                    Senior Legal Advisor
+                  </p>
+                </div>
+              </div>
+
+              {/* Team Member 3 */}
+              <div className=" ">
+                <img
+                  src="/expert.png"
+                  alt="James Roberts, Litigation Expert"
+                  className="w-full h-auto "
+                />
+                <div className="p-6 md:p-7 lg:p- bg-barley-white">
+                  <h3 className="text-midnight font-inter font-semibold text-base sm:text-xl md:text-3xl lg:text-2xl mb-3 mt-2 lg:mb-2 lg:mt-0">
+                    James Roberts
+                  </h3>
+                  <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
+                    Litigation Expert
+                  </p>
                 </div>
               </div>
             </div>
-
-            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
-              <img src="/advisor.png" alt="process image" className="w-full object-cover xl:w-auto" />
-              <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
-                <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">Seun Ukanwa</h3>
-                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">Senior Legal Advisor</h4>
-                </div>
-              </div>
-            </div>
-
-            <div className="w-full relative pb-[50px] xl:w-[360px]" id="process-image">
-              <img src="/expert.png" alt="process image" className="w-full object-cover xl:w-auto" />
-              <div className="absolute bottom--30 left-0 right-0  bg-barley-white pl-[24px] pb-[24px] pt-[16px] h-[90px]">
-                <div className="flex flex-col items-start text-left">
-                  <h3 className="text-midnight font-semibold text-xl font-inter mb-[9px] xl:text-2xl">James Roberts</h3>
-                  <h4 className="text-midnight font-inter text-sm xl:font-[16px] xl:text-sm">Litigation Expert</h4>
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
+
 
         {/* Blog Section */}
         <div className="max-w-[375px] mx-auto px-5 py-10 xl:max-w-[1440px] xl:px-[120px] xl:max-h-[915.97px] xl:py-[104px] xl:mx-auto">
