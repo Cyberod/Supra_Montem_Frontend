@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <section id="Home" className=" w-full ">
         {/* Hero Section */}
-        <div className="max-w-full container mx-auto sm:mx-0 bg-barley-white lg:gap-15 2xl:gap-20  lg:flex  xl:flex ">
+        <div className="max-w-full container  bg-barley-white lg:gap-15 2xl:gap-20  lg:flex  xl:flex ">
           {/* Mission statement */}
           <div className="w-full pt-[74px] lg:flex-1 ">
             <h1 className=" w-full font-inter text-[28px] sm:text-[45px] md:text-[60px] lg:text-[40px] xl:text-[64px] 2xl:text-[64px] leading-[30.8px] sm:leading-[60px] md:leading-[70px] lg:leading-[60px] xl:leading-[70px]  font-normal text-midnight  mb-[16px] sm:mb-[19px] md:mb-[22px] lg:mb-[25px] xl:mb-[28px] 2xl:mb-[30px] pt-[68px]">
@@ -29,7 +29,7 @@ export default function Home() {
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
-          <div className="max-w-full xs:right-2 sm:right-5 md:right-10 left-5 lg:right-155 lg:left-15 xl:right-170 2xl:right-200 xl:left-25 2xl:left-30 lg:h-[94px] h-16  mt-9 sm:mt-16 md:mt-18 lg:mt-145 xl:mt-145 mx-5 sm:mx-7 xl:inline-flex xl:gap-80  lg:px-0 xl:mx-0  overflow-hidden  absolute">            
+          <div className="max-w-full right-2 sm:right-5 md:right-10 left-5 lg:right-155 lg:left-15 xl:right-170 2xl:right-200 xl:left-25 2xl:left-30 lg:h-[94px] h-16  mt-9 sm:mt-16 md:mt-18 lg:mt-145 xl:mt-145 mx-5 sm:mx-7 xl:inline-flex xl:gap-80  lg:px-0 xl:mx-0  overflow-hidden  absolute">            
             <div className="inline-flex gap-80 xl:contents">
               <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 lg:h-[94px]"/>
               <img src="/SUPRA_MONTEM_ATTORNEYS.png" className="animate-marquee2 max-w-[1833px] h-16 lg:h-[94px]"/>
