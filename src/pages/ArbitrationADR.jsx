@@ -21,19 +21,19 @@ export default function ArbitrationADR() {
 
       <section id="practice-area" className="w-full pt-[74px]  lg:pt-0">
       {/* Topic Section */}
-        <div className="max-w-full container bg-midnight py-[80px] xl:py-[100px] h-auto">
-          <div className="text-center px-5 xl:mb-16 lg:px-[150px]">
+        <div className="max-w-full container relative bg-midnight py-[80px] xl:py-[100px] h-auto">
+          <div className="text-center px-5  lg:px-[150px]">
             <h1 className="font-inter text-barley-white font-normal text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
               Arbitration ADR
             </h1>
           </div>
-          <img src="/ADR_LINES.svg" alt="vector line" className='container absolute overflow-hidden top-0' />
+          <img src="/ADR_LINES.svg" alt="vector line" className='container absolute overflow-hidden top-0 right-10' />
 
         </div>
       
       {/* Content Section */}
       <div className="max-w-full container py-8  xl:py-[48px]">
-        <div className="space-y-6">
+        <div className="">
           <p className="font-inter  text-blue-bayoux leading-relaxed text-[18px]">
             We handle arbitration matters, whether in Nigeria or abroad, whether between commercial adversaries or by investors against states. We also conduct court proceedings relating to arbitration, including court applications to uphold arbitration agreements or to set awards aside. Most of our arbitration matters have an international dimension. We also handle mediations.
           </p>
