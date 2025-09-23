@@ -15,21 +15,21 @@ export default function PracticeArea() {
     <div className="min-h-screen">
       <Navbar />
 
-      <div className="hidden xl:block">
+      <div className="hidden lg:block">
         <Breadcrumbs items={breadcrumbItems} />
       </div>
 
-      <section id="practice-area" className="w-full bg-aqua-haze">
+      <section id="practice-area" className="w-full bg-aqua-haze pt-[74px] lg:pt-0">
       {/* Topic Section */}
-        <div className="max-w-[375px] mx-auto px-5 mt-20 py-10 xl:mt-0 xl:max-w-[1440px] xl:mx-auto xl:px-[120px] xl:py-[104px] xl:h-[347.58px]">
-          <div className="text-center px-10 xl:mb-16 xl:px-[180px]">
-            <h5 className="font-inter text-secondary text-xs mb-4 xl:text-sm xl:mb-3">• PRACTICE AREAS •</h5>
-            <h1 className="font-inter text-2xl text-midnight leading-tight xl:text-[48px]">
+        <div className="max-w-full container xl:py-[104px] py-10">
+          <div className="text-center px-10 xl:mb-16 lg:px-[180px]">
+            <h5 className="section-name text-center">• PRACTICE AREAS •</h5>
+            <h1 className="font-inter font-normal text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
               Expert Legal Services Tailored to Your Needs
             </h1>
           </div>
         </div>
-        <div className="max-w-[375px] px-5 xl:max-w-[1440px] xl:px-[120px] bg-midnight  ">
+        <div className="max-w-full container bg-midnight">
 
             <div className="py-10 xl:pt-[80px] xl:pb-[104px]" > <PracticeCta/></div>
 
