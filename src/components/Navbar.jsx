@@ -6,7 +6,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <Disclosure as="nav" className="fixed top-0 w-full xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30 bg-white z-50 xs:shadow-md md:shadow-none">
+    <Disclosure as="nav" className="fixed top-0 max-w-full container bg-white z-50 xs:shadow-xl md:shadow-none">
       {() => (
         <>
           {/* Main Navbar Container */}
