@@ -2,7 +2,7 @@ import ActionButton from "./ActionButton";
 
 export default function ReachOut() {
   return (
-      <div className="max-w-full relative container">
+      <div className="max-w-full bg-aqua-haze relative container">
           <div className="py-8 md:py-14 xl:py-20 2xl:py-[104px] lg:pr-[120px]  xl:pr-[200px] 2xl:pr-[280px]">
             <h5 className="section-name">• REACH OUT •</h5>
             <div className="flex flex-col gap-6  lg:flex lg:flex-row lg:justify-between lg:items-center lg:gap-auto" id='Explore-Process'>

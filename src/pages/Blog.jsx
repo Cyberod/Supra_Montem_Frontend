@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import ReachOut from '../components/ReachOut';
 import Footer from '../components/Footer';
 import {Link} from "react-router-dom";
+import ActionButton from '../components/ActionButton';
 
 
 export default function Blog() {
@@ -9,86 +10,113 @@ export default function Blog() {
   return (
     <div className="min-h-screen">
       <Navbar />
-      
-      
-      <div className="max-w-[375px] mx-auto mt-10 mb-16 xl:max-w-[1440px] xl:mt-[80px] xl:mb-[104px]">
-        <div className="h-32 bg-aqua-haze flex flex-col items-center justify-center px-5 xl:h-[347.58px] xl:px-0">
-            <h5 className="font-inter text-secondary text-xs mb-4 xl:text-sm xl:mb-[11px]">•  BLOG • </h5>
-            <h1 className="font-inter text-2xl text-midnight text-center xl:text-[48px]">
-            Insights and Updates from the Legal World
-            </h1>        
+
+      <section id="practice-area" className="w-full  pt-[74px]">
+      {/* Topic Section */}
+        <div className="max-w-full bg-aqua-haze container lg:py-[104px] py-10">
+          <div className="text-center  px-10 xl:mb-16 container">
+            <h5 className="section-name text-center">• BLOG •</h5>
+            <h1 className="font-inter lg:font-normal font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
+                Insights and Updates from the Legal World
+            </h1>
+          </div>
         </div>
-        <div className='max-w-[375px] mx-auto px-5 mt-8 xl:max-w-[1200px] xl:mt-[104px] xl:px-0'>
-            <div className="flex flex-col gap-8 xl:grid xl:grid-cols-1 xl:md:grid-cols-2 xl:lg:grid-cols-3 xl:gap-[40px]">
-                <div className="bg-white overflow-hidden">
-                    <img src="/blog3.png" alt="process image" className="w-full h-[200px] object-cover" />
-                    <div className="p-5 xl:py-7">
-                        <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
-                        <h4 className="text-midnight font-inter font-medium text-lg mb-2 xl:text-[24px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                        <h4 className="text-midnight font-inter text-sm mb-4 xl:mb-[16.68px]">From regulatory compliance to business structuring, 
-                            this piece unpacks key legal highlights from the UBS event ...
-                        </h4>
-                        <Link
-                        to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
-                        className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
-                        >
-                        Read Full Story
-                        <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
-                        </Link>
-                    </div>
-                </div>
+        <div className="max-w-full container lg:py-[104px]">
 
-                <div className="bg-white overflow-hidden">
-                    <img src="/blog2.png" alt="process image" className="w-full h-[200px] object-cover" />
-                    <div className="p-5 xl:py-7">
-                        <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
-                        <h4 className="text-midnight font-inter font-medium text-lg mb-2 xl:text-[24px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                        <h4 className="text-midnight font-inter text-sm mb-4 xl:mb-[16.68px]">From regulatory compliance to business structuring, 
-                            this piece unpacks key legal highlights from the UBS event ...
-                        </h4>
-                        <a
-                        href="#"
-                        className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
-                        >
-                        Read Full Story
-                        <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
-                        </a>
-                    </div>
-                </div>
+            {/* Blog Posts Grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10 lg:gap-12">
 
-                <div className="bg-white overflow-hidden">
-                    <img src="/blog1.png" alt="process image" className="w-full h-[200px] object-cover" />
-                    <div className="p-5 xl:py-7">
-                        <h3 className="text-secondary text-base font-medium font-inter mb-1 xl:text-[14px] xl:mb-[3.3px]">EVENT</h3>
-                        <h4 className="text-midnight font-inter font-medium text-lg mb-2 xl:text-[24px] xl:mb-[11.09px]">Unuahia Business Summit: Legal Insights and Impact</h4>
-                        <h4 className="text-midnight font-inter text-sm mb-4 xl:mb-[16.68px]">From regulatory compliance to business structuring, 
-                            this piece unpacks key legal highlights from the UBS event ...
-                        </h4>
-                        <a
-                        href="#"
-                        className="inline-flex text-matisse font-inter items-center gap-2 text-sm xl:gap-3 xl:text-base"
-                        >
-                        Read Full Story
-                        <img src="/Vector.png" alt="Vector icon" className="w-[10px] h-[10px]"/>
-                        </a>
-                    </div>
+              {/* Blog Post 1 */}
+              <div className="bg-white group transition-all duration-300 overflow-hidden border border-none">
+                <img 
+                  src="/blog3.png" 
+                  alt="Umuahia Business Summit: Legal Insights and Impact" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+                />
+                <div className="p-5 md:p-6 lg:px-0">
+                  <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
+                    EVENT
+                  </span>
+                  <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
+                    Umuahia Business Summit: Legal Insights and Impact
+                  </h3>
+                  <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
+                    From regulatory compliance to business structuring, this piece unpacks key legal highlights from the UBS event...
+                  </p>
+                  <a
+                    href="#"
+                    className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
+                  >
+                    Read Full Story
+                    <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
+                  </a>
                 </div>
+              </div>
+
+              {/* Blog Post 2 */}
+              <div className="bg-white group transition-all duration-300 overflow-hidden border border-none">
+                <img 
+                  src="/blog2.png" 
+                  alt="Umuahia Business Summit: Legal Insights and Impact" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+                />
+                <div className="p-5 md:p-6 lg:px-0">
+                  <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
+                    FAMILY LAW
+                  </span>
+                  <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
+                    Child Custody: Your Legal Guide Simplified
+                  </h3>
+                  <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
+                    Understanding the legal nuances of child custody
+                    can be overwhelming. In this blog, we break down
+                    key factors ...          </p>
+                  <a
+                    href="#"
+                    className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
+                  >
+                    Read Full Story
+                    <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
+                  </a>
+                </div>
+              </div>
+
+              {/* Blog Post 3 */}
+              <div className="bg-white group transition-all duration-300 overflow-hidden border border-none">
+                <img 
+                  src="/blog1.png" 
+                  alt="Umuahia Business Summit: Legal Insights and Impact" 
+                  className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
+                />
+                <div className="p-5 md:p-6 lg:px-0">
+                  <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
+                    PROPERTY LAW
+                  </span>
+                  <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
+                    Land Disputes: Resolving Conflicts Legally
+                  </h3>
+                  <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
+                    Land-related conflicts can escalate quickly without proper guidance. This post outlines steps to resolve property issues through legal channels ...          </p>
+                  <a
+                    href="#"
+                    className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
+                  >
+                    Read Full Story
+                    <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <div className="  text-center mt-16 mb-10 lg:mb-0">
+                <ActionButton label="Load More Updates" href="" />
 
             </div>
 
-            <div className="text-center mt-8 xl:mt-[80px]">
-                <button
-                type="submit"
-                className="inline-flex px-3 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm xl:px-[14px] xl:py-[13.5px] xl:text-[18px]"
-                >
-                Load More Updates
-                <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
-                </button>
-            </div> 
-        </div> 
-       
-      </div>
+        </div>
         <ReachOut />
         <Footer />
+      </section>
+
     </div>
   );}
