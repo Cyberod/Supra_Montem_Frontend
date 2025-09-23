@@ -1,3 +1,6 @@
+import { NavLink } from 'react-router-dom';
+
+
 export default function Footer() {
   return (
       <div className="max-w-full container bg-midnight  h-auto py-[40px] lg:pb-[124px] ">
@@ -18,11 +21,56 @@ export default function Footer() {
                 <div className="flex flex-col flex-1 lg:w-[200px]">
                     <h3 className="font-semibold font-inter text-grey">Pages</h3>
                     <div className="mt-6 flex flex-col gap-4 xl:mt-[32px] xl:gap-[16px]">
-                        <a href="#" className="text-base font-inter text-secondary hover:text-secondary transition xl:text-[14px]">Home</a>
-                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Practice Area</a>
-                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Legal Automation</a>
-                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Blog</a>
-                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Contact</a>
+                    <NavLink 
+                        to="/" 
+                        className={({ isActive }) =>
+                        `text-base font-inter ${
+                            isActive ? 'text-secondary' : 'text-grey hover:text-secondary'
+                        } transition xl:text-[14px]`
+                        }
+                    >
+                        Home
+                    </NavLink>
+                    <NavLink 
+                        to="/practice-areas" 
+                        className={({ isActive }) =>
+                        `text-base font-inter ${
+                            isActive ? 'text-secondary' : 'text-grey hover:text-secondary'
+                        } transition xl:text-[14px]`
+                        }
+                    >
+                        Practice Area
+                    </NavLink>
+                    <NavLink 
+                        to="/legal-automation" 
+                        className={({ isActive }) =>
+                        `text-base font-inter ${
+                            isActive ? 'text-secondary' : 'text-grey hover:text-secondary'
+                        } transition xl:text-[14px]`
+                        }
+                    >
+                        Legal Automation
+                    </NavLink>
+                    <NavLink 
+                        to="/blog" 
+                        className={({ isActive }) =>
+                        `text-base font-inter ${
+                            isActive ? 'text-secondary' : 'text-grey hover:text-secondary'
+                        } transition xl:text-[14px]`
+                        }
+                    >
+                        Blog
+                    </NavLink>
+                    <NavLink 
+                        to="/contact" 
+                        className={({ isActive }) =>
+                        `text-base font-inter ${
+                            isActive ? 'text-secondary' : 'text-grey hover:text-secondary'
+                        } transition xl:text-[14px]`
+                        }
+                    >
+                        Contact
+                    </NavLink>
                     </div>
                 </div>
 
