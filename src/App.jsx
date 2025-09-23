@@ -6,11 +6,14 @@ import ArbitrationADR from './pages/ArbitrationADR'
 import Blog from './pages/Blog';
 import Contact from './pages/Contact';
 import BlogPage from './pages/BlogPage';
+import ScrollToTop from './components/ScrollToTop';
+
 
 
 export default function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Add this line */}
       <div className="min-h-screen">
         <Routes>
           <Route path="/" element={<Home />} />

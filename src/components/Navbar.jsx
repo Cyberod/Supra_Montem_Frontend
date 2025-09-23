@@ -1,65 +1,71 @@
 import { useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const getNavLinkClass = ({ isActive }) =>
+    `font-inter transition-colors text-sm lg:text-base ${isActive ? "text-secondary" : "text-primary hover:text-secondary"}`;
+
+  const getMobileNavLinkClass = ({ isActive }) =>
+    `block px-3 py-2 font-inter transition-colors text-base ${isActive ? "text-secondary" : "text-primary hover:text-secondary"}`;
+
   return (
-    <Disclosure as="nav" className="fixed top-0 max-w-full container bg-white z-50 xs:shadow-xl md:shadow-none">
+    <Disclosure as="nav" className="fixed top-0 w-full bg-white z-50">
       {() => (
         <>
           {/* Main Navbar Container */}
-          <div className="mx-auto py-[24px] xl:py-[24px] h-[74px]">
+          <div className=" max-w-full mx-auto px-[20px] sm:px-[35px] sm:mx-0 md:px-8 lg:px-15 xl:px-[120px] py-[24px] xl:py-[24px] h-[74px] sm:h-[68px] md:h-[72px] lg:h-[76px] xl:h-[80px]">
             <div className="flex items-center justify-between h-full ">
               
               {/* Logo */}
               <div className="flex items-center flex-shrink-0">
-                <Link to="/">
+                <NavLink to="/">
                   <img 
                     src="/Logo+Menu.png" 
                     alt="Company Logo" 
                     className="h-6 sm:h-7 md:h-8 lg:h-9 xl:h-10 w-auto"
                   /> 
-                </Link>
+                </NavLink>
               </div>
 
               {/* Desktop Navigation Links - Hidden on mobile/tablet */}
-              <div className="hidden md:flex md:space-x-4 lg:space-x-6 xl:space-x-8">
-                <Link
+              <div className="hidden lg:flex lg:space-x-6 xl:space-x-8">
+                <NavLink
                   to="/"
-                  className="font-inter text-secondary hover:text-secondary transition-colors font-medium text-sm lg:text-base"
+                  className={getNavLinkClass}
                 >
                   Home
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/practice-areas"
-                  className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
+                  className={getNavLinkClass}
                 >
                   Practice Areas
-                </Link>
+                </NavLink>
                 <a
                   href="#legal-automation"
                   className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
                 >
                   Legal Automation
                 </a>
-                <Link
+                <NavLink
                   to="/Blog"
-                  className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
+                  className={getNavLinkClass}
                 >
                   Blog
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/Contact"
-                  className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
+                  className={getNavLinkClass}
                 >
                   Contact
-                </Link>
+                </NavLink>
               </div>
 
               {/* WhatsApp Contact - Hidden on mobile, shown on tablet+ */}
-              <div className="hidden md:flex">
+              <div className="hidden lg:block">
                 <a
                   href="https://wa.me/+234-7035786703"
                   target="_blank"
@@ -76,20 +82,14 @@ export default function Navbar() {
               </div>
 
               {/* Mobile Hamburger Button */}
-              <div className="md:hidden">
+              <div className="lg:hidden">
                 <button
                   onClick={() => setIsOpen(!isOpen)}
                   className="inline-flex items-center justify-center p-2 rounded-md text-primary hover:text-secondary transition-colors"
-                  aria-expanded={isOpen}
+                  aria-expanded="false"
                 >
-                  <span className="sr-only">{isOpen ? 'Close main menu' : 'Open main menu'}</span>
-                  {isOpen ? (
-                    <svg className="h-5 w-5 sm:h-6 sm:w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                  ) : (
-                    <img src="/HamNav.png" alt="menu" className="h-5 w-5 sm:h-6 sm:w-6" />
-                  )}
+                  <span className="sr-only">Open main menu</span>
+                  <img src="/HamNav.png" alt="menu" className="h-5 w-5 sm:h-6 sm:w-6" />
                 </button>
               </div>
             </div>
@@ -97,46 +97,46 @@ export default function Navbar() {
 
           {/* Mobile Menu Panel */}
           {isOpen && (
-            <div className="md:hidden bg-white border-t border-grey">
-              <div className="px-4 pt-1 pb-1 space-y-1">
-                <Link
+            <div className="lg:hidden bg-white border-t border-grey">
+              <div className="px-4 pt-2 pb-3 space-y-1 ">
+                <NavLink
                   to="/"
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-1 font-inter text-secondary hover:text-secondary transition-colors font-medium text-base"
+                  className={getMobileNavLinkClass}
                 >
                   Home
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/practice-areas"
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-1 font-inter text-primary hover:text-secondary transition-colors text-base"
+                  className={getMobileNavLinkClass}
                 >
                   Practice Areas
-                </Link>
+                </NavLink>
                 <a
                   href="#legal-automation"
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-1 font-inter text-primary hover:text-secondary transition-colors text-base"
+                  className="block px-3 py-2 font-inter text-primary hover:text-secondary transition-colors text-base"
                 >
                   Legal Automation
                 </a>
-                <Link
+                <NavLink
                   to="/Blog"
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-1 font-inter text-primary hover:text-secondary transition-colors text-base"
+                  className={getMobileNavLinkClass}
                 >
                   Blog
-                </Link>
-                <Link
+                </NavLink>
+                <NavLink
                   to="/Contact"
                   onClick={() => setIsOpen(false)}
-                  className="block px-3 py-1 font-inter text-primary hover:text-secondary transition-colors text-base"
+                  className={getMobileNavLinkClass}
                 >
                   Contact
-                </Link>
+                </NavLink>
                 
                 {/* Mobile WhatsApp Contact */}
-                <div className=" border-t border-grey pt-2 mt-2">
+                <div className="border-t border-grey pt-3 mt-3">
                   <a
                     href="https://wa.me/+234-7035786703"
                     target="_blank"
