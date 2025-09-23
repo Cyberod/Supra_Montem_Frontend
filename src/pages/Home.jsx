@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <section id="Home" className=" w-full ">
         {/* Hero Section */}
-        <div className="max-w-full xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30 mx-auto sm:mx-0 bg-barley-white lg:gap-15 2xl:gap-20  lg:flex  xl:flex ">
+        <div className="max-w-full container mx-auto sm:mx-0 bg-barley-white lg:gap-15 2xl:gap-20  lg:flex  xl:flex ">
           {/* Mission statement */}
           <div className="w-full pt-[74px] lg:flex-1 ">
             <h1 className=" w-full font-inter text-[28px] sm:text-[45px] md:text-[60px] lg:text-[40px] xl:text-[64px] 2xl:text-[64px] leading-[30.8px] sm:leading-[60px] md:leading-[70px] lg:leading-[60px] xl:leading-[70px]  font-normal text-midnight  mb-[16px] sm:mb-[19px] md:mb-[22px] lg:mb-[25px] xl:mb-[28px] 2xl:mb-[30px] pt-[68px]">
