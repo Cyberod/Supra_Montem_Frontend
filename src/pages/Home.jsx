@@ -55,7 +55,7 @@ export default function Home() {
         </div>
 
         {/* Pitch statement */}
-        <div className="w-full mx-auto xs:px-5 sm:px-10 md:px-15 lg:px-20 xl:px-25 2xl:px-30">
+        <div className="w-full container">
           <div className="lg:mx-[30px] py-8 md:py-14 xl:py-20 2xl:py-[104px]  text-center ">
             <h2 className="font-inter text-48  font-normal text-midnight ">
               At Supra Montem Attorneys, we merge deep legal insight, strategic focus, and a 
