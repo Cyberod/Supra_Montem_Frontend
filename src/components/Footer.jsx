@@ -18,11 +18,11 @@ export default function Footer() {
                 <div className="flex flex-col flex-1 lg:w-[200px]">
                     <h3 className="font-semibold font-inter text-grey">Pages</h3>
                     <div className="mt-6 flex flex-col gap-4 xl:mt-[32px] xl:gap-[16px]">
-                        <a href="#" className="text-xs font-inter text-secondary hover:text-secondary transition xl:text-[14px]">Home</a>
-                        <a href="#" className="text-xs font-inter text-grey hover:text-secondary transition xl:text-[14px]">Practice Area</a>
-                        <a href="#" className="text-xs font-inter text-grey hover:text-secondary transition xl:text-[14px]">Legal Automation</a>
-                        <a href="#" className="text-xs font-inter text-grey hover:text-secondary transition xl:text-[14px]">Blog</a>
-                        <a href="#" className="text-xs font-inter text-grey hover:text-secondary transition xl:text-[14px]">Contact</a>
+                        <a href="#" className="text-base font-inter text-secondary hover:text-secondary transition xl:text-[14px]">Home</a>
+                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Practice Area</a>
+                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Legal Automation</a>
+                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Blog</a>
+                        <a href="#" className="text-base font-inter text-grey hover:text-secondary transition xl:text-[14px]">Contact</a>
                     </div>
                 </div>
 
@@ -30,19 +30,19 @@ export default function Footer() {
                 <div className="flex flex-col flex-1 xl:w-[200px]">
                     <h3 className="font-semibold font-inter text-grey">Social</h3>
                     <div className="mt-6 flex flex-col gap-4 xl:mt-[32px] xl:gap-[16px]">
-                        <a href="#" className="flex  gap-2 text-xs font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
+                        <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
                             <img src="/instagram.svg" alt="Instagram" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
                             Instagram
                         </a>
-                        <a href="#" className="flex  gap-2 text-xs font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
+                        <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
                             <img src="/twitter.svg" alt="Twitter" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
                             Twitter (X)
                         </a>
-                        <a href="#" className="flex  gap-2 text-xs font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
+                        <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
                             <img src="/linkedin.svg" alt="LinkedIn" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
                             LinkedIn
                         </a>
-                        <a href="#" className="flex  gap-2 text-xs font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
+                        <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
                             <img src="/facebook.svg" alt="Facebook" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
                             Facebook
                         </a>
@@ -54,9 +54,9 @@ export default function Footer() {
             <div className="flex flex-col xl:w-[200px] xl:pr-0">
                 <h3 className="font-semibold font-inter text-grey">Contact Us</h3>
                 <div className="mt-6 flex flex-col gap-3 xl:mt-[32px] xl:gap-[10px]">
-                    <p className="text-xs font-inter text-grey xl:text-[14px]">+234-7035786703</p>
-                    <p className="text-xs font-inter text-grey xl:text-[14px]">info@supramontem.com</p>
-                    <p className="text-xs font-inter text-grey xl:text-[14px]">1 Bende Road, Umu Obasi, Umuahia 440234, Abia</p>
+                    <p className="text-base font-inter text-grey xl:text-[14px]">+234-7035786703</p>
+                    <p className="text-base font-inter text-grey xl:text-[14px]">info@supramontem.com</p>
+                    <p className="text-base font-inter text-grey xl:text-[14px]">1 Bende Road, Umu Obasi, Umuahia 440234, Abia</p>
                 </div>
             </div>
         </div>

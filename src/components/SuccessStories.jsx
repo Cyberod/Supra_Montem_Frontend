@@ -33,13 +33,13 @@ const testimonials = [
 export default function SuccessStories() {
   return (
     <div className="max-w-full container relative ">
-      <div className="py-8 md:py-14 xl:py-20 2xl:py-[104px]">
+      <div className="py-10 md:py-14 xl:py-20 2xl:py-[104px]">
         {/* Heading */}
         <div className="mb-8 md:mb-10 lg:mb-12">
           <h5 className="section-name uppercase mb-[10px]">
-            SUCCESS STORIES
+            • SUCCESS STORIES •
           </h5>
-          <h2 className="text-midnight font-inter font-normal text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-tight">
+          <h2 className="text-midnight font-inter font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-tight">
             Legal Journeys, Real Results
           </h2>
         </div>

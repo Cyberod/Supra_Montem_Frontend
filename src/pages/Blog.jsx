@@ -33,7 +33,7 @@ export default function Blog() {
                 alt="Umuahia Business Summit: Legal Insights and Impact" 
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
               />
-              <div className="p-5 md:p-6 lg:px-0">
+              <div className="py-5 md:py-6 lg:px-0">
                 <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                   EVENT
                 </span>
@@ -60,7 +60,7 @@ export default function Blog() {
                 alt="Umuahia Business Summit: Legal Insights and Impact" 
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
               />
-              <div className="p-5 md:p-6 lg:px-0">
+              <div className="py-5 md:py-6 lg:px-0">
                 <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                   FAMILY LAW
                 </span>
@@ -88,7 +88,7 @@ export default function Blog() {
                 alt="Umuahia Business Summit: Legal Insights and Impact" 
                 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
               />
-              <div className="p-5 md:p-6 lg:px-0">
+              <div className="py-5 md:py-6 lg:px-0">
                 <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                   PROPERTY LAW
                 </span>

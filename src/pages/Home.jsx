@@ -20,11 +20,11 @@ export default function Home() {
               Guiding You from a Higher Ground
             </h1>
             {/* Secondary statement */}
-            <p className="text-midnight text-sm md:text-[18px] text-h-1 xs:mb-[24px] md:mb-[30px] xl:mb-[35px] 2xl:mb-[40px] ">
+            <p className="text-midnight text-sm md:text-[18px] text-h-1 mb-[24px] md:mb-[30px] xl:mb-[35px] 2xl:mb-[40px] ">
               At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
-            <ActionButton label="Book a free Consultation" href="" className='' />
+            <ActionButton label="Book a free Consultation" href="" className=' ' />
 
           </div>
 
@@ -56,7 +56,7 @@ export default function Home() {
 
         {/* Pitch statement */}
         <div className="w-full container">
-          <div className="lg:mx-[30px] py-8 md:py-14 xl:py-20 2xl:py-[104px]  text-center ">
+          <div className="lg:mx-[30px] py-10 md:py-14 xl:py-20 2xl:py-[104px]  text-center ">
             <h2 className="font-inter text-48  font-normal text-midnight ">
               At Supra Montem Attorneys, we merge deep legal insight, strategic focus, and a 
               Client-first ethos to deliver truly distinguished legal solutions. Rooted 
@@ -66,7 +66,7 @@ export default function Home() {
         </div>
 
         {/* Practice Areas Section */}
-        <div className="max-w-full container bg-midnight py-8 md:py-14 xl:py-20 2xl:py-[104px] ">
+        <div className="max-w-full container bg-midnight py-10 md:py-14 xl:py-20 2xl:py-[104px] ">
           <div className=" xs:mx-0 lg:mx-[180px]">
             <h5 className="section-name">
               • PRACTICE AREAS • 
@@ -105,12 +105,12 @@ export default function Home() {
 
         {/* Process Section*/}
         <div className="max-w-full container">
-          <div className="pt-10 md:pt-20 lg:pt-30 ">
-            <div className='mx-5 sm:mx-10 md:mx-15 lg:mx-0'>
-              <h5 className="section-name">• Our Process •</h5>
-              <div className="flex flex-col gap-6 mt-4 lg:flex-row lg:justify-between  lg:items-center lg:mt-0" id='Explore-Process'>
+          <div className="py-10 md:py-20 lg:pt-30 ">
+            <div className=' lg:mx-0'>
+              <h5 className="section-name">• OUR PROCESS •</h5>
+              <div className="flex flex-col gap-6 lg:flex-row lg:justify-between  lg:items-center lg:mt-0" id='Explore-Process'>
                 <h1 className="font-inter text-midnight  font-medium lg:font-normal  text-[24px] sm:text-[40px] md:text-[48px] lg:text-[42px] 2xl:text-[48px] text-left tracking-[0.96px]">Explore Our Process</h1>
-                <ActionButton label="Book a free consultation" href="" className='w-[255px] lg:w-auto' />
+              <ActionButton label="Book free consultation" href="" className=" w-[237px] md:w-[257px] md:gap-6 h-auto lg:w-auto" />
               </div>
             </div>
             <div className='flex flex-col gap-8 mt-8 lg:mt-[50px] lg:flex lg:items-center lg:justify-between lg:mx-auto xl:gap-[40px] lg:flex-row'>
@@ -163,7 +163,7 @@ export default function Home() {
         {/* Legal Automation Section */}
         <div className="max-w-full container">
           <div className="flex flex-col gap-8 lg:flex-row  lg:relative">
-            <div className="lg:flex-1 lg:sticky lg:top-[0px] lg:self-start pt-10 sm:pt-15 md:pt-20 lg:pt-25 xl:pt-30">
+            <div className="lg:flex-1 lg:sticky lg:top-[0px] lg:self-start py-10 sm:py-15 md:py-20 lg:py-25 xl:py-30">
               <h5 className="section-name">
                 • LEGAL AUTOMATION • 
               </h5>
@@ -233,7 +233,7 @@ export default function Home() {
           <div className=" py-8 md:py-14 xl:py-20 2xl:py-[104px]">
             {/* Section Header */}
             <div className="mb-6 sm:mb-8 md:mb-12 xl:mb-16">
-              <h5 className="section-name text-barley-white mb-[10px]">
+              <h5 className="section-name ">
                 • MEET OUR TEAM •
               </h5>
               <h2 className="text-barley-white font-inter font-medium lg:font-normal  text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl">
@@ -320,7 +320,7 @@ export default function Home() {
                   alt="Umuahia Business Summit: Legal Insights and Impact" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
-                <div className="p-5 md:p-6 lg:px-0">
+                <div className="py-5 md:py-6 lg:px-0">
                   <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                     EVENT
                   </span>
@@ -347,7 +347,7 @@ export default function Home() {
                   alt="Umuahia Business Summit: Legal Insights and Impact" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
-                <div className="p-5 md:p-6 lg:px-0">
+                <div className="py-5 md:py-6 lg:px-0">
                   <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                     FAMILY LAW
                   </span>
@@ -375,7 +375,7 @@ export default function Home() {
                   alt="Umuahia Business Summit: Legal Insights and Impact" 
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500" 
                 />
-                <div className="p-5 md:p-6 lg:px-0">
+                <div className="py-5 md:py-6 lg:px-0">
                   <span className="font-inter text-secondary text-sm md:text-base lg:text-sm font-medium mb-2 block">
                     PROPERTY LAW
                   </span>

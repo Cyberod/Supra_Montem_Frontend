@@ -71,7 +71,7 @@ export default function BlogPage() {
               10 Key Questions to Ask Before Hiring a Law Firm
             </h1>
           </div>
-          <img src="/ADR_LINES.svg" alt="vector line" className='container absolute overflow-hidden top-0 right-10' />
+          <img src="/ADR_LINES.svg" alt="vector line" className='container absolute overflow-hidden top-0 right-5' />
 
         </div>
         <div>
