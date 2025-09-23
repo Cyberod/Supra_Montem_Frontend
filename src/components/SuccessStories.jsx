@@ -32,8 +32,8 @@ const testimonials = [
 
 export default function SuccessStories() {
   return (
-    <div className="max-w-full container relative py-8 md:py-14 xl:py-20 2xl:py-[104px]">
-      <div className="mx-auto max-w-6xl">
+    <div className="max-w-full container relative ">
+      <div className="py-8 md:py-14 xl:py-20 2xl:py-[104px]">
         {/* Heading */}
         <div className="mb-8 md:mb-10 lg:mb-12">
           <h5 className="section-name uppercase mb-[10px]">

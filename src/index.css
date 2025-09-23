@@ -133,6 +133,11 @@ hr {
   }
 }
 
+.full-story:hover img {
+  @apply rotate-45 duration-300;
+}
+
+
 
 /* Pagination Dots */
 .swiper-pagination-bullet {
