@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 export default function Breadcrumbs({ items }) {
   return (
-    <div className="bg-white pt-[80px] border-b border-grey">
+    <div className="bg-white pt-[74px] border-b border-grey">
       <div className="max-w-[1440px] mx-auto px-[120px] py-6">
         <nav className="flex items-center space-x-2 text-base">
           {items.map((item, index) => (
