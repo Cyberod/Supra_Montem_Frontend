@@ -23,6 +23,8 @@ import Tax from './pages/Tax';
 import WhiteCollar from './pages/WhiteCollar';
 
 import Blog from './pages/Blog';
+import BlogPage2 from './pages/BlogPage2';
+import BlogPage3 from './pages/BlogPage3';
 import Contact from './pages/Contact';
 import BlogPage from './pages/BlogPage';
 import ScrollToTop from './components/ScrollToTop';
@@ -38,7 +40,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/practice-areas" element={<PracticeArea />} />
           <Route path="/practice-areas/arbitration-adr" element={<ArbitrationADR />} />
-          
+
           <Route path="/practice-areas/capital-markets" element={<CapitalMarkets />} /> 
           <Route path="/practice-areas/competition" element={<Competition />} /> 
           <Route path="/practice-areas/compliance-esg" element={<ComplianceESG />} /> 
@@ -62,6 +64,10 @@ export default function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
+          <Route path="/blog/how-law-firms-help-resolve-disputes" element={<BlogPage2 />} />
+          <Route path="/blog/how-law-firms-help-resolves-disputes" element={<BlogPage3 />} />
+
+
           {/* Add more routes as needed */}
         </Routes>
         <WhatsappFloat />

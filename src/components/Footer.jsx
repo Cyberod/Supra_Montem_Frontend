@@ -79,19 +79,19 @@ export default function Footer() {
                     <h3 className="font-semibold font-inter text-grey">Social</h3>
                     <div className="mt-6 flex flex-col gap-4 xl:mt-[32px] xl:gap-[16px]">
                         <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
-                            <img src="/instagram.svg" alt="Instagram" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
+                            <img src="/instagram.svg" alt="Instagram" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             Instagram
                         </a>
                         <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
-                            <img src="/twitter.svg" alt="Twitter" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
+                            <img src="/twitter.svg" alt="Twitter" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             Twitter (X)
                         </a>
                         <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
-                            <img src="/linkedin.svg" alt="LinkedIn" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
+                            <img src="/linkedin.svg" alt="LinkedIn" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             LinkedIn
                         </a>
                         <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
-                            <img src="/facebook.svg" alt="Facebook" className="w-4 h-4 xl:w-[20px] xl:h-[20px]" />
+                            <img src="/facebook.svg" alt="Facebook" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             Facebook
                         </a>
                     </div>
@@ -123,14 +123,30 @@ export default function Footer() {
                 </div>
                 <div>
                     <p className=" font-inter text-grey lg:text-center text-base lg:text-xs xl:text-base">
-                        © 2025 Supramontem Attorneys. All rights reserved. Built by Jay-Tech Solutions.
+                        © 2025 Supramontem Attorneys. All rights reserved. 
                     </p>
                 </div>
             </div>
 
         {/* Footer Montem Scroller */}
 
-        <div className=" max-w-full overflow-hidden inline-flex lg:gap-200 gap-80 h-auto relatve mt-[28px] lg:mt-[87px]">
+        <div className=" max-w-full overflow-hidden inline-flex lg:gap-50 gap-20 h-auto relatve mt-[28px] lg:mt-[87px]">
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
+            <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
             <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
             <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>
             <img src="/FOOTER_MONTEM_ATTORNEYS.png" alt="SUPRAMONTEM" className="animate-marquee2 oject-cover max-w-[1248px] h-auto lg:max-w-[1833px] "/>

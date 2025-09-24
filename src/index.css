@@ -66,7 +66,7 @@ hr {
   }
 
   .animate-marquee2 {
-    animation: marquee2 60s linear infinite;
+    animation: marquee2 100s linear infinite;
   }
 }
 

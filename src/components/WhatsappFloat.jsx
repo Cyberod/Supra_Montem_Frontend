@@ -25,7 +25,7 @@ const WhatsappFloat = () => (
     aria-label="Chat on WhatsApp"
   >
     <img
-      src="/whatsapp-Icon.png"
+      src="/whatsapp.svg"
       alt="WhatsApp"
       style={{ width: 32, height: 32, display: "block" }}
     />

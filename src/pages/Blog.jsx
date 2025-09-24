@@ -43,13 +43,13 @@ export default function Blog() {
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
                   From regulatory compliance to business structuring, this piece unpacks key legal highlights from the UBS event...
                 </p>
-                <a
-                  href="#"
+                <Link
+                  to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
                   className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                 >
                   Read Full Story
                   <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -65,14 +65,12 @@ export default function Blog() {
                   FAMILY LAW
                 </span>
                 <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                  Child Custody: Your Legal Guide Simplified
+                  How Law Firms Help Resolve Disputes 
                 </h3>
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                  Understanding the legal nuances of child custody
-                  can be overwhelming. In this blog, we break down
-                  key factors ...          </p>
+                  Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and...         </p>
                 <a
-                  href="#"
+                  href="/blog/how-law-firms-help-resolves-disputes"
                   className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                 >
                   Read Full Story
@@ -93,17 +91,18 @@ export default function Blog() {
                   PROPERTY LAW
                 </span>
                 <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                  Land Disputes: Resolving Conflicts Legally
+                  How Law Firms Help Resolve Disputes
                 </h3>
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                  Land-related conflicts can escalate quickly without proper guidance. This post outlines steps to resolve property issues through legal channels ...          </p>
-                <a
-                  href="#"
+                  Land-related conflicts can escalate quickly without proper guidance. This post outlines steps to resolve property issues through legal channels ...
+                </p>
+                <Link
+                  to="/blog/how-law-firms-help-resolve-disputes"
                   className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                 >
                   Read Full Story
                   <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                </a>
+                </Link>
               </div>
             </div>
           </div>
