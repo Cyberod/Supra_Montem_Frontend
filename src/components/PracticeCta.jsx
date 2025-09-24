@@ -9,14 +9,14 @@ export default function PracticeCta() {
           <ul className="text-barley-white text-left space-y-6 md:space-y-8">
             {[
               { name: "Arbitration ADR", path: "/practice-areas/arbitration-adr" },
-              { name: "Competition", path: "/competition" },
-              { name: "Corporate", path: "/corporate" },
-              { name: "Derivatives", path: "/corporate" },
-              { name: "Environmental", path: "/corporate" },
-              { name: "Intellectual Property", path: "/corporate" },
-              { name: "Investigations", path: "/corporate" },
-              { name: "Litigations", path: "/corporate" },
-              { name: "Tax", path: "/corporate" },
+              { name: "Competition", path: "/practice-areas/competition" },
+              { name: "Corporate", path: "/practice-areas/corporate" },
+              { name: "Derivatives", path: "/practice-areas/derivatives" },
+              { name: "Environmental", path: "/practice-areas/environmental" },
+              { name: "Intellectual Property", path: "/practice-areas/intellectual-property" },
+              { name: "Investigations", path: "/practice-areas/investigations" },
+              { name: "Litigations", path: "/practice-areas/litigations" },
+              { name: "Tax", path: "/practice-areas/tax" },
             ].map((item, index) => (
               <li key={index} className="font-inter">
                 <Link 
@@ -37,15 +37,15 @@ export default function PracticeCta() {
           {/* Second Column */}
           <ul className="text-barley-white text-left space-y-6 md:space-y-8">
             {[
-              { name: "Capital Markets", path: "/employment" },
-              { name: "Compliance ESG", path: "/litigation" },
-              { name: "Data Protection", path: "/real-estate" },
-              { name: "Employment", path: "/litigation" },
-              { name: "Foreign Investments", path: "/litigation" },
-              { name: "Insolvency", path: "/litigation" },
-              { name: "Lendings", path: "/litigation" },
-              { name: "Mergers and Acquisitions", path: "/litigation" },
-              { name: "White Collar", path: "/litigation" },
+              { name: "Capital Markets", path: "/practice-areas/capital-markets" },
+              { name: "Compliance ESG", path: "/practice-areas/compliance-esg" },
+              { name: "Data Protection", path: "/practice-areas/data-protection" },
+              { name: "Employment", path: "/practice-areas/employment" },
+              { name: "Foreign Investments", path: "/practice-areas/foreign-investments" },
+              { name: "Insolvency", path: "/practice-areas/insolvency" },
+              { name: "Lendings", path: "/practice-areas/lendings" },
+              { name: "Mergers and Acquisitions", path: "/practice-areas/mergers-and-acquisitions" },
+              { name: "White Collar", path: "/practice-areas/white-collar" },
             ].map((item, index) => (
               <li key={index} className="font-inter">
                 <Link 

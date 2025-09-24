@@ -16,7 +16,7 @@ export default function Navbar() {
       {() => (
         <>
           {/* Main Navbar Container */}
-          <div className=" max-w-full mx-auto px-[20px] sm:px-[35px] sm:mx-0 md:px-8 lg:px-15 xl:px-[120px] py-[24px] xl:py-[24px] h-[74px] sm:h-[68px] md:h-[72px] lg:h-[76px] xl:h-[80px]">
+          <div className=" max-w-full container py-[24px] xl:py-[24px] h-[74px] sm:h-[68px] md:h-[72px] lg:h-[76px] xl:h-[80px]">
             <div className="flex items-center justify-between h-full ">
               
               {/* Logo */}

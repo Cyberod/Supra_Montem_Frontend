@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ActionButton from './ActionButton';
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -23,8 +24,8 @@ export default function AppointmentForm() {
   };
 
   return (
-    <div className="max-w-[375px] mx-auto px-5 py-10 bg-aqua-haze xl:max-w-[1440px] xl:px-[200px] xl:py-[64px]">
-      <div className="xl:mx-auto">
+    <div className="max-w-full container py-10 bg-aqua-haze  xl:py-[64px]">
+      <div className="">
         {/* Header Section */}
         <div className="text-center mb-8 xl:mb-[48px]">
           <h2 className="font-inter text-2xl font-semibold text-midnight mb-3 xl:text-[28px]">
@@ -148,14 +149,9 @@ export default function AppointmentForm() {
           </div>
 
           {/* Submit Button */}
-          <div className="text-center pt-6">
-            <button
-              type="submit"
-              className="inline-flex px-4 py-2 bg-midnight text-barley-white rounded-[24px] hover:opacity-90 transition font-inter items-center gap-3 text-sm w-fit xl:px-8 xl:py-3 xl:text-base"
-            >
-              Confirm Your Appointment
-              <img src="/arrow.png" alt="arrow icon" className="bg-secondary rounded-[50%] w-[30px] h-[30px] xl:w-[32px] xl:h-[32px]"/>
-            </button>
+          <div className='text-center mt-12'>
+              <ActionButton label="Confirm your appointment" href='#' className='' />
+
           </div>
         </form>
       </div>
