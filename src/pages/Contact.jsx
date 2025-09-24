@@ -14,7 +14,7 @@ export default function Contact() {
         <div className="max-w-full bg-aqua-haze container lg:py-[104px] py-10">
           <div className="text-center  px-5  container">
             <h5 className="section-name text-center">• CONTACT US •</h5>
-            <h1 className="font-inter lg:font-normal font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl ">
+            <h1 className="font-inter text-midnight lg:font-normal font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl ">
               Secure Your Rights with Expert Legal Support
             </h1>
           </div>

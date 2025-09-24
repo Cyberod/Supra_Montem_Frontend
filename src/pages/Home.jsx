@@ -24,8 +24,9 @@ export default function Home() {
               At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
-            <ActionButton label="Book a free Consultation" href="" className=' ' />
-
+            <Link to="/contact">
+              <ActionButton label="Book a free Consultation" />
+            </Link>
           </div>
 
           {/* Scrolling SUPRA MONTEM */}
@@ -127,7 +128,9 @@ export default function Home() {
               <h5 className="section-name">• OUR PROCESS •</h5>
               <div className="flex flex-col gap-6 lg:flex-row lg:justify-between  lg:items-center lg:mt-0" id='Explore-Process'>
                 <h1 className="font-inter text-midnight  font-medium lg:font-normal  text-[24px] sm:text-[40px] md:text-[48px] lg:text-[42px] 2xl:text-[48px] text-left tracking-[0.96px]">Explore Our Process</h1>
-              <ActionButton label="Book free consultation" href="" className=" w-[237px] md:w-[257px] md:gap-6 h-auto lg:w-auto" />
+              <Link to="/contact">
+                <ActionButton label="Book a free Consultation" className=" w-[237px] md:w-[257px] md:gap-6 h-auto lg:w-auto" />
+              </Link>
               </div>
             </div>
             <div className='flex flex-col gap-8 mt-8 lg:mt-[50px] lg:flex lg:items-center lg:justify-between lg:mx-auto xl:gap-[40px] lg:flex-row'>
@@ -342,18 +345,18 @@ export default function Home() {
                     EVENT
                   </span>
                   <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                    Umuahia Business Summit: Legal Insights and Impact
+                  10 Key Questions to Ask Before Hiring a Law Firm                
                   </h3>
                   <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                    From regulatory compliance to business structuring, this piece unpacks key legal highlights from the UBS event...
+                    Choosing the right law firm is crucial for ensuring legal success, whether for personal matters or business needs...   
                   </p>
-                  <a
-                    href="#"
+                  <Link
+                    to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
                     className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                   >
                     Read Full Story
                     <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -369,19 +372,18 @@ export default function Home() {
                     FAMILY LAW
                   </span>
                   <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                    Child Custody: Your Legal Guide Simplified
+                  How Law Firms Help Resolve Disputes 
                   </h3>
                   <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                    Understanding the legal nuances of child custody
-                    can be overwhelming. In this blog, we break down
-                    key factors ...          </p>
-                  <a
-                    href="#"
+                  Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and...         
+                  </p>
+                  <Link
+                    to="/blog/how-law-firms-help-resolves-disputes"
                     className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                   >
                     Read Full Story
                     <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                  </a>
+                  </Link>
                 </div>
               </div>
 
@@ -397,17 +399,18 @@ export default function Home() {
                     PROPERTY LAW
                   </span>
                   <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                    Land Disputes: Resolving Conflicts Legally
+                  How Law Firms Help Resolve Disputes
                   </h3>
                   <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                    Land-related conflicts can escalate quickly without proper guidance. This post outlines steps to resolve property issues through legal channels ...          </p>
-                  <a
-                    href="#"
+                  Land-related conflicts can escalate quickly without proper guidance. This post outlines steps to resolve property issues through legal channels ...
+                  </p>
+                  <Link
+                    to="/blog/how-law-firms-help-resolve-disputes"
                     className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                   >
                     Read Full Story
                     <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -415,7 +418,7 @@ export default function Home() {
             {/* View More Button */}
             <div className="mt-12 md:mt-14 lg:mt-16">
               <Link
-                to="#Blogs">
+                to="/blog">
                 <ActionButton  label="View More Updates" />
 
               </Link>

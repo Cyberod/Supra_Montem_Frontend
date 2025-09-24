@@ -16,7 +16,7 @@ export default function Blog() {
         <div className="max-w-full bg-aqua-haze container lg:py-[104px] py-10">
           <div className="text-center  px-5  container">
             <h5 className="section-name text-center">• BLOG •</h5>
-            <h1 className="font-inter lg:font-normal font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
+            <h1 className="font-inter text-midnight lg:font-normal font-medium text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
                 Insights and Updates from the Legal World
             </h1>
           </div>
@@ -38,11 +38,10 @@ export default function Blog() {
                   EVENT
                 </span>
                 <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                  Umuahia Business Summit: Legal Insights and Impact
+                  10 Key Questions to Ask Before Hiring a Law Firm                
                 </h3>
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
-                  From regulatory compliance to business structuring, this piece unpacks key legal highlights from the UBS event...
-                </p>
+                    Choosing the right law firm is crucial for ensuring legal success, whether for personal matters or business needs...                </p>
                 <Link
                   to="/blog/10-key-questions-to-ask-before-hiring-a-law-firm"
                   className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
@@ -69,13 +68,13 @@ export default function Blog() {
                 </h3>
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
                   Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and...         </p>
-                <a
-                  href="/blog/how-law-firms-help-resolves-disputes"
+                <Link
+                  to="/blog/how-law-firms-help-resolves-disputes"
                   className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                 >
                   Read Full Story
                   <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />
-                </a>
+                </Link>
               </div>
             </div>
 
