@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import ActionButton from './ActionButton';
+import { useFormspark } from '@formspark/use-formspark';
+// import ActionButton from './ActionButton'; // Not needed, using button instead
 
 export default function AppointmentForm() {
   const [formData, setFormData] = useState({
@@ -9,18 +10,70 @@ export default function AppointmentForm() {
     category: '',
     message: ''
   });
+  const [errors, setErrors] = useState({});
+  const [submit, submitting] = useFormspark({
+    formId: "jVcoHK4iD", // Replace with your actual Formspark form ID
+  });
 
   const handleChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
+    // Clear error for the field being changed
+    if (errors[e.target.name]) {
+      setErrors({
+        ...errors,
+        [e.target.name]: ''
+      });
+    }
   };
 
-  const handleSubmit = (e) => {
+  const validateForm = () => {
+    const newErrors = {};
+    if (!formData.fullName.trim()) {
+      newErrors.fullName = 'Full name is required';
+    } else if (/\d/.test(formData.fullName)) {
+      newErrors.fullName = 'Full name cannot contain digits';
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    if (!formData.phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (!/^\d{10,15}$/.test(formData.phone.replace(/\D/g, ''))) {
+      newErrors.phone = 'Please enter a valid phone number (10-15 digits)';
+    }
+    if (!formData.category) {
+      newErrors.category = 'Please select a category';
+    }
+    return newErrors;
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
+    const validationErrors = validateForm();
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors);
+      return;
+    }
+    try {
+      await submit(formData);
+      alert('Form submitted successfully!');
+      // Optionally reset the form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        category: '',
+        message: ''
+      });
+    } catch (error) {
+      alert('Failed to submit form. Please try again.');
+    }
   };
 
   return (
@@ -59,6 +112,7 @@ export default function AppointmentForm() {
                   </svg>
                 </div>
               </div>
+              {errors.fullName && <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>}
             </div>
 
             {/* Email Address Field */}
@@ -80,6 +134,7 @@ export default function AppointmentForm() {
                   </svg>
                 </div>
               </div>
+              {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
             </div>
           </div>
 
@@ -104,6 +159,7 @@ export default function AppointmentForm() {
                   </svg>
                 </div>
               </div>
+              {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone}</p>}
             </div>
 
             {/* Select Category Field */}
@@ -118,11 +174,11 @@ export default function AppointmentForm() {
                   required
                 >
                   <option value="">Choose Area of Law</option>
-                  <option value="corporate">Corporate Law</option>
-                  <option value="criminal">Criminal Defense</option>
-                  <option value="family">Family Law</option>
-                  <option value="estate">Estate Planning</option>
-                  <option value="litigation">Litigation</option>
+                  <option value="Corporate Law">Corporate Law</option>
+                  <option value="Criminal Defense">Criminal Defense</option>
+                  <option value="Family Law">Family Law</option>
+                  <option value="Estate Planning">Estate Planning</option>
+                  <option value="Litigation">Litigation</option>
                   <option value="other">Other</option>
                 </select>
                 <div className="absolute right-3 top-1/2 transform -translate-y-1/2 xl:right-4">
@@ -131,6 +187,7 @@ export default function AppointmentForm() {
                   </svg>
                 </div>
               </div>
+              {errors.category && <p className="text-red-500 text-sm mt-1">{errors.category}</p>}
             </div>
           </div>
 
@@ -150,8 +207,20 @@ export default function AppointmentForm() {
 
           {/* Submit Button */}
           <div className='text-center mt-12'>
-              <ActionButton label="Confirm your appointment" href='#' className='' />
-
+              <button
+                type="submit"
+                disabled={submitting}
+                className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                {submitting ? 'Submitting...' : 'Send Message'}
+                <div className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform">
+                  <img
+                    src="/arrow.svg"
+                    alt="arrow icon"
+                    className="bg-secondary w-[10px] h-[10px] stroke-[1.5px]"
+                  />
+                </div>
+              </button>
           </div>
         </form>
       </div>
