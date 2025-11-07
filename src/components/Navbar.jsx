@@ -44,12 +44,12 @@ export default function Navbar() {
                 >
                   Practice Areas
                 </NavLink>
-                <a
-                  href="#legal-automation"
+                <NavLink
+                  to="/legal-automation"
                   className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
                 >
                   Legal Automation
-                </a>
+                </NavLink>
                 <NavLink
                   to="/Blog"
                   className={getNavLinkClass}

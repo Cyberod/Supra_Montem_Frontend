@@ -43,6 +43,14 @@ hr {
   background: #D5D6D8;
 }
 
+.step hr {
+  border: none;
+  height: 2px;
+  background: #D5D6D8;
+}
+
+
+
 
 @keyframes marquee {
   0% {

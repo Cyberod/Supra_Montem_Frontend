@@ -1,7 +1,18 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import WhatsappFloat from './components/WhatsappFloat';
+import ScrollToTop from './components/ScrollToTop';
+
+
 import Home from './pages/Home'
 import PracticeArea from './pages/PracticeArea'
+import Blog from './pages/Blog';
+import BlogPage2 from './pages/BlogPage2';
+import BlogPage3 from './pages/BlogPage3';
+import Contact from './pages/Contact';
+import BlogPage from './pages/BlogPage';
+import LegalAutomation from './pages/LegalAutomation';
+import QuitNotice from './pages/QuitNotice';
+
 
 import ArbitrationADR from './pages/ArbitrationADR'
 import CapitalMarkets from './pages/CapitalMarkets'; 
@@ -22,12 +33,8 @@ import MergersAndAcquisitions from './pages/MergersAndAcquisitions';
 import Tax from './pages/Tax';
 import WhiteCollar from './pages/WhiteCollar';
 
-import Blog from './pages/Blog';
-import BlogPage2 from './pages/BlogPage2';
-import BlogPage3 from './pages/BlogPage3';
-import Contact from './pages/Contact';
-import BlogPage from './pages/BlogPage';
-import ScrollToTop from './components/ScrollToTop';
+
+
 
 
 
@@ -63,9 +70,13 @@ export default function App() {
   
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/legal-automation" element={<LegalAutomation />} />
+          <Route path="/legal-automation/quit-notice" element={<QuitNotice />} />
+
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
           <Route path="/blog/how-law-firms-help-resolve-disputes" element={<BlogPage2 />} />
           <Route path="/blog/how-law-firms-help-resolves-disputes" element={<BlogPage3 />} />
+
 
 
           {/* Add more routes as needed */}
