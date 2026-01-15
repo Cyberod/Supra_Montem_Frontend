@@ -90,7 +90,7 @@ export default function Footer() {
                             <img src="/linkedin.svg" alt="LinkedIn" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             LinkedIn
                         </a>
-                        <a href="#" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
+                        <a href="https://web.facebook.com/HillcrestAttorneys" className="flex  gap-2 text-base font-inter text-grey hover:text-secondary transition xl:gap-[8px] xl:text-[14px]">
                             <img src="/facebook.svg" alt="Facebook" className="w-4 h-4 xl:w-[20px] mt-1 xl:h-[20px]" />
                             Facebook
                         </a>
@@ -122,9 +122,9 @@ export default function Footer() {
                     </p>
                 </div>
                 <div>
-                    <p className=" font-inter text-grey lg:text-center text-base lg:text-xs xl:text-base">
-                        © 2025 Supramontem Attorneys. All rights reserved. 
-                    </p>
+                <p className=" font-inter text-grey lg:text-center text-base lg:text-xs xl:text-base">
+                © {new Date().getFullYear()} Supramontem Attorneys. All rights reserved.
+                </p>
                 </div>
             </div>
 
