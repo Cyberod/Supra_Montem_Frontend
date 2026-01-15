@@ -106,7 +106,7 @@ export default function Home() {
             </div>
 
             <div className="xl:flex-1 text-center lg:text-left">
-              <CountUp target={99.99} suffix="%" decimals={1} duration={2500} />
+              <CountUp target={99.9} suffix="%" decimals={1} duration={2500} />
               <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Success Rate</h6>
               <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">Our cases result to favourable 
                 outcomes for 99% of our clients.</p>
