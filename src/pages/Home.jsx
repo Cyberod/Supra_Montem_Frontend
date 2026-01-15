@@ -21,7 +21,7 @@ export default function Home() {
             </h1>
             {/* Secondary statement */}
             <p className="text-midnight text-sm md:text-[18px] text-h-1 mb-[24px] md:mb-[30px] xl:mb-[35px] 2xl:mb-[40px] ">
-              At SupraMontem Attorneys, we deliver law with clarity, strategy and integrity,
+              At Supra Montem Attorneys, we deliver law with clarity, strategy and integrity,
               elevating every client's position through modern, value-driven solutions.
             </p>
             <div>
@@ -99,14 +99,14 @@ export default function Home() {
           <div className="py-[40px] flex flex-col gap-17 tems-center  lg:py-[104px] mx-[50px] lg:mx-[136px] lg:flex-row lg:justify-between lg:gap-12">
 
             <div className="xl:flex-1 text-center lg:text-left">
-              <CountUp target={20} suffix="+" duration={2500} />
+              <CountUp target={35} suffix="+" duration={2500} />
               <h6 className="text-lg text-midnight font-inter font-semibold mt-3 xl:text-[20px]">Years of Combined Experience</h6>
               <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">We've handled cases across 
                 diverse areas, securing justice for our clients</p>
             </div>
 
             <div className="xl:flex-1 text-center lg:text-left">
-              <CountUp target={99.9} suffix="%" decimals={1} duration={2500} />
+              <CountUp target={99.99} suffix="%" decimals={1} duration={2500} />
               <h6 className="text-lg text-midnight font-inter font-semibold mt-2 xl:text-[20px]">Success Rate</h6>
               <p className="text-sm text-blue-bayoux font-inter mt-4 xl:text-base">Our cases result to favourable 
                 outcomes for 99% of our clients.</p>
@@ -275,7 +275,7 @@ export default function Home() {
                     Izundu Ukanwa
                   </h3>
                   <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
-                    Founder, Senior Attorney
+                    Principal Partner
                   </p>
                 </div>
               </div>
@@ -292,7 +292,7 @@ export default function Home() {
                     Seun Ukanwa
                   </h3>
                   <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
-                    Senior Legal Advisor
+                    Managing Partner
                   </p>
                 </div>
               </div>
@@ -309,7 +309,7 @@ export default function Home() {
                     James Roberts
                   </h3>
                   <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
-                    Litigation Expert
+                    Associate
                   </p>
                 </div>
               </div>
@@ -372,13 +372,13 @@ export default function Home() {
                     FAMILY LAW
                   </span>
                   <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                  How Law Firms Help Resolve Disputes 
+                  Guiding Families Through Legal Matters: The Role of a Law Firm 
                   </h3>
                   <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
                   Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and...         
                   </p>
                   <Link
-                    to="/blog/how-law-firms-help-resolves-disputes"
+                    to="/blog/Guiding-Families-Through-Legal-Matters-The-Role-of-a-Law-Firm"
                     className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                   >
                     Read Full Story

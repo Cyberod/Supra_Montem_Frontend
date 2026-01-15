@@ -64,13 +64,13 @@ export default function Blog() {
                   FAMILY LAW
                 </span>
                 <h3 className="text-midnight font-inter font-medium text-base md:text-xl lg:text-[18px] xl:text-[22px] 2xl:text-2xl mb-3 lg:tracking-[0.96px]">
-                  How Law Firms Help Resolve Disputes 
+                  Guiding Families Through Legal Matters: The Role of a Law Firm 
                 </h3>
                 <p className="text-blue-bayoux font-inter text-sm sm:text-xl lg:text-base mb-4 line-clamp-3">
                   Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and...         </p>
                 <Link
-                  to="/blog/how-law-firms-help-resolves-disputes"
-                  className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
+                to="/blog/Guiding-Families-Through-Legal-Matters-The-Role-of-a-Law-Firm"
+                className="full-story inline-flex text-matisse font-inter font-medium items-center text-sm sm:text-xl lg:text-base gap-3 "
                 >
                   Read Full Story
                   <img src="/blue_arrow.svg" alt="arrow-icon" className='w-[10px] h-[10px] stroke-[1.5px]' />

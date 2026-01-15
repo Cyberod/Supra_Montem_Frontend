@@ -74,8 +74,8 @@ export default function App() {
           <Route path="/legal-automation/quit-notice" element={<QuitNotice />} />
 
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
-          <Route path="/blog/how-law-firms-help-resolve-disputes" element={<BlogPage2 />} />
-          <Route path="/blog/how-law-firms-help-resolves-disputes" element={<BlogPage3 />} />
+          <Route path="/blog/Guiding-Families-Through-Legal-Matters-The-Role-of-a-Law-Firm" element={<BlogPage2 />} />
+          <Route path="/blog/how-law-firms-help-resolve-disputes" element={<BlogPage3 />} />
 
 
 

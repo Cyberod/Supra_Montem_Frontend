@@ -6,51 +6,51 @@ import ReachOut from '../components/ReachOut';
 
 const questions = [
   {
-    title: "Marriage & Prenuptial Agreements",
-    content: "Before marriage, couples may choose to establish prenuptial agreements to clarify financial responsibilities and property ownership. Law firms draft and review these agreements to ensure fairness and enforceability."
+    title: "Initial Legal Advice & Case Review",
+    content: "The first step in any dispute is understanding where you stand legally. Law firms provide professional consultations to analyze the facts, review agreements, and outline the best strategies to achieve a resolution while protecting your interests."
   },
   {
-    title: "Divorce & Separation",
-    content: "When relationships break down, divorce or separation can be overwhelming. Lawyers assist in filing for divorce, negotiating settlements, and ensuring compliance with family laws to achieve a fair outcome for both parties."
+    title: "Negotiation and Mediation",
+    content: "Courtroom battles aren’t always the answer. Many disagreements can be settled through direct negotiation or mediation. Lawyers assist in these processes by ensuring fair discussions and helping parties reach mutually acceptable solutions without the expense and time of litigation. Mediation, guided by a neutral third party, often leads to quicker and less confrontational outcomes."
   },
   {
-    title: "Child Custody & Visitation Rights",
-    content: "Disputes involving children require careful handling. Law firms advocate for custody and visitation arrangements that prioritize the child’s best interests while protecting parental rights."
+    title: "Alternative Dispute Resolution (ADR)",
+    content: "When negotiation alone doesn’t work, ADR methods like arbitration can be an effective option. In arbitration, an impartial arbitrator evaluates both sides and makes a binding decision. This approach is typically faster and less expensive than going to trial."
   },
   {
-    title: "International Family Law Issues",
-    content: "Global mobility sometimes leads to cross-border family disputes involving custody, marriage, or inheritance. Law firms assist in navigating international family laws and treaties to resolve such complex cases."
+    title: "Drafting, Reviewing & Enforcing Contracts",
+    content: "Poorly written contracts are a common source of conflict. Law firms help clients draft and review contracts to ensure clarity, enforceability, and compliance with the law. They also provide strategies to prevent future disagreements through stronger legal documentation."
   },
   {
-    title: "Child & Spousal Support",
-    content: "Financial support is often a major concern during separation. Law firms help establish, enforce, or modify child support and spousal maintenance agreements to ensure financial stability."
+    title: "Litigation and Courtroom Representation",
+    content: "If out-of-court methods fail, litigation may be necessary. Law firms handle all aspects of court proceedings—from filing claims to presenting evidence—while advocating for the best possible outcome on behalf of their clients."
   },
   {
-    title: "Adoption & Guardianship",
-    content: "Expanding a family through adoption or guardianship requires navigating detailed legal procedures. Law firms guide clients through the process, ensuring compliance with all regulations and safeguarding the child’s welfare."
+    title: "Workplace & Employment Issues",
+    content: "Conflicts between employers and employees, such as wrongful dismissal, harassment, or wage disputes, can be damaging if left unresolved. Legal professionals guide both sides in finding solutions, whether through internal procedures, negotiations, or formal legal action."
   },
   {
-    title: "Domestic Violence & Protection Orders",
-    content: "In cases of abuse, immediate legal intervention is necessary. Law firms assist victims in obtaining restraining orders, ensuring safety, and pursuing legal action against perpetrators."
+    title: "Intellectual Property & Commercial Conflicts",
+    content: "Protecting intellectual property is crucial for many businesses. Disputes over trademarks, copyrights, or patents can be complex, but law firms provide the expertise to defend rights, pursue infringement claims, and settle commercial disagreements."
   },
   {
-    title: "Property Division in Divorce",
-    content: "Dividing assets during a divorce can be complicated, particularly with shared businesses, properties, or investments. Law firms work to secure equitable distribution and protect their clients’ financial interests."
+    title: "Debt Recovery & Financial Conflicts",
+    content: "Outstanding debts or financial disputes can disrupt business operations. Law firms assist with recovering owed money, negotiating settlements, and enforcing payment agreements."
   },
   {
-    title: "Inheritance & Estate Disputes",
-    content: "Family conflicts over inheritance or wills can cause lasting rifts. Law firms provide legal clarity by resolving estate disputes, contesting wills, and guiding families through probate processes."
+    title: "Real Estate & Property Disputes",
+    content: "Property conflicts—such as landlord-tenant disagreements, boundary issues, or contract breaches—require clear legal intervention. A law firm ensures compliance with real estate laws, supports negotiations, and litigates when needed."
   },
   {
-    title: "Mediation & Alternative Dispute Resolution",
-    content: "Not every family matter needs to go to court. Law firms often encourage mediation or arbitration to help families reach amicable agreements without lengthy litigation."
+    title: "Family & Personal Disputes",
+    content: "Legal conflicts aren’t limited to business. Family-related issues, including divorce, child custody, or inheritance disputes, require sensitive but firm legal support. Law firms help clients reach fair outcomes while safeguarding their rights."
   }
 ];
 
 export default function BlogPage3() {
   const breadcrumbItems = [
     { label: 'Blog', href: '/' },
-    { label: 'Guiding Families Through Legal Matters: The Role of a Law Firm' }
+    { label: 'How Law Firms Help Resolve Disputes' }
   ];
 
   
@@ -68,13 +68,14 @@ export default function BlogPage3() {
         <div className="max-w-full container bg-midnight py-[80px] xl:py-[100px] h-auto">
           <div className="text-center px-5  lg:px-[150px]">
             <h1 className="font-inter text-barley-white font-normal text-2xl sm:text-3xl md:text-4xl lg:text-4xl xl:text-5xl leading-[39.2px] tracking-[1.12px] md:leading-[62.4px] md:tracking-[1.92px]">
-                How Law Firms Help Resolve Disputes           </h1>
+              How Law Firms Help Resolve Disputes
+            </h1>
           </div>
           <img src="/ADR_LINES.svg" alt="vector line" className='container absolute overflow-hidden top-0 right-5' />
 
         </div>
         <div>
-          <img src="/BlogPage2.png" alt="Blog Page image" className='w-full h-auto' />
+          <img src="/BlogPage3.png" alt="Blog Page image" className='w-full h-auto' />
         </div>
 
         {/* Content Section */}
@@ -82,7 +83,7 @@ export default function BlogPage3() {
 
           <div className="space-y-6">
             <p className="font-inter text-sm text-blue-bayoux leading-relaxed xl:text-[18px]">
-                Family-related legal issues are often sensitive and emotionally charged. From marriage and divorce to child custody and inheritance, these matters require both compassion and legal precision. A law firm provides the necessary guidance, advocacy, and representation to help families navigate complex situations while protecting their rights and interests. 
+              Choosing the right law firm is crucial for ensuring legal success, whether for personal matters or business needs. A competent law firm can help you navigate legal complexities, protect your rights, and achieve favorable outcomes. Before hiring, asking the right questions can help you determine if the firm is the right fit for you.
             </p>
 
             {Array.from({ length: 10 }).map((_, index) => (
@@ -101,7 +102,8 @@ export default function BlogPage3() {
                 Conclusion
               </h3>
               <p className="font-inter text-sm text-blue-bayoux leading-relaxed xl:text-[18px]">
-               Family law matters affect people at deeply personal levels. A law firm’s role is not just about legal representation but also about providing support, clarity, and protection during life’s most challenging transitions. By seeking professional legal assistance, families can find solutions that are fair, balanced, and respectful of everyone involved.              </p>
+                Hiring the right law firm requires careful consideration. By asking these key questions, you can make an informed decision and choose a firm that aligns with your legal needs, budget, and expectations. Take your time, compare options, and ensure you feel confident in your choice before moving forward.
+              </p>
             </div>
           </div>
 
