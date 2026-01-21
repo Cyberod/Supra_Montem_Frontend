@@ -111,7 +111,7 @@ const handleChange = (e) => {
       issuanceDate: formData.issuanceDate || null
     };
 
-    const resp = await fetch(`${API_BASE}/documents/quit-notice`, {
+    const resp = await fetch(`${API_BASE}/api/v1/documents/quit-notice/initiate-payment`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(payload)
@@ -119,19 +119,17 @@ const handleChange = (e) => {
 
     const body = await resp.json().catch(() => ({}));
 
-    if (resp.ok) {
-      // success
-      alert('Quit notice submitted successfully! Your document will be emailed.');
-      // reset form...
-    } else {
-      // Show backend error message if present
-      const errMsg =
-        body.detail?.[0]?.msg ||
-        body.message ||
-        JSON.stringify(body) ||
-        'Submission failed';
-      alert(`Submission failed: ${errMsg}`);
-    }
+    if (resp.ok && body.payment_url) {
+      // Redirect user to Paystack checkout
+      window.location.href = body.payment_url;
+      return;
+      
+    } const errMsg =
+      body.detail?.[0]?.msg ||
+      body.message ||
+      'Payment initialization failed';
+
+      alert(errMsg);
   } catch (err) {
     console.error('Submit error', err);
     alert('Network or unexpected error submitting form.');

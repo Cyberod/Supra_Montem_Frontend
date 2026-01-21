@@ -12,6 +12,7 @@ import Contact from './pages/Contact';
 import BlogPage from './pages/BlogPage';
 import LegalAutomation from './pages/LegalAutomation';
 import QuitNotice from './pages/QuitNotice';
+import NDA from './pages/NDA'; 
 
 
 import ArbitrationADR from './pages/ArbitrationADR'
@@ -72,6 +73,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal-automation" element={<LegalAutomation />} />
           <Route path="/legal-automation/quit-notice" element={<QuitNotice />} />
+          <Route path="/legal-automation/non-disclosure-agreement" element={<NDA />} />
 
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
           <Route path="/blog/Guiding-Families-Through-Legal-Matters-The-Role-of-a-Law-Firm" element={<BlogPage2 />} />
