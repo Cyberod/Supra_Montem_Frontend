@@ -1,6 +1,12 @@
-import { useState } from 'react';
+// File: components/NDAForm.jsx
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import PaymentStatusAlert from './PaymentStatusAlert';
+import { extractAndClearUrlParams, mapPaymentStatus } from '../utils/urlParams';
 
 export default function NDAForm() {
+  const location = useLocation();
+  
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     // Step 0: Disclosing Party
@@ -22,8 +28,14 @@ export default function NDAForm() {
     // Step 4: Effective Date
     effectiveDate: ''
   });
+  
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentMessage, setPaymentMessage] = useState('');
+  const [transactionRef, setTransactionRef] = useState('');
+  const [documentId, setDocumentId] = useState('');
+  const [hasProcessedPayment, setHasProcessedPayment] = useState(false);
 
   const steps = [
     'Disclosing Party Details',
@@ -32,6 +44,65 @@ export default function NDAForm() {
     'Legal Terms',
     'Effective Date & Submit'
   ];
+
+  // Check for payment status on component mount
+  useEffect(() => {
+    // Prevent processing the same payment multiple times
+    if (hasProcessedPayment) return;
+
+    const paramsToExtract = [
+      'payment_status',
+      'message',
+      'transaction_ref',
+      'document_id'
+    ];
+
+    const extracted = extractAndClearUrlParams(paramsToExtract);
+
+    if (extracted.payment_status) {
+      const frontendStatus = mapPaymentStatus(extracted.payment_status);
+      
+      setPaymentStatus(frontendStatus);
+      setPaymentMessage(extracted.message || getDefaultMessage(frontendStatus));
+      setTransactionRef(extracted.transaction_ref || '');
+      setDocumentId(extracted.document_id || '');
+      setHasProcessedPayment(true);
+
+      // If payment was successful, reset the form
+      if (frontendStatus === 'success') {
+        setTimeout(() => resetForm(), 100); // Small delay for better UX
+      }
+    }
+  }, []);
+
+  const getDefaultMessage = (status) => {
+    const messages = {
+      'success': 'Payment successful! Your NDA document is being generated and will be emailed to you shortly.',
+      'pending': 'Payment pending. Please wait for confirmation.',
+      'failed': 'Payment failed. Please try again or contact support if the issue persists.'
+    };
+    return messages[status] || 'Payment status unknown.';
+  };
+
+  const resetForm = () => {
+    setFormData({
+      disclosingPartyName: '',
+      disclosingPartyAddress: '',
+      disclosingPartyPhone: '',
+      disclosingPartyEmail: '',
+      receivingPartyName: '',
+      receivingPartyAddress: '',
+      purpose: '',
+      confidentialInformation: '',
+      exclusions: '',
+      term: '',
+      governingLaw: '',
+      jurisdiction: '',
+      effectiveDate: ''
+    });
+    setCurrentStep(0);
+    setErrors({});
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -120,6 +191,14 @@ export default function NDAForm() {
     } finally {
       setSubmitting(false);
     }
+  };
+
+  const handleClosePaymentAlert = () => {
+    setPaymentStatus(null);
+    setPaymentMessage('');
+    setTransactionRef('');
+    setDocumentId('');
+    setHasProcessedPayment(false); // Reset to allow processing new payments
   };
 
   const renderStep = () => {
@@ -221,6 +300,17 @@ export default function NDAForm() {
   return (
     <div className="max-w-full container py-10 bg-aqua-haze xl:py-[64px]">
       <div>
+        {/* Payment Status Alert */}
+        {paymentStatus && (
+          <PaymentStatusAlert
+            status={paymentStatus}
+            message={paymentMessage}
+            documentType="nda"
+            transactionRef={transactionRef}
+            onClose={handleClosePaymentAlert}
+          />
+        )}
+
         <div className="mb-8 xl:mb-[16px] font-bold">
           <h2 className="font-inter text-2xl text-medium text-midnight mb-3 xl:text-[28px] xl:leading-[39.12px] xl:tracking-[0.5px]">Fill out the form below to receive your NDA document!</h2>
         </div>

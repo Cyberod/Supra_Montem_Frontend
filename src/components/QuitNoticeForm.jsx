@@ -1,21 +1,44 @@
-import { useState } from 'react';
+// File: components/QuitNoticeForm.jsx
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import PaymentStatusAlert from './PaymentStatusAlert';
+import { extractAndClearUrlParams, mapPaymentStatus } from '../utils/urlParams';
 
 export default function QuitNoticeForm() {
+  const location = useLocation();
+  
   const [currentStep, setCurrentStep] = useState(0);
   const [formData, setFormData] = useState({
     // Step 1: Landlord
-    landlordName: '', landlordAddress: '', landlordPhone: '', landlordEmail: '',
+    landlordName: '',
+    landlordAddress: '',
+    landlordPhone: '',
+    landlordEmail: '',
     // Step 2: Tenant
-    tenantName: '', rentalAddress: '', occupants: '',
+    tenantName: '',
+    rentalAddress: '',
+    occupants: '',
     // Step 3: Lease
-    leaseStartDate: '', leaseEndDate: '', rentAmount: '', leaseClauses: '',
+    leaseStartDate: '',
+    leaseEndDate: '',
+    rentAmount: '',
+    leaseClauses: '',
     // Step 4: Notice
-    noticeReason: '', noticePeriod: '', amountsDue: '',
+    noticeReason: '',
+    noticePeriod: '',
+    amountsDue: '',
     // Step 5: Property
-    propertyAddress: '', issuanceDate: ''
+    propertyAddress: '',
+    issuanceDate: ''
   });
+  
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentMessage, setPaymentMessage] = useState('');
+  const [transactionRef, setTransactionRef] = useState('');
+  const [documentId, setDocumentId] = useState('');
+  const [hasProcessedPayment, setHasProcessedPayment] = useState(false);
 
   const steps = [
     'Landlord Details',
@@ -25,16 +48,77 @@ export default function QuitNoticeForm() {
     'Property & Submit'
   ];
 
-const handleChange = (e) => {
-  let value = e.target.value;
-  if (e.target.type === 'email') value = value.trim();
-  if (e.target.name === 'rentAmount') {
-    // allow typing but strip commas
-    value = value.replace(/,/g, '');
-  }
-  setFormData({ ...formData, [e.target.name]: value });
-  if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: '' });
-};
+  // Check for payment status on component mount
+  useEffect(() => {
+    // Prevent processing the same payment multiple times
+    if (hasProcessedPayment) return;
+
+    const paramsToExtract = [
+      'payment_status',
+      'message',
+      'transaction_ref',
+      'document_id'
+    ];
+
+    const extracted = extractAndClearUrlParams(paramsToExtract);
+
+    if (extracted.payment_status) {
+      const frontendStatus = mapPaymentStatus(extracted.payment_status);
+      
+      setPaymentStatus(frontendStatus);
+      setPaymentMessage(extracted.message || getDefaultMessage(frontendStatus));
+      setTransactionRef(extracted.transaction_ref || '');
+      setDocumentId(extracted.document_id || '');
+      setHasProcessedPayment(true);
+
+      // If payment was successful, reset the form
+      if (frontendStatus === 'success') {
+        setTimeout(() => resetForm(), 100);
+      }
+    }
+  }, []);
+
+  const getDefaultMessage = (status) => {
+    const messages = {
+      'success': 'Payment successful! Your quit notice document is being generated and will be emailed to you shortly.',
+      'pending': 'Payment pending. Please wait for confirmation.',
+      'failed': 'Payment failed. Please try again or contact support if the issue persists.'
+    };
+    return messages[status] || 'Payment status unknown.';
+  };
+
+  const resetForm = () => {
+    setFormData({
+      landlordName: '',
+      landlordAddress: '',
+      landlordPhone: '',
+      landlordEmail: '',
+      tenantName: '',
+      rentalAddress: '',
+      occupants: '',
+      leaseStartDate: '',
+      leaseEndDate: '',
+      rentAmount: '',
+      leaseClauses: '',
+      noticeReason: '',
+      noticePeriod: '',
+      amountsDue: '',
+      propertyAddress: '',
+      issuanceDate: ''
+    });
+    setCurrentStep(0);
+    setErrors({});
+  };
+
+  const handleChange = (e) => {
+    let value = e.target.value;
+    if (e.target.type === 'email') value = value.trim();
+    if (e.target.name === 'rentAmount') {
+      value = value.replace(/,/g, '');
+    }
+    setFormData({ ...formData, [e.target.name]: value });
+    if (errors[e.target.name]) setErrors({ ...errors, [e.target.name]: '' });
+  };
 
   const validateStep = (step) => {
     const newErrors = {};
@@ -79,64 +163,64 @@ const handleChange = (e) => {
     }
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
-  setSubmitting(true);
-  try {
-    // Build a safe payload with correct types/formats
-    const payload = {
-      landlordName: formData.landlordName.trim(),
-      landlordAddress: formData.landlordAddress.trim(),
-      landlordPhone: formData.landlordPhone.trim(),
-      landlordEmail: formData.landlordEmail.trim(),
+    setSubmitting(true);
+    try {
+      const payload = {
+        landlordName: formData.landlordName.trim(),
+        landlordAddress: formData.landlordAddress.trim(),
+        landlordPhone: formData.landlordPhone.trim(),
+        landlordEmail: formData.landlordEmail.trim(),
 
-      tenantName: formData.tenantName.trim(),
-      rentalAddress: formData.rentalAddress.trim(),
-      occupants: formData.occupants?.trim() || null,
+        tenantName: formData.tenantName.trim(),
+        rentalAddress: formData.rentalAddress.trim(),
+        occupants: formData.occupants?.trim() || null,
 
-      // Date inputs already produce YYYY-MM-DD strings — leave as-is or null
-      leaseStartDate: formData.leaseStartDate || null,
-      leaseEndDate: formData.leaseEndDate || null,
+        leaseStartDate: formData.leaseStartDate || null,
+        leaseEndDate: formData.leaseEndDate || null,
 
-      // Ensure rent is a number and remove any commas
-      rentAmount: formData.rentAmount === '' || formData.rentAmount == null
-        ? null
-        : Number(String(formData.rentAmount).replace(/,/g, '')),
+        rentAmount: formData.rentAmount === '' || formData.rentAmount == null
+          ? null
+          : Number(String(formData.rentAmount).replace(/,/g, '')),
 
-      leaseClauses: formData.leaseClauses?.trim() || null,
+        leaseClauses: formData.leaseClauses?.trim() || null,
 
-      noticeReason: formData.noticeReason.trim(),
-      noticePeriod: formData.noticePeriod.trim(),
-      amountsDue: formData.amountsDue?.trim() || null,
+        noticeReason: formData.noticeReason.trim(),
+        noticePeriod: formData.noticePeriod.trim(),
+        amountsDue: formData.amountsDue?.trim() || null,
 
-      propertyAddress: formData.propertyAddress.trim(),
-      issuanceDate: formData.issuanceDate || null
-    };
+        propertyAddress: formData.propertyAddress.trim(),
+        issuanceDate: formData.issuanceDate || null
+      };
 
-    const resp = await fetch(`${API_BASE}/api/v1/documents/quit-notice/initiate-payment`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(payload)
-    });
+      const resp = await fetch(`${API_BASE}/api/v1/documents/quit-notice/initiate-payment`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      });
 
-    const body = await resp.json().catch(() => ({}));
+      const body = await resp.json().catch(() => ({}));
 
-    if (resp.ok && body.payment_url) {
-      // Redirect user to Paystack checkout
-      window.location.href = body.payment_url;
-      return;
-      
-    } const errMsg =
-      body.detail?.[0]?.msg ||
-      body.message ||
-      'Payment initialization failed';
-
+      if (resp.ok && body.payment_url) {
+        window.location.href = body.payment_url;
+        return;
+      }
+      const errMsg = body.detail?.[0]?.msg || body.message || 'Payment initialization failed';
       alert(errMsg);
-  } catch (err) {
-    console.error('Submit error', err);
-    alert('Network or unexpected error submitting form.');
-  } finally {
-    setSubmitting(false);
-  }
-};
+    } catch (err) {
+      console.error('Submit error', err);
+      alert('Network or unexpected error submitting form.');
+    } finally {
+      setSubmitting(false);
+    }
+  };
+
+  const handleClosePaymentAlert = () => {
+    setPaymentStatus(null);
+    setPaymentMessage('');
+    setTransactionRef('');
+    setDocumentId('');
+    setHasProcessedPayment(false);
+  };
 
   const renderStep = () => {
     switch (currentStep) {
@@ -249,6 +333,17 @@ const handleChange = (e) => {
   return (
     <div className="max-w-full container py-10 bg-aqua-haze xl:py-[64px]">
       <div>
+        {/* Payment Status Alert */}
+        {paymentStatus && (
+          <PaymentStatusAlert
+            status={paymentStatus}
+            message={paymentMessage}
+            documentType="quit-notice"
+            transactionRef={transactionRef}
+            onClose={handleClosePaymentAlert}
+          />
+        )}
+
         <div className="mb-8 xl:mb-[16px] font-bold">
           <h2 className="font-inter text-2xl text-medium text-midnight mb-3 xl:text-[28px] xl:leading-[39.12px] xl:tracking-[0.5px]">Fill out the form below to receive your document!</h2>
         </div>
@@ -268,10 +363,6 @@ const handleChange = (e) => {
           <div className='flex flex-row justify-between'>
             <p className='font-inter bg-white px-2 text-sm md:text-[18px] lg:text-[20px] flex-shrink-0'>{steps[currentStep]}</p>
             <div className="w-[335px] lg:w-full py-4 step"><hr /></div>
-              
-
-            
-
           </div>
         </div>
 
