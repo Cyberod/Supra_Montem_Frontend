@@ -46,7 +46,7 @@ export default function Navbar() {
                 </NavLink>
                 <NavLink
                   to="/legal-automation"
-                  className="font-inter text-primary hover:text-secondary transition-colors text-sm lg:text-base"
+                  className={getNavLinkClass}
                 >
                   Legal Automation
                 </NavLink>
