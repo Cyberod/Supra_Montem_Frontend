@@ -25,7 +25,7 @@ export default function Navbar() {
                   <img 
                     src="/SupraMontem_Logo.png" 
                     alt="Company Logo" 
-                    className="h-6 sm:h-7 md:h-8 lg:h-9 xl:h-10 w-auto"
+                    className="h-10 sm:h-11 md:h-12 lg:h-13 xl:h-14 w-auto"
                   /> 
                 </NavLink>
               </div>

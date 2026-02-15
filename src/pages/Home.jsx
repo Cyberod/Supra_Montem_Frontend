@@ -129,7 +129,7 @@ export default function Home() {
               <div className="flex flex-col gap-6 lg:flex-row lg:justify-between  lg:items-center lg:mt-0" id='Explore-Process'>
                 <h1 className="font-inter text-midnight  font-medium lg:font-normal  text-[24px] sm:text-[40px] md:text-[48px] lg:text-[42px] 2xl:text-[48px] text-left tracking-[0.96px]">Explore Our Process</h1>
               <div>
-                <ActionButton label="Book a free Consultation" className=" w-[237px] md:w-[257px] md:gap-6 h-auto lg:w-auto" href="/contact" />
+                <ActionButton label="Book a free Consultation" className=" w-[247px] md:w-[257px] md:gap-4 h-auto lg:w-auto" href="/contact" />
               </div>
               </div>
             </div>
