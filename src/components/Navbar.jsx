@@ -23,7 +23,7 @@ export default function Navbar() {
               <div className="flex items-center flex-shrink-0">
                 <NavLink to="/">
                   <img 
-                    src="/Logo+Menu.png" 
+                    src="/SupraMontem_Logo.png" 
                     alt="Company Logo" 
                     className="h-6 sm:h-7 md:h-8 lg:h-9 xl:h-10 w-auto"
                   /> 

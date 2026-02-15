@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="  flex flex-col gap-8 text-white lg:pt-8  lg:px-[40px] lg:flex lg:flex-row lg:space-x-0">
             {/* Logo */}
             <div className="flex flex-col">
-                <img src="/LightLogo.png" alt="SupraMontem Logo" className="w-[143px] h-[24px] lg:w-[149.4px] lg:h-[32px]" />
+                <img src="/SupraMontem_Cream.png" alt="SupraMontem Logo" className="w-[143px] h-[24px] lg:w-[200.4px] lg:h-[52px]" />
                 <p className="mt-6 text-xs font-inter text-grey font-normal text-left lg:mt-[32px] lg:text-[14px] lg:max-w-[400px]">
                     Supramontem is a trusted law firm with 20+ years of 
                     experience, offering expert legal services in criminal defense, family law, and estate planning.
