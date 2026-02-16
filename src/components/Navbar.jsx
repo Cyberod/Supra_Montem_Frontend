@@ -113,13 +113,13 @@ export default function Navbar() {
                 >
                   Practice Areas
                 </NavLink>
-                <a
-                  href="#legal-automation"
+                <NavLink
+                  to="/legal-automation"
                   onClick={() => setIsOpen(false)}
                   className="block px-3 py-2 font-inter text-primary hover:text-secondary transition-colors text-base"
                 >
                   Legal Automation
-                </a>
+                </NavLink>
                 <NavLink
                   to="/Blog"
                   onClick={() => setIsOpen(false)}

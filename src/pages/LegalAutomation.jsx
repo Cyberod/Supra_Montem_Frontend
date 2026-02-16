@@ -55,18 +55,18 @@ export default function LegalAutomation(){
                     "US Company Registration"
                 ].map((service, index) => {
                     const urlMap = {
-                        "Business Name Registration": "/legal-automation/business-name-registration",
-                        "Company Registration": "/legal-automation/company-registration",
-                        "Company Seal": "/legal-automation/company-seal",
-                        "Company Stamp": "/legal-automation/company-stamp",
-                        "Independent Contractors Agreement": "/legal-automation/independent-contractors-agreement",
-                        "Non-Disclosure Agreement": "/legal-automation/non-disclosure-agreement",
-                        "Lease Agreement": "/legal-automation/lease-agreement",
-                        "Loan Agreement": "/legal-automation/loan-agreement",
-                        "Quit Notice": "/legal-automation/quit-notice",
-                        "Tenancy Agreement": "/legal-automation/tenancy-agreement",
-                        "Trademark Registration": "/legal-automation/trademark-registration",
-                        "US Company Registration": "/legal-automation/us-company-registration"
+                        "Business Name Registration": "",
+                        "Company Registration": "",
+                        "Company Seal": "",
+                        "Company Stamp": "",
+                        "Independent Contractors Agreement": "",
+                        "Non-Disclosure Agreement": "",
+                        "Lease Agreement": "",
+                        "Loan Agreement": "",
+                        "Quit Notice": "",
+                        "Tenancy Agreement": "",
+                        "Trademark Registration": "",
+                        "US Company Registration": ""
                     };
                     const linkUrl = urlMap[service] || "/legal-automation";
                     return (
