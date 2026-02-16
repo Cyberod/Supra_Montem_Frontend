@@ -37,7 +37,7 @@ export default function LegalAutomation(){
             US Company Registration
         
         */}
-        <div className='max-w-full py-[40px] lg:py-[80px] xl:py-[104px]  container'>
+        <div className='max-w-full py-[40px] lg:py-[80px] xl:py-[104px] font-inter container'>
             {/* Legal Automation services */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
                 {[
