@@ -301,12 +301,12 @@ export default function Home() {
               <div className=" ">
                 <img
                   src="/expert.png"
-                  alt="James Roberts, Litigation Expert"
+                  alt="Mary Ogwo, Esq., Associate"
                   className="w-full h-auto "
                 />
                 <div className="p-6 md:p-7 lg:p- bg-barley-white">
                   <h3 className="text-midnight font-inter font-semibold text-base sm:text-xl md:text-3xl lg:text-2xl mb-3 mt-2 lg:mb-2 lg:mt-0">
-                    James Roberts
+                    Mary Ogwo, Esq.
                   </h3>
                   <p className="text-midnight font-inter text-xs sm:text-sm md:text-xl mb-1 lg:text-[16px]">
                     Associate
