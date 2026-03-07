@@ -60,10 +60,10 @@ export default function LegalAutomation(){
                         "Company Seal": "",
                         "Company Stamp": "",
                         "Independent Contractors Agreement": "",
-                        "Non-Disclosure Agreement": "",
+                        "Non-Disclosure Agreement": "/legal-automation/non-disclosure-agreement",
                         "Lease Agreement": "",
                         "Loan Agreement": "",
-                        "Quit Notice": "",
+                        "Quit Notice": "/legal-automation/quit-notice",
                         "Tenancy Agreement": "",
                         "Trademark Registration": "",
                         "US Company Registration": ""

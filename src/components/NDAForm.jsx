@@ -153,6 +153,10 @@ export default function NDAForm() {
     }
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
+    // Temporarily disabled: Service coming soon
+    alert('Service coming soon!');
+
+    /*
     setSubmitting(true);
     try {
       const payload = {
@@ -191,6 +195,7 @@ export default function NDAForm() {
     } finally {
       setSubmitting(false);
     }
+    */
   };
 
   const handleClosePaymentAlert = () => {
