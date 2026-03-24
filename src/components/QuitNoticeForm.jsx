@@ -138,6 +138,12 @@ export default function QuitNoticeForm() {
     } else if (step === 3) {
       if (!formData.noticeReason.trim()) newErrors.noticeReason = 'Reason is required';
       if (!formData.noticePeriod.trim()) newErrors.noticePeriod = 'Notice period is required';
+      else {
+        const noticePeriodRegex = /^\d+(?:\s*days?)?$/i;
+        if (!noticePeriodRegex.test(formData.noticePeriod.trim())) {
+          newErrors.noticePeriod = 'Notice period must be in format: number days (e.g., "30 days" or "30")';
+        }
+      }
     } else if (step === 4) {
       if (!formData.propertyAddress.trim()) newErrors.propertyAddress = 'Property address is required';
       if (!formData.issuanceDate) newErrors.issuanceDate = 'Issuance date is required';
@@ -164,9 +170,9 @@ export default function QuitNoticeForm() {
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
     // Temporarily disabled: Service coming soon
-    alert('Service coming soon!');
+    /* alert('Service coming soon!'); */
 
-    /*
+    
     setSubmitting(true);
     try {
       const payload = {
@@ -216,7 +222,7 @@ export default function QuitNoticeForm() {
     } finally {
       setSubmitting(false);
     }
-    */
+    
   };
 
   const handleClosePaymentAlert = () => {
