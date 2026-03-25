@@ -170,10 +170,10 @@ export default function QuitNoticeForm() {
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
     // Temporarily disabled: Service coming soon
-    /* alert('Service coming soon!'); */
+     alert('Service coming soon!'); 
 
     
-    setSubmitting(true);
+/*    setSubmitting(true);
     try {
       const payload = {
         landlordName: formData.landlordName.trim(),
@@ -222,7 +222,7 @@ export default function QuitNoticeForm() {
     } finally {
       setSubmitting(false);
     }
-    
+    */
   };
 
   const handleClosePaymentAlert = () => {
