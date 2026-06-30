@@ -7,7 +7,7 @@ export default function ActionButton({ label, href = "#", onClick, className = "
     clickHandler = (e) => {
       e.preventDefault();
       if (window.Calendly) {
-        window.Calendly.initPopupWidget({ url: 'https://calendly.com/jonazkeez/30min?hide_gdpr_banner=1&text_color=01203F&primary_color=E19132' });
+        window.Calendly.initPopupWidget({ url: 'https://calendly.com/contact-supramontemattorneys/30min?hide_gdpr_banner=1&text_color=01203F&primary_color=E19132' });
       }
     };
   }

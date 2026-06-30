@@ -44,7 +44,7 @@ export default function Contact() {
           </div>
           <span className="font-inter text-sm lg:text-base text-blue-bayoux">Email</span>
         </div>
-        <p className="font-inter text-sm lg:text-base text-blue-bayoux mt-2">info@supramontem.com</p>
+        <p className="font-inter text-sm lg:text-base text-blue-bayoux mt-2">contact@supramontemattorneys.com.ng</p>
       </div>
 
       {/* Location */}
