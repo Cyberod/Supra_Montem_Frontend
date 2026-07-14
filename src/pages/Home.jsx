@@ -65,7 +65,7 @@ export default function Home() {
           {/* CEO Image */}
           <div className="relative -mx-5 sm:-mx-10 md:-mx-15 lg:mx-0 h-[441px] sm:h-[720px] md:h-[900px] lg:h-[675px]  mt-25 sm:mt-32 md:mt-34 lg:w-[500px] 2xl:w-[600px] xl:flex xl:justify-end lg:pt-[68px] lg:mt-0"> 
             <img
-              src="/ceo.png"
+              src="/Principal_Partner.png"
               alt="CEO"
               className="w-full h-full object-cover"
             />
@@ -266,7 +266,7 @@ export default function Home() {
               {/* Team Member 1 */}
               <div className="bg-barley-white ">
                 <img
-                  src="/team1.png"
+                  src="/Principal_Partner.png"
                   alt="Izundu Ukanwa, CEO, Senior Attorney"
                   className="w-full h-auto "
                 />
@@ -283,7 +283,7 @@ export default function Home() {
               {/* Team Member 2 */}
               <div className=" ">
                 <img
-                  src="/advisor.png"
+                  src="/Managing_Partner.png"
                   alt="Seun Ukanwa, Senior Legal Advisor"
                   className="w-full h-auto "
                 />
