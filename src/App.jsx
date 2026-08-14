@@ -12,7 +12,13 @@ import Contact from './pages/Contact';
 import BlogPage from './pages/BlogPage';
 import LegalAutomation from './pages/LegalAutomation';
 import QuitNotice from './pages/QuitNotice';
-import NDA from './pages/NDA'; 
+import SevenDayNotice from './pages/SevenDayNotice';
+import NDA from './pages/NDA';
+import TenancyAgreement from './pages/TenancyAgreement';
+import Affidavit from './pages/Affidavit';
+import DemandLetter from './pages/DemandLetter';
+import EmploymentContract from './pages/EmploymentContract';
+import LetterOfAttestation from './pages/LetterOfAttestation';
 
 
 import ArbitrationADR from './pages/ArbitrationADR'
@@ -73,7 +79,13 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal-automation" element={<LegalAutomation />} />
           <Route path="/legal-automation/quit-notice" element={<QuitNotice />} />
+          <Route path="/legal-automation/seven-day-notice" element={<SevenDayNotice />} />
           <Route path="/legal-automation/non-disclosure-agreement" element={<NDA />} />
+          <Route path="/legal-automation/tenancy-agreement" element={<TenancyAgreement />} />
+          <Route path="/legal-automation/affidavit" element={<Affidavit />} />
+          <Route path="/legal-automation/demand-letter" element={<DemandLetter />} />
+          <Route path="/legal-automation/employment-contract" element={<EmploymentContract />} />
+          <Route path="/legal-automation/letter-of-attestation" element={<LetterOfAttestation />} />
 
           <Route path="/blog/10-key-questions-to-ask-before-hiring-a-law-firm" element={<BlogPage />} />
           <Route path="/blog/Guiding-Families-Through-Legal-Matters-The-Role-of-a-Law-Firm" element={<BlogPage2 />} />

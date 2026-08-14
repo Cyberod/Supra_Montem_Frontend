@@ -4,6 +4,15 @@ import { useLocation } from 'react-router-dom';
 import PaymentStatusAlert from './PaymentStatusAlert';
 import { extractAndClearUrlParams, mapPaymentStatus } from '../utils/urlParams';
 
+const NIGERIAN_STATES = [
+  'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue',
+  'Borno', 'Cross River', 'Delta', 'Ebonyi', 'Edo', 'Ekiti', 'Enugu',
+  'Gombe', 'Imo', 'Jigawa', 'Kaduna', 'Kano', 'Katsina', 'Kebbi', 'Kogi',
+  'Kwara', 'Lagos', 'Nasarawa', 'Niger', 'Ogun', 'Ondo', 'Osun', 'Oyo',
+  'Plateau', 'Rivers', 'Sokoto', 'Taraba', 'Yobe', 'Zamfara',
+  'Federal Capital Territory',
+];
+
 export default function NDAForm() {
   const location = useLocation();
   
@@ -23,7 +32,6 @@ export default function NDAForm() {
     exclusions: '',
     // Step 3: Legal Terms
     term: '',
-    governingLaw: '',
     jurisdiction: '',
     // Step 4: Effective Date
     effectiveDate: ''
@@ -96,7 +104,6 @@ export default function NDAForm() {
       confidentialInformation: '',
       exclusions: '',
       term: '',
-      governingLaw: '',
       jurisdiction: '',
       effectiveDate: ''
     });
@@ -127,21 +134,24 @@ export default function NDAForm() {
       if (!formData.confidentialInformation.trim()) newErrors.confidentialInformation = 'Confidential information description is required';
     } else if (step === 3) {
       if (!formData.term.trim()) newErrors.term = 'Term is required';
-      if (!formData.governingLaw.trim()) newErrors.governingLaw = 'Governing law is required';
-      if (!formData.jurisdiction.trim()) newErrors.jurisdiction = 'Jurisdiction is required';
+      if (!formData.jurisdiction) newErrors.jurisdiction = 'Please select a state';
     } else if (step === 4) {
       if (!formData.effectiveDate) newErrors.effectiveDate = 'Effective date is required';
     }
     return newErrors;
   };
 
-  const nextStep = () => {
+  const nextStep = (e) => {
+    e.preventDefault();
     const stepErrors = validateStep(currentStep);
     if (Object.keys(stepErrors).length) return setErrors(stepErrors);
     setCurrentStep(currentStep + 1);
   };
 
-  const prevStep = () => setCurrentStep(currentStep - 1);
+  const prevStep = (e) => {
+    e.preventDefault();
+    setCurrentStep(currentStep - 1);
+  };
 
   const API_BASE = import.meta.env.VITE_API_URL ?? '';
 
@@ -153,10 +163,6 @@ export default function NDAForm() {
     }
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
-    // Temporarily disabled: Service coming soon
-    alert('Service coming soon!');
-
-    /*
     setSubmitting(true);
     try {
       const payload = {
@@ -170,8 +176,7 @@ export default function NDAForm() {
         confidentialInformation: formData.confidentialInformation.trim(),
         exclusions: formData.exclusions?.trim() || null,
         term: formData.term.trim(),
-        governingLaw: formData.governingLaw.trim(),
-        jurisdiction: formData.jurisdiction.trim(),
+        jurisdiction: formData.jurisdiction,
         effectiveDate: formData.effectiveDate || null
       };
 
@@ -195,7 +200,6 @@ export default function NDAForm() {
     } finally {
       setSubmitting(false);
     }
-    */
   };
 
   const handleClosePaymentAlert = () => {
@@ -276,13 +280,14 @@ export default function NDAForm() {
               {errors.term && <p className="text-red-500 text-sm mt-1">{errors.term}</p>}
             </div>
             <div>
-              <label className="block font-inter text-sm text-midnight mb-2 font-semibold xl:text-[14px] xl:mb-1">Governing Law</label>
-              <input type="text" name="governingLaw" value={formData.governingLaw} onChange={handleChange} placeholder="e.g., Nigeria" required className="w-full h-12 px-3 py-3 pr-10 border border-grey rounded-lg font-inter text-sm focus:border-secondary focus:outline-none bg-white text-grey-3 xl:h-[56px] xl:px-4 xl:pr-12 xl:text-[14px]" />
-              {errors.governingLaw && <p className="text-red-500 text-sm mt-1">{errors.governingLaw}</p>}
-            </div>
-            <div>
-              <label className="block font-inter text-sm text-midnight mb-2 font-semibold xl:text-[14px] xl:mb-1">Jurisdiction</label>
-              <input type="text" name="jurisdiction" value={formData.jurisdiction} onChange={handleChange} placeholder="e.g., Lagos Courts" required className="w-full h-12 px-3 py-3 pr-10 border border-grey rounded-lg font-inter text-sm focus:border-secondary focus:outline-none bg-white text-grey-3 xl:h-[56px] xl:px-4 xl:pr-12 xl:text-[14px]" />
+              <label className="block font-inter text-sm text-midnight mb-2 font-semibold xl:text-[14px] xl:mb-1">Jurisdiction (State)</label>
+              <select name="jurisdiction" value={formData.jurisdiction} onChange={handleChange} required className="w-full h-12 px-3 py-3 pr-10 border border-grey rounded-lg font-inter text-sm focus:border-secondary focus:outline-none bg-white text-grey-3 xl:h-[56px] xl:px-4 xl:pr-12 xl:text-[14px]">
+                <option value="">Select state</option>
+                {NIGERIAN_STATES.map((state) => (
+                  <option key={state} value={state}>{state}</option>
+                ))}
+              </select>
+              <p className="text-grey-3 text-xs mt-1">The state whose courts will settle any dispute under this agreement. The agreement is governed by Nigerian law.</p>
               {errors.jurisdiction && <p className="text-red-500 text-sm mt-1">{errors.jurisdiction}</p>}
             </div>
           </div>
