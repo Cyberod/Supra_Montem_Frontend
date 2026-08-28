@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import PaymentStatusAlert from './PaymentStatusAlert';
 import { extractAndClearUrlParams, mapPaymentStatus } from '../utils/urlParams';
 import { GENERATION_DISABLED, GENERATION_DISABLED_MESSAGE } from '../utils/featureFlags';
+import { openDocumentPreview } from '../utils/documentPreview';
 
 const DEMAND_TYPES = [
   { value: 'DEBT_PAYMENT', label: 'Debt / Payment Demand' },
@@ -52,6 +53,7 @@ export default function DemandLetterForm() {
   });
 
   const [errors, setErrors] = useState({});
+  const [previewing, setPreviewing] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [paymentMessage, setPaymentMessage] = useState('');
@@ -197,57 +199,79 @@ export default function DemandLetterForm() {
 
   const API_BASE = import.meta.env.VITE_API_URL ?? '';
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (GENERATION_DISABLED) return alert(GENERATION_DISABLED_MESSAGE);
+  const validateAllSteps = () => {
     const allErrors = {};
     for (let i = 0; i < steps.length; i++) {
       Object.assign(allErrors, validateStep(i));
     }
+    return allErrors;
+  };
+
+  const buildPayload = () => {
+    const optional = (v) => (v.trim() ? v.trim() : null);
+    const optionalNumber = (v) => (v !== '' && v !== null && v !== undefined ? Number(v) : null);
+    return {
+      clientName: formData.clientName.trim(),
+      clientAddress: formData.clientAddress.trim(),
+      clientPhone: formData.clientPhone.trim(),
+      clientEmail: formData.clientEmail.trim(),
+
+      recipientName: formData.recipientName.trim(),
+      recipientAddress: formData.recipientAddress.trim(),
+      isGovernmentEntity: formData.isGovernmentEntity,
+
+      demandType: formData.demandType,
+      deadlineDays: Number(formData.deadlineDays),
+      additionalNotes: optional(formData.additionalNotes),
+
+      debtDescription: optional(formData.debtDescription),
+      amountOwed: optionalNumber(formData.amountOwed),
+      dateDue: formData.dateDue || null,
+      amountPartPaid: optionalNumber(formData.amountPartPaid),
+      contractualInterestRate: optional(formData.contractualInterestRate),
+
+      contractDescription: optional(formData.contractDescription),
+      obligationBreached: optional(formData.obligationBreached),
+      remedySought: formData.remedySought || null,
+      damagesAmount: optionalNumber(formData.damagesAmount),
+
+      propertyDescription: optional(formData.propertyDescription),
+      howRecipientObtainedProperty: optional(formData.howRecipientObtainedProperty),
+      returnBasis: optional(formData.returnBasis),
+
+      generalSubject: optional(formData.generalSubject),
+      generalFacts: formData.generalFacts.trim() || null,
+      generalDemand: optional(formData.generalDemand)
+    };
+  };
+
+  const handlePreview = async () => {
+    const allErrors = validateAllSteps();
+    if (Object.keys(allErrors).length) return setErrors(allErrors);
+
+    setPreviewing(true);
+    try {
+      await openDocumentPreview(API_BASE, 'demand-letter', buildPayload());
+    } catch (err) {
+      console.error('Preview error', err);
+      alert(err.message);
+    } finally {
+      setPreviewing(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (GENERATION_DISABLED) return alert(GENERATION_DISABLED_MESSAGE);
+    const allErrors = validateAllSteps();
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
     setSubmitting(true);
     try {
-      const optional = (v) => (v.trim() ? v.trim() : null);
-      const optionalNumber = (v) => (v !== '' && v !== null && v !== undefined ? Number(v) : null);
-      const payload = {
-        clientName: formData.clientName.trim(),
-        clientAddress: formData.clientAddress.trim(),
-        clientPhone: formData.clientPhone.trim(),
-        clientEmail: formData.clientEmail.trim(),
-
-        recipientName: formData.recipientName.trim(),
-        recipientAddress: formData.recipientAddress.trim(),
-        isGovernmentEntity: formData.isGovernmentEntity,
-
-        demandType: formData.demandType,
-        deadlineDays: Number(formData.deadlineDays),
-        additionalNotes: optional(formData.additionalNotes),
-
-        debtDescription: optional(formData.debtDescription),
-        amountOwed: optionalNumber(formData.amountOwed),
-        dateDue: formData.dateDue || null,
-        amountPartPaid: optionalNumber(formData.amountPartPaid),
-        contractualInterestRate: optional(formData.contractualInterestRate),
-
-        contractDescription: optional(formData.contractDescription),
-        obligationBreached: optional(formData.obligationBreached),
-        remedySought: formData.remedySought || null,
-        damagesAmount: optionalNumber(formData.damagesAmount),
-
-        propertyDescription: optional(formData.propertyDescription),
-        howRecipientObtainedProperty: optional(formData.howRecipientObtainedProperty),
-        returnBasis: optional(formData.returnBasis),
-
-        generalSubject: optional(formData.generalSubject),
-        generalFacts: formData.generalFacts.trim() || null,
-        generalDemand: optional(formData.generalDemand)
-      };
-
       const resp = await fetch(`${API_BASE}/api/v1/documents/demand-letter/initiate-payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(buildPayload())
       });
 
       const body = await resp.json().catch(() => ({}));
@@ -565,12 +589,17 @@ export default function DemandLetterForm() {
                 </div>
               </button>
             ) : (
-              <button type="submit" disabled={submitting || GENERATION_DISABLED} className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0 disabled:opacity-50 disabled:cursor-not-allowed">
-                {submitting ? 'Submitting...' : GENERATION_DISABLED ? 'Coming Soon' : 'Generate Document'}
-                <div className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform">
-                  <img src="/arrow.svg" alt="arrow icon" className="bg-secondary w-[10px] h-[10px] stroke-[1.5px]" />
-                </div>
-              </button>
+              <div className="flex flex-wrap gap-3">
+                <button type="button" onClick={handlePreview} disabled={previewing} className="inline-flex px-4 py-3 border-2 border-midnight text-midnight cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base lg:text-[18px] h-12 lg:h-14 disabled:opacity-50 disabled:cursor-not-allowed">
+                  {previewing ? 'Preparing Preview...' : 'Preview Document'}
+                </button>
+                <button type="submit" disabled={submitting || GENERATION_DISABLED} className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0 disabled:opacity-50 disabled:cursor-not-allowed">
+                  {submitting ? 'Submitting...' : GENERATION_DISABLED ? 'Coming Soon' : 'Generate Document'}
+                  <div className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform">
+                    <img src="/arrow.svg" alt="arrow icon" className="bg-secondary w-[10px] h-[10px] stroke-[1.5px]" />
+                  </div>
+                </button>
+              </div>
             )}
           </div>
         </form>

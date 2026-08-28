@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import PaymentStatusAlert from './PaymentStatusAlert';
 import { extractAndClearUrlParams, mapPaymentStatus } from '../utils/urlParams';
 import { GENERATION_DISABLED, GENERATION_DISABLED_MESSAGE } from '../utils/featureFlags';
+import { openDocumentPreview } from '../utils/documentPreview';
 
 const NIGERIAN_STATES = [
   'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue',
@@ -40,6 +41,7 @@ export default function NDAForm() {
   
   const [errors, setErrors] = useState({});
   const [submitting, setSubmitting] = useState(false);
+  const [previewing, setPreviewing] = useState(false);
   const [paymentStatus, setPaymentStatus] = useState(null);
   const [paymentMessage, setPaymentMessage] = useState('');
   const [transactionRef, setTransactionRef] = useState('');
@@ -156,36 +158,56 @@ export default function NDAForm() {
 
   const API_BASE = import.meta.env.VITE_API_URL ?? '';
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    if (GENERATION_DISABLED) return alert(GENERATION_DISABLED_MESSAGE);
+  const validateAllSteps = () => {
     const allErrors = {};
     for (let i = 0; i < steps.length; i++) {
       Object.assign(allErrors, validateStep(i));
     }
+    return allErrors;
+  };
+
+  const buildPayload = () => ({
+    disclosingPartyName: formData.disclosingPartyName.trim(),
+    disclosingPartyAddress: formData.disclosingPartyAddress.trim(),
+    disclosingPartyPhone: formData.disclosingPartyPhone.trim(),
+    disclosingPartyEmail: formData.disclosingPartyEmail.trim(),
+    receivingPartyName: formData.receivingPartyName.trim(),
+    receivingPartyAddress: formData.receivingPartyAddress.trim(),
+    purpose: formData.purpose.trim(),
+    confidentialInformation: formData.confidentialInformation.trim(),
+    exclusions: formData.exclusions?.trim() || null,
+    term: formData.term.trim(),
+    jurisdiction: formData.jurisdiction,
+    effectiveDate: formData.effectiveDate || null
+  });
+
+  const handlePreview = async () => {
+    const allErrors = validateAllSteps();
+    if (Object.keys(allErrors).length) return setErrors(allErrors);
+
+    setPreviewing(true);
+    try {
+      await openDocumentPreview(API_BASE, 'nda', buildPayload());
+    } catch (err) {
+      console.error('Preview error', err);
+      alert(err.message);
+    } finally {
+      setPreviewing(false);
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (GENERATION_DISABLED) return alert(GENERATION_DISABLED_MESSAGE);
+    const allErrors = validateAllSteps();
     if (Object.keys(allErrors).length) return setErrors(allErrors);
 
     setSubmitting(true);
     try {
-      const payload = {
-        disclosingPartyName: formData.disclosingPartyName.trim(),
-        disclosingPartyAddress: formData.disclosingPartyAddress.trim(),
-        disclosingPartyPhone: formData.disclosingPartyPhone.trim(),
-        disclosingPartyEmail: formData.disclosingPartyEmail.trim(),
-        receivingPartyName: formData.receivingPartyName.trim(),
-        receivingPartyAddress: formData.receivingPartyAddress.trim(),
-        purpose: formData.purpose.trim(),
-        confidentialInformation: formData.confidentialInformation.trim(),
-        exclusions: formData.exclusions?.trim() || null,
-        term: formData.term.trim(),
-        jurisdiction: formData.jurisdiction,
-        effectiveDate: formData.effectiveDate || null
-      };
-
       const resp = await fetch(`${API_BASE}/api/v1/documents/nda/initiate-payment`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(payload)
+        body: JSON.stringify(buildPayload())
       });
 
       const body = await resp.json().catch(() => ({}));
@@ -360,12 +382,17 @@ export default function NDAForm() {
                 </div>
               </button>
             ) : (
-              <button type="submit" disabled={submitting || GENERATION_DISABLED} className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0 disabled:opacity-50 disabled:cursor-not-allowed">
-                {submitting ? 'Submitting...' : GENERATION_DISABLED ? 'Coming Soon' : 'Generate Document'}
-                <div className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform">
-                  <img src="/arrow.svg" alt="arrow icon" className="bg-secondary w-[10px] h-[10px] stroke-[1.5px]" />
-                </div>
-              </button>
+              <div className="flex flex-wrap gap-3">
+                <button type="button" onClick={handlePreview} disabled={previewing} className="inline-flex px-4 py-3 border-2 border-midnight text-midnight cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base lg:text-[18px] h-12 lg:h-14 disabled:opacity-50 disabled:cursor-not-allowed">
+                  {previewing ? 'Preparing Preview...' : 'Preview Document'}
+                </button>
+                <button type="submit" disabled={submitting || GENERATION_DISABLED} className="inline-flex pl-[14px] py-2 pb-2 pr-2 md:px-[14px] md:py-3 xl:px-4 xl:py-3 bg-midnight text-barley-white cursor-pointer rounded-full hover:opacity-90 transition text-h-1 items-center text-base gap-3 lg:text-[18px] h-12 lg:h-14 xl:ml-0 disabled:opacity-50 disabled:cursor-not-allowed">
+                  {submitting ? 'Submitting...' : GENERATION_DISABLED ? 'Coming Soon' : 'Generate Document'}
+                  <div className="bg-secondary rounded-full w-8 h-8 flex items-center justify-center transition-transform">
+                    <img src="/arrow.svg" alt="arrow icon" className="bg-secondary w-[10px] h-[10px] stroke-[1.5px]" />
+                  </div>
+                </button>
+              </div>
             )}
           </div>
         </form>
