@@ -23,29 +23,23 @@ export default function LegalAutomation(){
         </div>
 
         {/* Legal Automation  */}
-        {/* Business Name Registration
-            Company Registration
-            Company Seal
-            Company Stamp
+        {/* Affidavit
+            Demand Letter
+            Employment Contract
             Independent Contractors Agreement
             Non-Disclosure Agreement
             Lease Agreement
+            Letter of Attestation
             Loan Agreement
             Quit Notice
+            Seven Days Notice
             Tenancy Agreement
-            Trademark Registration
-            US Company Registration
-        
         */}
         <div className='max-w-full py-[40px] lg:py-[80px] xl:py-[104px] font-inter container'>
             {/* Legal Automation services */}
             <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
                 {[
                     "Affidavit",
-                    "Business Name Registration",
-                    "Company Registration",
-                    "Company Seal",
-                    "Company Stamp",
                     "Demand Letter",
                     "Employment Contract",
                     "Independent Contractors Agreement",
@@ -55,16 +49,10 @@ export default function LegalAutomation(){
                     "Loan Agreement",
                     "Quit Notice",
                     "Seven Days Notice",
-                    "Tenancy Agreement",
-                    "Trademark Registration",
-                    "US Company Registration"
+                    "Tenancy Agreement"
                 ].map((service, index) => {
                     const urlMap = {
                         "Affidavit": "/legal-automation/affidavit",
-                        "Business Name Registration": "",
-                        "Company Registration": "",
-                        "Company Seal": "",
-                        "Company Stamp": "",
                         "Demand Letter": "/legal-automation/demand-letter",
                         "Employment Contract": "/legal-automation/employment-contract",
                         "Independent Contractors Agreement": "",
@@ -74,9 +62,7 @@ export default function LegalAutomation(){
                         "Loan Agreement": "",
                         "Quit Notice": "/legal-automation/quit-notice",
                         "Seven Days Notice": "/legal-automation/seven-day-notice",
-                        "Tenancy Agreement": "/legal-automation/tenancy-agreement",
-                        "Trademark Registration": "",
-                        "US Company Registration": ""
+                        "Tenancy Agreement": "/legal-automation/tenancy-agreement"
                     };
                     const linkUrl = urlMap[service] || "/legal-automation";
                     return (
