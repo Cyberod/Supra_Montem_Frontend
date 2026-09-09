@@ -6,6 +6,12 @@ export default function ActionButton({ label, href = "#", onClick, className = "
   if (!clickHandler && isConsultationButton) {
     clickHandler = (e) => {
       e.preventDefault();
+      if (typeof window.gtag === 'function') {
+        window.gtag('event', 'book_consultation_click', {
+          event_category: 'engagement',
+          event_label: 'Book a Consultation Button',
+        });
+      }
       if (window.Calendly) {
         window.Calendly.initPopupWidget({ url: 'https://calendly.com/contact-supramontemattorneys/30min?hide_gdpr_banner=1&text_color=01203F&primary_color=E19132' });
       }
